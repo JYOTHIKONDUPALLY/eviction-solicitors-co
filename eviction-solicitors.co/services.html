@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Eviction Solicitors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #fff8f2;
+            color: black;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #cc6918 !important;
+        }
+        .navbar-brand,
+        .navbar-nav .nav-link {
+            color: white !important;
+        }
+        .navbar-nav .nav-link.active, .navbar-nav .nav-link:hover {
+            color: #ffe5cc !important;
+        }
+        .services-section {
+            padding: 80px 0;
+            background-color: #fffaf4;
+        }
+        .services-section h2 {
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #cc6918;
+        }
+        .service-card {
+            border: none;
+            background-color: white;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        footer {
+            background-color: #cc6918;
+            color: white;
+            padding: 40px 0;
+        }
+        footer a {
+            color: #ffe5cc;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+            text-decoration: underline;
+        }.call-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #cc6918;
+  border-radius: 50%;
+  padding: 16px;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.call-button:hover {
+  background-color: #a85613;
+}
+
+.call-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+    </style>
+</head>
+
+<body>
+    <!-- nav bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img src="assets/eviction-solicitors.png" alt="logo" width="50px" height="50px" style="position: relative; top:-5px">
+          <a class="navbar-brand" href="#">Eviction Solicitors</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="services.html">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+          <span class="px-3 d-none d-lg-inline text-white">Call Us: 0333 334 5953</span>
+        </div>
+      </nav>
+
+      <section class="services-section">
+        <div class="container">
+            <h2>Our Legal Services</h2>
+    
+            <!-- Service 1 -->
+            <div class="row align-items-center mb-5" id="eviction-notices">
+                <div class="col-md-5" >
+                  <img src="assets/eviction notice.png" alt="Eviction Notices for Landlords" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                  <h4>Eviction Notices</h4>
+                  <p>We provide professional drafting and service of legally compliant eviction notices, including Section 8 and Section 21. Our experts ensure your documentation meets all statutory requirements, avoiding costly delays or legal challenges.</p>
+                </div>
+              </div>
+    
+            <!-- Service 2 -->
+            <div class="row align-items-center mb-5 flex-md-row-reverse" id="notice-drafting">
+                <div class="col-md-5">
+                    <img src="assets/contract.png" alt="Section 8 notice for tenant eviction with legal grounds" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Notice Drafting & Service</h4>
+                    <p>Precision-drafted notices delivered correctly the first time. We ensure each notice is tailored to your situation and served in accordance with legal standards to protect your rights as a landlord.</p>
+                </div>
+            </div>
+    
+            <!-- Service 3 -->
+            <div class="row align-items-center mb-5" id="court-representation">
+                <div class="col-md-5">
+                    <img src="assets/legalAdvice.png" alt="Court representation for landlord eviction cases" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Court Representation</h4>
+                    <p>Our eviction solicitors provide full legal representation at possession hearings across England and Wales. We ensure all court paperwork is in order, represent your interests effectively, and guide you through every step of the eviction process. With experienced legal advocacy, landlords significantly improve their success rate in court proceedings.</p>
+                </div>
+            </div>
+    
+            <!-- Service 4 -->
+            <div class="row align-items-center mb-5 flex-md-row-reverse" id="bailiff-enforcement">
+                <div class="col-md-5">
+                    <img src="assets/Judge-amico.png" alt="Bailiff enforcement for tenant eviction UK" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Bailiff Enforcement</h4>
+                    <p>When tenants fail to vacate even after a possession order, we arrange bailiff enforcement to legally recover your property. From requesting a county court bailiff to escalating to High Court enforcement officers (HCEOs), we handle the process quickly and legally—minimizing delays, stress, and financial losses for landlords.</p>
+                </div>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="row align-items-center mb-5 " id="section21">
+                <div class="col-md-5">
+                    <img src="assets/section 21.png" alt="Section 21 eviction notice service for landlords" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Section 21 Notice</h4>
+                    <p>Our specialist eviction solicitors provide legally compliant Section 21 notices, helping landlords regain possession of their property without giving a reason. We ensure every notice is properly served, aligned with the latest UK legislation, including deposit protection rules and prescribed information requirements—minimizing the risk of dismissal in court and saving time and legal fees.</p>
+                </div>
+            </div>
+    
+            <!-- Service 6 -->
+            <div class="row align-items-center mb-5 flex-md-row-reverse" id="legal_advice">
+                <div class="col-md-5">
+                    <img src="assets/legalAdvice.png" alt="Court representation for landlord eviction cases" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Legal Advice & Actions</h4>
+                    <p>Whether you're dealing with a non-compliant tenant or facing complex property disputes, we offer practical legal advice and tailored strategies to help you resolve issues quickly and effectively.</p>
+                </div>
+            </div>
+            
+            <!-- Service 7 -->
+            <div class="row align-items-center mb-5 " id="section8">
+                <div class="col-md-5">
+                    <img src="assets/section8.png" alt="Section 8 notice for tenant eviction with legal grounds" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Section 8 Notice</h4>
+                    <p>If your tenant is breaching the terms of their tenancy—whether due to rent arrears, property damage, or antisocial behaviour—our team helps you serve a strong and accurate Section 8 notice. We prepare the appropriate legal grounds under the Housing Act 1988 and support you with evidence and documentation to build a robust case for possession.</p>
+                </div>
+            </div>
+    
+            <!-- Service 8 -->
+            <div class="row align-items-center mb-5 flex-md-row-reverse" id="rent-recovery">
+                <div class="col-md-5">
+                    <img src="assets/Rent-recovery.png" alt="Bailiff enforcement for tenant eviction UK" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Rent Arrears Recovery</h4>
+                    <p>We assist landlords in recovering unpaid rent through legal claims and enforcement action. Our team ensures proper documentation and representation to maximise recovery success.</p>
+                </div>
+            </div>
+        
+            <!-- Service 9 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-md-5">
+                    <img src="assets/eviction notice.png" alt="Tenancy agreement review and drafting services for landlords" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Tenancy Agreement Reviews</h4>
+                    <p>Our legal experts help you draft or review tenancy agreements that are watertight, fair, and fully compliant with the latest rental laws. We ensure your contracts protect your rights as a landlord and reduce the risk of future disputes—covering clauses like rent reviews, notice periods, deposit handling, and more.</p>
+                </div>
+            </div>
+    
+            <!-- Service 10 -->
+            <div class="row align-items-center mb-5 flex-md-row-reverse">
+                <div class="col-md-5">
+                    <img src="assets/Rent-recovery.png" alt="Landlord legal compliance and property regulations UK" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-md-7 mt-3">
+                    <h4>Legal Compliance Guidance</h4>
+                    <p>Stay on top of your legal obligations as a landlord with our compliance services. We advise on deposit protection schemes, property licensing, energy efficiency standards, and health and safety requirements. Avoid costly fines, tenant disputes, and legal complications by partnering with experts who know the ever-changing regulations inside out.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <a href="tel:+44 0333 334 5953" class="call-button" title="Call Us">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="white" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M6.62 10.79a15.464 15.464 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.12.45 2.33.69 3.48.69a1 1 0 011 1v3.5a1 1 0 01-1 1C10.75 22 2 13.25 2 2.99a1 1 0 011-1H6.5a1 1 0 011 1c0 1.15.24 2.36.69 3.48a1 1 0 01-.21 1.11l-2.2 2.21z"/>
+        </svg>
+      </a>
+    <footer class="mt-5 py-5" style="background-color: #cc6918; color: #fff;">
+        <div class="container">
+          <div class="row text-center text-md-start">
+            
+            <!-- Company Info -->
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h5 class="fw-bold text-white">Eviction Solicitors</h5>
+              <p>Reliable, experienced legal support for landlords across the UK.</p>
+              <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+                <i class="fas fa-star text-warning me-2"></i>
+                <small class="text-white fw-semibold">Top-Rated Legal Services</small>
+              </div>
+            </div>
+      
+            <!-- Services Navigation -->
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h5 class="fw-bold text-white">Services We Provide</h5>
+              <ul class="list-unstyled">
+                <li><a href="services.html#eviction-notices" class="text-decoration-none text-white">Eviction Notices</a></li>
+                <li><a href="services.html#notice-drafting" class="text-decoration-none text-white">Notice Drafting & Service</a></li>
+                <li><a href="services.html#court-representation" class="text-decoration-none text-white">Court Representation</a></li>
+                <li><a href="services.html#legal_advice" class="text-decoration-none text-white">Legal Advice & Actions</a></li>
+                <li><a href="services.html#bailiff-enforcement" class="text-decoration-none text-white">Bailiff Eviction Enforcement</a></li>
+                <li><a href="services.html#rent-recovery" class="text-decoration-none text-white">Rent Arrears Recovery</a></li>
+                <li><a href="services.html#section8" class="text-decoration-none text-white">Section 8 Evictions (With Grounds) </a></li>
+                <li><a href="services.html#section21" class="text-decoration-none text-white">Section 21 Evictions (No-Fault)</a></li>
+              
+                
+              </ul>
+            </div>
+      
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-4 mb-md-0">
+              <h5 class="fw-bold text-white">Quick Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="index.html" class="text-decoration-none text-white">Home</a></li>
+                <li><a href="about.html" class="text-decoration-none text-white">About Us</a></li>
+                <li><a href="services.html" class="text-decoration-none text-white">Services</a></li>
+                <li><a href="#contact" class="text-decoration-none text-white">Contact</a></li>
+              </ul>
+            </div>
+      
+            <!-- Contact Info -->
+            <div class="col-md-3">
+              <h5 class="fw-bold text-white">Contact Us</h5>
+              <p>Email: <a href="mailto:llblegalmarketing@gmail.com" class="text-white">llblegalmarketing@gmail.com</a></p>
+              <p>Phone: <a href="tel:03333345953" class="text-white">0333 334 5953</a></p>
+              <p>Hours: Mon–Fri, 9am–6pm</p>
+            </div>
+          </div>
+      
+          <hr class="border-light mt-4" />
+          <div class="text-center">
+            <small>&copy; 2025 Eviction Solicitors. All rights reserved.</small>
+          </div>
+        </div>
+      </footer>
+</body>
+
+</html>
