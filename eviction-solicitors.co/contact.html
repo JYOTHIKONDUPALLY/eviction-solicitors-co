@@ -102,16 +102,23 @@
         width: 24px;
         height: 24px;
       }
-      .mobile-call{
-        color:#a85613;
+      .mobile-call-bar{
+        color:#a85613 !important;
         transform: scale(1);
+        border-top: 1px solid #dee2e6;
+        z-index: 1030;
       }
-      .mobile-call:hover{
+      .mobile-call-bar:hover{
         color: #f38c38;
         transform: scale(1.03);
         box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
 
       }
+      .sticky-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
       .small {
   width: 100%;
 }
@@ -125,50 +132,59 @@
   </head>
 
   <body>
-    <!-- nav bar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-      <div class="container">
-        <img
-          src="assets/Eviction_lawyers.png"
-          alt="logo"
-          width="70px"
-          height="50px"
-        />
-        <a class="navbar-brand" href="#">Eviction Lawyers</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <a href="tel:+44 0333 050 5381" class="px-3 d-none d-lg-inline text-decoration-none text-white">
-          Call Us: 0333 050 5381
-        </a>
+<!-- WRAPPER for navbar and mobile call link -->
+<div class="sticky-wrapper">
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container">
+      <img
+        src="assets/Eviction_lawyers.png"
+        alt="logo"
+        width="70px"
+        height="50px"
+      />
+      <a class="navbar-brand" href="#">Eviction Lawyers</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
       </div>
-    </nav>
-    <div class="d-lg-none bg-white text-center py-2 sticky-top ">
-      <a href="tel:+44 0333 050 5381" class="fw-semibold text-decoration-none mobile-call">
+      <!-- Desktop Call Button -->
+      <a
+        href="tel:+44 0333 050 5381"
+        class="px-3 d-none d-lg-inline text-decoration-none text-white"
+      >
         Call Us: 0333 050 5381
       </a>
     </div>
+  </nav>
+
+  <!-- Mobile Call Button -->
+  <div class="d-lg-none bg-white text-center py-2 mobile-call-bar">
+    <a href="tel:+44 0333 050 5381" class="fw-semibold text-decoration-none mobile-call" style="color: #a85613;">
+      Call Us: 0333 050 5381
+    </a>
+  </div>
+</div>
 
     <section class="contact-section">
       <div class="container">
