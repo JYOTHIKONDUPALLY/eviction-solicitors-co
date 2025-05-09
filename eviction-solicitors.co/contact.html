@@ -220,30 +220,35 @@
         </p>
         <div class="row">
           <div class="col-md-6">
-            <form id="contactForm">
+            <form id="contactForm" method="POST">
               <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
               <div class="mb-3">
-                <label for="name" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="name" name="name" required>
-              </div>
-              
+                <input type="hidden" name="from_name" value="Eviction Lawyers Website">
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="checkbox" name="botcheck" style="display: none;">
+
               <div class="mb-3">
-                <label for="email" class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="email" name="email" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="phone" class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="phone" name="phone" required>
-              </div>
-              
-              <div class="mb-3">
-                <label for="message" class="form-label">Your Message</label>
-                <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-              </div>
-              
-              <button type="submit" class="btn btn-submit">Submit Form</button>
-            </form>
+              <label for="name" class="form-label">Full Name</label>
+              <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="email" class="form-label">Email Address</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            
+            <div class="mb-3">
+              <label for="message" class="form-label">Your Message</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-submit" id="submitBtn">Submit Form</button>
+          </form>
             <div class="form-success" id="formSuccess">
               <strong>Success!</strong> Your message has been sent successfully.
             </div>
@@ -356,6 +361,9 @@
       form.addEventListener('submit', function(e) {
         e.preventDefault();
         
+        // Reset messages
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
         // Get form data
         const formData = new FormData(form);
         const data = {};
@@ -367,11 +375,7 @@
         // Send to Formspree
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
+          body: formData,
         })
         .then(response => {
           if (response.ok) {
@@ -379,11 +383,11 @@
             form.reset();
             successMessage.style.display = 'block';
             errorMessage.style.display = 'none';
-            
-            // Optional: Redirect after successful submission
             setTimeout(() => {
-              window.location.href = "thankyou.html";
-            }, 2000);
+              successMessage.style.display = 'none';
+            }, 5000);
+            // Optional: Redirect after successful submission
+        
           } else {
             // Show error message
             errorMessage.style.display = 'block';
@@ -395,6 +399,9 @@
           console.error('Error:', error);
           errorMessage.style.display = 'block';
           successMessage.style.display = 'none';
+          setTimeout(() => {
+            errorMessage.style.display = 'none';
+          }, 5000);
         });
       });
     });

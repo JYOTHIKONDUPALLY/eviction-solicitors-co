@@ -279,9 +279,12 @@ footer h6 {
           <div class="col-lg-6">
             <div class="card p-4 shadow">
               <h3 class="mb-3">Contact Us</h3>
-              <form id="contactForm">
+              <form id="contactForm" method =' POST'>
                 <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
                 <div class="mb-2">
+                  <input type="hidden" name="from_name" value="Eviction Lawyers Website">
+                  <input type="hidden" name="subject" value="New Contact Form Submission">
+                  <input type="checkbox" name="botcheck" style="display: none;">
                   <input
                     type="text"
                     class="form-control"
@@ -787,18 +790,12 @@ footer h6 {
         formData.forEach((value, key) => {
           data[key] = value;
         });
-        
-        // Add subject
-        data['_subject'] = 'New Contact Form Submission';
+
         
         // Send to Formspree
         fetch('https://api.web3forms.com/submit', {
           method: 'POST',
-          headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(data)
+          body: formData,
         })
         .then(response => {
           if (response.ok) {
@@ -806,11 +803,10 @@ footer h6 {
             form.reset();
             successMessage.style.display = 'block';
             errorMessage.style.display = 'none';
-            
-            // Optional: Redirect after successful submission
             setTimeout(() => {
-              window.location.href = "thankyou.html";
-            }, 2000);
+              successMessage.style.display = 'none';
+            }, 5000); // Hide after 5 seconds
+         
           } else {
             // Show error message
             errorMessage.style.display = 'block';
@@ -822,6 +818,9 @@ footer h6 {
           console.error('Error:', error);
           errorMessage.style.display = 'block';
           successMessage.style.display = 'none';
+          setTimeout(() => {
+            errorMessage.style.display = 'none';
+          }, 5000); // Hide after 5 seconds
         });
       });
     });
