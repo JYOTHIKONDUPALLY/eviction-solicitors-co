@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Browse expert legal services by eviction solicitors for tenants—covering eviction notices, notice drafting, legal advice, court process, and enforcement help."
+    />
+
+    <title>
+      Eviction Solicitors for Tenants | Legal Help & Process Guide – Eviction
+      Support, Notice Drafting & Representation
+    </title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      body {
+        background-color: #fff8f2;
+        color: black;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      .navbar {
+        background-color: #cc6918 !important;
+      }
+       .navbar-toggler {
+      padding: 0.2rem 0.4rem;
+      font-size: 0.9rem;
+    }
+      .navbar-brand,
+      .navbar-nav .nav-link {
+        color: white !important;
+      }
+      .navbar-nav .nav-link.active,
+      .navbar-nav .nav-link:hover {
+        color: #ffe5cc !important;
+      }
+      .services-section {
+        padding: 80px 0;
+        background-color: #fffaf4;
+      }
+      .services-section h2 {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #cc6918;
+      }
+      .service-card {
+        border: none;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 16px;
+        padding: 30px;
+        transition: all 0.3s ease;
+        max-width: 400px;
+        max-height:500px;
+      }
+
+      .service-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+      footer {
+        background-color: #cc6918;
+        color: white;
+        padding: 40px 0;
+      }
+      footer a {
+        color: #ffe5cc;
+        text-decoration: none;
+      }
+      footer a:hover {
+        color: white;
+        text-decoration: underline;
+      }
+      .call-button {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #cc6918;
+        border-radius: 50%;
+        padding: 16px;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease;
+      }
+
+      .call-button:hover {
+        background-color: #a85613;
+      }
+
+      .call-button svg {
+        width: 24px;
+        height: 24px;
+      }
+      .pricing-box{
+        background-color: #ffe5cc;
+      }
+      .pricing-box .btn {
+  background-color: #cc6918;
+  border-color: #cc6918;
+  color: white;
+  transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+}
+
+.pricing-box .btn:hover {
+  background-color: #a85613;
+  border-color: #a85613;
+  transform: scale(1.03);
+}
+
+.mobile-call-bar{
+        color:#a85613 !important;
+        transform: scale(1);
+        border-top: 1px solid #dee2e6;
+        z-index: 1030;
+      }
+      .mobile-call-bar:hover{
+        color: #f38c38;
+        transform: scale(1.03);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+      }
+      .sticky-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+}
+
+        .small {
+  width: 100%;
+}
+
+@media (min-width: 992px) { /* lg and above */
+  .small {
+    max-width: 400px;
+  }
+}
+
+    </style>
+  </head>
+
+  <body>
+<!-- WRAPPER for navbar and mobile call link -->
+  <div class="sticky-wrapper">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <img src="assets/Eviction_lawyers.png" alt="logo" width="50px" height="50px" />
+        <a class="navbar-brand" href="#">Eviction Lawyers</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <!-- Desktop Call Button -->
+        <a href="tel:+44 0333 050 5381" class="px-3 d-none d-lg-inline text-decoration-none text-white">
+          Call Us: 0333 050 5381
+        </a>
+      </div>
+    </nav>
+
+    <!-- Mobile Call Button -->
+  <div class="d-lg-none bg-white py-2 mobile-call-bar d-flex justify-content-around align-items-center">
+  <a href="tel:+44 0333 050 5381" class="fw-semibold mobile-call text-decoration-none" style="color: #a85613; border-bottom: 2px solid #a85613;">
+    Call Us: 0333 050 5381
+  </a>
+  <a href="contact.html" class="btn btn-sm" style="background-color: #a85613; color: white; padding: 6px 12px; border-radius: 4px;">
+    Eviction Today
+  </a>
+</div>
+
+  </div>
+    <section class="services-section">
+      <div class="container">
+        <h2>Our Legal Services</h2>
+
+        <!-- Service 1 -->
+        <div class="row align-items-center mb-5 p-4" id="eviction-notices">
+          <div class="col-md-5 d-flex flex-column h-100">
+            <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+              <img
+                src="assets/eviction notice.png"
+                alt="Eviction Notices for Landlords"
+                class="img-fluid rounded shadow"
+                style="width: 100%; height: 300px;"
+              />
+            </div>
+          </div>
+          <div class="col-md-7 d-flex flex-column h-100 mt-3">
+            <div class="flex-grow-1">
+            <h4>Eviction Notice Service – Section 8 or Section 21 or  Other Notice    </h4>
+            <p>
+              We professionally draft and serve eviction notices including Section 8, Section 21, or any other legal notice as required.  Get expert help with the tenant eviction process, including step-by-step guidance and landlord support.  Visit the official UK eviction process page for more info.
+            </p>
+            <p class="mt-2">
+              For official government guidance, visit the
+              <a
+                href="https://www.gov.uk/evicting-tenants"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="px-4 py-2 mt-2 text-decoration-none text-black"
+              >
+                UK eviction process page </a
+              >.
+            </p>
+            </div>
+            <div class="pricing-box p-3 rounded shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="text-dark fw-bold mb-0">£100 + VAT</h5>
+              <span class="badge bg-warning text-dark">Best Value</span>
+              </div>
+              <p class="small mb-0 text-muted">Expert advice and legally compliant eviction notice drafting.</p>
+              <a href="http://slssolicitors.co.uk/payment-page/" class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="row align-items-center mb-5 p-4 flex-md-row-reverse" id="court-representation">
+            <div class="col-md-5 d-flex flex-column h-100">
+              <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+            <img
+              src="assets/legalAdvice.png"
+              alt="Court representation for landlord eviction cases"
+              class="img-fluid rounded shadow"
+              style="width: 100%; height: 300px;"
+            />
+            </div>
+          </div>
+          <div class="col-md-7 d-flex flex-column h-100 mt-3">
+            <div class="flex-grow-1">
+            <h4>Guaranteed Eviction Package (Uncontested Cases)</h4>
+            <p>
+              Our expert eviction solicitors handle possession hearings across England and Wales. We draft the court documents, represent you in court, and instruct bailiffs if and when needed.<br>This service covers full legal representation but excludes any court fees and any replies to tenant defences.</br>Get trusted support through the entire eviction court process to boost your chances of success.
+            </p>
+            </div>
+            <div class="pricing-box p-3 rounded shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="text-dark fw-bold mb-0">£1500 + VAT</h5>
+                <span class="badge bg-warning text-dark"> Best Value</span>
+              </div>
+              <p class="small mb-0 text-muted">Full court preparation & representation including bailiff attendance.</p>
+              <a href="http://slssolicitors.co.uk/payment-page/" class="btn btn-dark w-100 mt-3 fw-semibold rounded-pill">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="row align-items-center mt-3 mb-5 p-4"
+          id="bailiff-enforcement"
+        >
+            <div class="col-md-5 d-flex flex-column h-100">
+              <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+            <img
+              src="assets/Judge-amico.png"
+              alt="Bailiff enforcement for tenant eviction UK"
+              class="img-fluid rounded shadow"
+              style="width: 100%; height: 300px;"
+            />
+            </div>
+          </div>
+          <div class="col-md-7 d-flex flex-column h-100 mt-3">
+            <div class="flex-grow-1">
+            <h4>Priority Super Package (Contested Case Coverage)</h4>
+            <p>
+              We provide full eviction legal support, including drafting court documents, replying to tenant defences, court representation, and instructing bailiffs.<br>Our expert solicitors handle the entire eviction process, ensuring fast, compliant results with continued support until possession is granted
+            </p>
+            </div>
+            <div class="pricing-box p-3 rounded shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="text-dark fw-bold mb-0"> £2500 + VAT</h5>
+              <span class="badge bg-warning text-dark">Best Value</span>
+              </div>
+              <p class="small mb-0 text-muted">Guaranteed Eviction including full legal representation and responding to any Defence</p>
+              <a href="http://slssolicitors.co.uk/payment-page/" class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Service 4 -->
+        <div class="row align-items-center mt-5 mb-3 p-4 flex-md-row-reverse" id="section8">
+            <div class="col-md-5 d-flex flex-column h-100">
+              <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+            <img
+              src="assets/section8.png"
+              alt="Section 8 notice for tenant eviction with legal grounds"
+              class="img-fluid rounded shadow"
+              style="width: 100%; height: 300px;"
+            />
+            </div>
+          </div>
+          <div class="col-md-7 d-flex flex-column h-100 mt-3">
+            <div class="flex-grow-1">
+            <h4>Complicated Eviction Cases – Expert Legal Support</h4>
+            <p>
+             We professionally draft and serve eviction notices including Section 8 or Section 21, or any other legal notice  on your instruction. If you require comprehensive advice please contact us today. For official government guidance, visit the UK eviction process page on https://www.gov.uk/evicting-tenants
+            </p>
+            </div>
+            <div class="pricing-box p-3 rounded shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="text-dark fw-bold mb-0"> £350 Per Hour</h5>
+              <span class="badge bg-warning text-dark">Best Value</span>
+              </div>
+              <p class="small mb-0 text-muted">Custom handling of complex cases with hourly billing.</p>
+              <a href="http://slssolicitors.co.uk/payment-page/" class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Service 5 -->
+        <div
+          class="row align-items-center mt-5 p-4"
+          id="rent-recovery"
+        >
+            <div class="col-md-5 d-flex flex-column h-100">
+              <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+            <img
+              src="assets/Rent-recovery.png"
+              alt="Bailiff enforcement for tenant eviction UK"
+              class="img-fluid rounded shadow"
+              style="width: 100%; height: 300px;"
+            />
+            </div>
+          </div>
+          <div class="col-md-7 d-flex flex-column h-100 mt-3">
+            <div class="flex-grow-1">
+            <h4>Rent Arrears Recovery</h4>
+            <p>
+              We assist landlords in recovering unpaid rent through legal claims
+              and enforcement action. Our team ensures proper documentation and
+              representation to maximise recovery success.
+            </p>
+            </div>
+            <div class="pricing-box p-3 rounded shadow-sm">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+              <h5 class="text-dark fw-bold mb-0"> £1300 + VAT + Disbursements</h5>
+              <span class="badge bg-warning text-dark"> Best Value</span>
+              </div>
+              <p class="small mb-0 text-muted">Help recovering rent arrears. Additional disbursements may apply.</p>
+              <a href="http://slssolicitors.co.uk/payment-page/" class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <a href="tel:+44 0333 050 5381" class="call-button" title="Call Us">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="white"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path
+          d="M6.62 10.79a15.464 15.464 0 006.59 6.59l2.2-2.2a1.003 1.003 0 011.11-.21c1.12.45 2.33.69 3.48.69a1 1 0 011 1v3.5a1 1 0 01-1 1C10.75 22 2 13.25 2 2.99a1 1 0 011-1H6.5a1 1 0 011 1c0 1.15.24 2.36.69 3.48a1 1 0 01-.21 1.11l-2.2 2.21z"
+        />
+      </svg>
+    </a>
+ <footer class="mt-5 py-5" style="background-color: #cc6918; color: #fff">
+        <div class="container">
+            <div class="row gy-4">
+
+                <!-- Left Side: Company Info -->
+                <div class="col-md-6 text-center text-md-start">
+                    <img src="assets/Eviction_lawyers.png" alt="logo" width="100" height="80" class="mb-3" />
+                    <span class="fw-bold text-white fs-4">Eviction Lawyers</span>
+                    <p class="small">
+                        Eviction Lawyers is a trading name of LLB Legal Marketing Limited, a company registered in
+                        England and Wales
+                        (Company No. 13772872). We are registered with the Information Commissioner’s Office (ICO) for
+                        data
+                        protection purposes (Registration No. 00012507817). We are a lead generation business for law
+                        firms and do
+                        not provide legal advice or claims management services. All legal work is carried out by our
+                        panel
+                        solicitors, who are authorised and regulated by the Solicitors Regulation Authority (SRA).
+                    </p>
+                    <div class="d-block d-md-flex align-items-center justify-content-center justify-content-md-start gap-2">
+                        <!-- Start of SRA Digital Badge code -->
+                        <div class="yoshkidiv" 
+                            style="position: relative; left: 0; top: 0; display:inline-block;display: inline;"><img
+                                alt="Verify SRA Membership" undefined="" 
+                                this.src='https://cdn.yoshki.com/SRA/EnglishColour/275/0/error-Default.png';"
+                                src="https://cdn.yoshki.com/SRA/EnglishColour/275/0/-Default.png?a=121*01240=701240124012@=70=401$0=40125012@1230124@5501$012@05501260=6"
+                                class="yoshkiimg badgenopopup"
+                                style="width:auto;background-repeat:no-repeat;padding:0px;max-width:none;background-image:url(https://cdn.yoshki.com/SRA/EnglishColour/275/0/=Default.png?a=121*01240=701240124012@=70=401$0=40125012@1230124@5501$012@05501260=6); position: relative; top: 0; left: 0; -webkit-touch-callout: none; border: none;  cursor: pointer; cursor: hand;">
+                        </div>
+
+                        <!-- End of SRA Digital Badge code -->
+                        <img src="assets/icoLogo.png" alt="logo" width="300" height="300">
+                    </div>
+
+                    <div class="d-flex align-items-center justify-content-center justify-content-md-start gap-2">
+
+                        <img src="assets/top_service.png" alt="logo" width="30" height="30">
+                        <span class="text-white fw-semibold">Top-Rated Legal Services</span>
+                    </div>
+
+                </div>
+
+                <!-- Right Side: Links Section -->
+                <div class="col-md-6">
+                    <div class="row  text-center text-md-start ">
+
+                        <!-- Services -->
+                        <div class="col-md-4 mb-4">
+                            <h6 class="fw-bold text-white">Services</h6>
+                            <ul class="list-unstyled small">
+                                <li><a href="services.html#eviction-notices"
+                                        class="text-white text-decoration-none ">Eviction Notice
+                                        Service</a></li>
+                                <li><a href="services.html#court-representation"
+                                        class="text-white text-decoration-none ">Eviction Court
+                                        Representation</a></li>
+                                <li><a href="services.html#bailiff-enforcement"
+                                        class="text-white text-decoration-none ">Guaranteed
+                                        Eviction Service</a></li>
+                                <li><a href="services.html#rent-recovery" class="text-white text-decoration-none">Rent
+                                        Arrears
+                                        Recovery</a></li>
+                                <li><a href="services.html#section8"
+                                        class="text-white text-decoration-none ">Complicated Eviction
+                                        Cases</a></li>
+                            </ul>
+
+                        </div>
+
+                        <!-- Quick Links -->
+                        <div class="col-md-4 mb-4">
+                            <h6 class="fw-bold text-white">Quick Links</h6>
+                            <ul class="list-unstyled small">
+                                <li><a href="index.html" class="text-white text-decoration-none ">Home</a></li>
+                                <li><a href="about.html" class="text-white text-decoration-none ">About Us</a></li>
+                                <li><a href="services.html" class="text-white text-decoration-none ">Services</a></li>
+                                <li><a href="contact.html" class="text-white text-decoration-none ">Contact</a></li>
+                            </ul>
+                        </div>
+
+                        <!-- Contact Info -->
+                        <div class="col-md-4">
+                            <h6 class="fw-bold text-white">Contact</h6>
+                            <p class="small mb-1">85 Great Portland Street,<br />First Floor, London, W1W 7LT</p>
+                            <p class="small mb-1">
+                                Email: <a href="mailto:info@evictionlawyers.co.uk"
+                                    class="text-white text-decoration-none">info@evictionlawyers.co.uk</a>
+                            </p>
+                            <p class="small mb-1">
+                                Phone: <a href="tel:03333345953" class="text-white text-decoration-none">0333 050
+                                    5381</a>
+                            </p>
+                            <p class="small">Hours: Mon–Fri, 9am–6pm</p>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <hr class="border-light mt-4" />
+            <div class="d-block d-md-flex justify-content-between align-items-center">
+                <div class="text-center">
+                    <small>&copy; 2025 Eviction Solicitors. All rights reserved.</small>
+                </div>
+                <div class="d-flex justify-content-center gap-2"><small><a href="TermsAndConditions.html"
+                            class="text-white">Terms and
+                            Conditions</a></small> | <small><a href="PrivacyPolicy.html" class="text-white">Privacy
+                            Policy</a></small>|
+                    <small><a href="CookiePolicy.html" class="text-white">Cookie Policy</a></small> | <small><a
+                            href="Disclaimer.html" class="text-white">complaints</a></small>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+  </body>
+</html>
