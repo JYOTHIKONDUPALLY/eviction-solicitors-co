@@ -337,6 +337,7 @@
         <a class="navbar-brand" href="#">Eviction Lawyers</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
+          <span class="close-icon d-none fs-3">&times;</span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
@@ -931,6 +932,23 @@
   </footer>
 
 </body>
+<script>
+  const toggler = document.querySelector('.navbar-toggler');
+  const navbarCollapse = document.getElementById('navbarNav');
+  const hamburgerIcon = toggler.querySelector('.navbar-toggler-icon');
+  const closeIcon = toggler.querySelector('.close-icon');
+
+  // Listen for show/hide events
+  navbarCollapse.addEventListener('show.bs.collapse', () => {
+    hamburgerIcon.classList.add('d-none');
+    closeIcon.classList.remove('d-none');
+  });
+
+  navbarCollapse.addEventListener('hide.bs.collapse', () => {
+    hamburgerIcon.classList.remove('d-none');
+    closeIcon.classList.add('d-none');
+  });
+</script>
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('contactForm');
