@@ -1,0 +1,194 @@
+:root {
+      --primary-orange: #cc6918;
+      --dark-orange: #a85414;
+      --light-orange: #e67e22;
+      --secondary-orange: #e08a35;
+      --middle-orange: #f38c38;
+      --text-light: #f8f9fa;
+      --text-muted: white;
+      --bg-light: #fff8f2;
+      --bg-section: #fffaf4;
+      --bg-how-help: #f9fafb;
+    }
+     nav .container {
+      color: white;
+    }
+
+    .navbar {
+      background-color: var(--primary-orange) !important;
+    }
+
+    .navbar-toggler {
+      padding: 0.2rem 0.4rem;
+      font-size: 0.9rem;
+    }
+
+    .navbar-brand,
+    .navbar-nav .nav-link {
+      color: white !important;
+    }
+
+    .navbar-nav .nav-link.active,
+    .navbar-nav .nav-link:hover {
+      color: #ffe5cc !important;
+    }
+
+    .navbar-brand {
+      font-weight: bold;
+    }
+    footer {
+      background-color: var(--primary-orange);
+      color: white;
+      padding: 40px 0;
+    }
+
+    footer a {
+      color: #ffe5cc;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: white;
+      text-decoration: underline;
+    }
+
+    .coverage-section {
+      background: rgba(255, 255, 255, 0.95);
+      color: var(--primary-orange);
+      margin: 0 -15px;
+      padding: 3rem 2rem;
+      border-top: 3px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .coverage-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--primary-orange);
+    }
+
+    .coverage-description {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      color: #666;
+    }
+
+    .top-rated-badge {
+            background: white;
+            color: var(--primary-orange);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+            border: 2px solid rgba(208, 123, 57, 0.2);
+            font-weight: 600;
+        }
+
+    .footer-link {
+      color: var(--text-muted);
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .footer-link:hover {
+      color: var(--text-light) !important;
+      transform: translateX(5px);
+      text-decoration: underline !important;
+    }
+
+    .coverage-link {
+      color: var(--primary-orange);
+      text-decoration: none;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(204, 105, 24, 0.1);
+      transition: all 0.3s ease;
+      display: block;
+      font-weight: 500;
+    }
+
+    .coverage-link:hover {
+      color: var(--dark-orange);
+      padding-left: 0.75rem;
+      border-bottom-color: var(--primary-orange);
+      background: rgba(204, 105, 24, 0.05);
+    }
+
+    .coverage-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .sticky-wrapper {
+      position: sticky;
+      top: 0;
+      z-index: 1030;
+    }
+
+    @media (max-width: 768px) {
+      .coverage-section {
+        text-align: center;
+        margin: 0 -15px;
+        padding: 2rem 1rem;
+      }
+
+      .coverage-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+    }
+    .call-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: var(--primary-orange);
+      border-radius: 50%;
+      padding: 16px;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .call-button:hover {
+      background-color: var(--dark-orange);
+    }
+
+    .call-button svg {
+      width: 24px;
+      height: 24px;
+    }
+      .small {
+      width: 100%;
+    }
+
+      @media (min-width: 992px) {
+
+      /* lg and above */
+      .small {
+        max-width: 400px;
+      }
+    }
+
+    
+    .mobile-call-bar {
+      color: var(--dark-orange) !important;
+      transform: scale(1);
+      border-top: 1px solid #dee2e6;
+      z-index: 1030;
+    }
+
+    .mobile-call-bar:hover {
+      color: var(--middle-orange);
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+
+    }
+

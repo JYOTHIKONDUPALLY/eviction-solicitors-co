@@ -1,0 +1,114 @@
+:root {
+      --primary-orange: #cc6918;
+      --dark-orange: #a85414;
+      --light-orange: #e67e22;
+      --secondary-orange: #e08a35;
+      --text-light: #f8f9fa;
+      --text-muted: white;
+      --bg-light: #fff8f2;
+      --bg-section: #fffaf4;
+      --bg-how-help: #f9fafb;
+    }
+.hero .container {
+      color: var(--text-muted);
+    }
+
+    .hero {
+      background-color: rgba(255, 248, 242, 0.6);
+      color: black;
+      padding: 60px 0;
+      background-image: url("../assets/hero.jpg");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero .btn {
+      background-color: var(--primary-orange);
+      color: var(--text-muted);
+    }
+    .hero-card {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid #ddd;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      min-height: 250px;
+    }
+
+    .square-img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+
+
+    .testimonial {
+      background-color: #fff0e5;
+      padding: 60px 0;
+    }
+
+    .testimonial h2 {
+      text-align: center;
+      color: var(--primary-orange);
+      margin-bottom: 40px;
+    }
+
+    .testimonial .card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .testimonial footer {
+      width: fit-content;
+      padding: 7px 7px;
+    }
+
+    #services .serviceCard {
+      border: none;
+      border-radius: 16px;
+      padding: 30px;
+      transition: all 0.4s ease;
+      cursor: pointer;
+      transform: scale(1);
+      margin: auto
+    }
+
+    #services .serviceCard:hover {
+      transform: scale(1.03);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    }
+
+    #services .btn {
+      background-color: var(--primary-orange);
+      color: white;
+    }
+
+    .form-success {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .form-error {
+      display: none;
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .formSection h2 {
+      color: #a85613;
+    }
+
+    .formSection .btn {
+      background-color: #cc6918;
+      color: white;
+    }
