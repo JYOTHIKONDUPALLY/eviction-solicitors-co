@@ -10,6 +10,12 @@
       --bg-section: #fffaf4;
       --bg-how-help: #f9fafb;
     }
+
+    body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
      nav .container {
       color: white;
     }
