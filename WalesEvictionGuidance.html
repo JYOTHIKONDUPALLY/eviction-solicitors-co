@@ -13,22 +13,6 @@
     <link rel="stylesheet" href="Css/CommonStyles.css">
     <link rel="stylesheet" href="Css/CommonServiceStyle.css">
     <style>
-        :root {
-            --primary-orange: #cc6918;
-            --secondary-orange: #e67e22;
-            --light-orange: #fef3e2;
-            --dark-orange: #a85414;
-            --text-orange: black;
-            --text-secondary: #6b7280;
-            --border-light: #e5e7eb;
-            --bg-light: #f8fafc;
-            --success-green: #059669;
-            --warning-amber: #d97706;
-            --danger-red: #dc2626;
-            --wales-red: #d32f2f;
-            --wales-green: #388e3c;
-        }
-
         .wales-badge {
             background: linear-gradient(45deg, var(--wales-red), var(--wales-green));
             color: white;
@@ -121,7 +105,7 @@
         .step-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(204, 105, 24, 0.15);
-        }
+            }
 
         .step-number {
             background: var(--secondary-orange);
@@ -135,7 +119,9 @@
             font-weight: 700;
             font-size: 1.2rem;
             margin-bottom: 1rem;
+            flex-shrink: 0;
         }
+        
             /* Summary Table */
         .summary-table {
             background: white;
@@ -244,7 +230,7 @@
                         <a href="services.html" class="btn btn-primary-custom btn-lg px-4">
                             <i class="fas fa-arrow-right me-2"></i>Our Services
                         </a>
-                        <a href="contact.html" class="btn btn-outline-custom btn-lg px-4">
+                        <a  href="tel:+44 0333 050 5381" class="btn btn-outline-custom btn-lg px-4">
                             <i class="fas fa-phone me-2"></i>Get Consultation
                         </a>
                     </div>
@@ -476,7 +462,7 @@
 
            </section>
                <!-- Common Defences & Pitfalls -->
-        <section class="content-section mb-5">
+        <section class="content-section  py-5 border-bottom">
             <h2 class="section-title"><i class="fa-solid fa-circle-exclamation me-2"></i> Avoid Common Pitfalls & Tenant Defences</h2>
 
             <div class="row">
@@ -512,7 +498,8 @@
                 </div>
             </div>
         </section>
-         <section class="content-section mb-5">
+        <!-- Summary Table -->
+         <section class="content-section  py-5 border-bottom">
             <h2 class="section-title"> Summary: Eviction Routes in Wales</h2>
             <div class="table-responsive">
                 <table class="table summary-table">
@@ -542,6 +529,52 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+        </section>
+         <!-- pricing section -->
+        <section class="pricing-box" id="pricing">
+            <h2 class="pricing-title"> Legal Support for Eviction in Wales</h2>
+            <p>Looking for eviction support in Wales? We offer a range of clear,  legal
+                packages designed to make the eviction process straightforward and affordable  from Notice Drafting to Cort Representation.</p>
+                  <div class="pricing-amount">£1500</div>
+                        <div class="pricing-text">+ VAT Starting Price</div>
+                        <hr style="border-color: rgba(255,255,255,0.3);">
+
+            <div class="pricing-features">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span>Transparent pricing</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-eye-slash me-2"></i>
+                            <span>No hidden costs</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-clock me-2"></i>
+                            <span>Fast turnaround</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            <span>Online "Buy Now" option</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Whether you need help drafting the notice or full court representation, our solicitors are here to
+                support you from start to finish.</p>
+
+            <div class="mt-4">
+                <a href="#" class="cta-button-white me-2">Explore Packages & Start Now</a>
+                <a href="#" class="cta-button-white">Request a Free Call</a>
             </div>
         </section>
          <!-- CTA Section -->
@@ -581,7 +614,7 @@
 
             <div class="mt-4">
                 <p class="mb-3 opacity-90">Fixed-fee eviction packages and tailored support. All services by SRA-regulated solicitors.</p>
-                <a href="tel:03330505381" class="cta-button-white me-3"><i class=" bi bi-telephone me-2"></i> Call 0333 050 5381</a>
+                <a  href="tel:+44 0333 050 5381" class="cta-button-white me-3"><i class=" bi bi-telephone me-2"></i> Call 0333 050 5381</a>
                 <a href="#" class="cta-button-white">📝 Begin Your Eviction Case →</a>
             </div>
         </section>
@@ -654,7 +687,7 @@
         </div>
         
         <!-- Right Side: Links Section -->
-        <div class="col-md-6 text-center text-md-start mt-md-5 pt-md-3">
+         <div class="col-md-6 text-center text-md-start ">
                     <div class="text-center mb-4">
           <div class="top-rated-badge">
             <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">

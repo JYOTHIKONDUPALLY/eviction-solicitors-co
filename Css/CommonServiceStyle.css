@@ -12,6 +12,7 @@
     --danger-red: #dc2626;
      --wales-red: #d32f2f;
     --wales-green: #388e3c;
+    --wales-orange: #b08a00;
 }
 
 /* Hero Section */
@@ -241,6 +242,12 @@
             transform: translateY(-2px);
             box-shadow: 0 4px 15px rgba(204, 105, 24, 0.2);
         }
+
+         @media (max-width: 768px) {
+            .area-coverage-grid {
+                grid-template-columns: 1fr;
+            }
+         }
 
         /* Highlight Card */
         .highlight-card {

@@ -20,10 +20,11 @@
     <link rel="alternate" hreflang="en-gb" href="https://eviction-lawyers.co.uk/" />
     <link rel="canonical" href="https://eviction-lawyers.co.uk" />
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./Css/CommonStyles.css" />
-    <link rel="stylesheet" href="./Css/CommonServiceStyle.css" />
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Css/CommonStyles.css">
+    <link rel="stylesheet" href="Css/CommonServiceStyle.css">
     <style>
  .step-card {
             background: white;
@@ -52,6 +53,7 @@
             font-weight: 700;
             font-size: 1.2rem;
             margin-bottom: 1rem;
+            flex-shrink: 0;
         }
         .subsection-title {
             color: var(--primary-orange);
@@ -59,20 +61,7 @@
             font-size: 1.5rem;
             margin: 2rem 0 3rem 0;
         }
-        /* accordian css */
-         .accordion-button:not(.collapsed) {
-      background-color: #cc6918;
-      color: white;
-    }
 
-    .accordion-button.collapsed {
-      background-color: #fff0e5;
-      color: #cc6918;
-    }
-
-    .accordion-body {
-      background-color: #fff8f2;
-    }
     /* Summary Table */
         .summary-table {
             background: white;
@@ -209,7 +198,7 @@
                         <a href="services.html" class="btn btn-primary-custom btn-lg px-4">
                             <i class="fas fa-arrow-right me-2"></i>Our Services
                         </a>
-                        <a href="contact.html" class="btn btn-outline-custom btn-lg px-4">
+                        <a  href="tel:+44 0333 050 5381" class="btn btn-outline-custom btn-lg px-4">
                             <i class="fas fa-phone me-2"></i>Get Consultation
                         </a>
                     </div>
@@ -483,6 +472,54 @@
                 </table>
             </div>
         </section>
+
+           <!-- pricing section -->
+        <section class="pricing-box" id="pricing">
+            <h2 class="pricing-title">Eviction Legal Support </h2>
+            <p>Need expert legal assistance for your eviction case? Our team of experienced solicitors is here to
+                help landlords navigate in the complete process from notice drafting to Cort Representation</p>
+            <div class="pricing-amount text-center">£1500</div>
+            <div class="pricing-text text-center">+ VAT Starting Price</div>
+            <hr style="border-color: rgba(255,255,255,0.3);">
+            <p class="small mb-0">
+
+            <div class="pricing-features">
+                <div class="row">
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-check-circle me-2"></i>
+                            <span>Transparent pricing</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-eye-slash me-2"></i>
+                            <span>No hidden costs</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-clock me-2"></i>
+                            <span>Fast turnaround</span>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="d-flex align-items-center justify-content-center mb-2">
+                            <i class="fas fa-shopping-cart me-2"></i>
+                            <span>Online "Buy Now" option</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <p>Whether you need help drafting the notice or full court representation, our solicitors are here to
+                support you from start to finish.</p>
+
+            <div class="mt-4">
+                <a href="services.html" class="cta-button-white me-2">Explore Packages & Start Now</a>
+                <a  href="tel:+44 0333 050 5381" class="cta-button-white">Request a Free Call</a>
+            </div>
+        </section>
  <!-- CTA Section -->
          <section id="contact" class="cta-section">
             <div class="cta-title"> Ready to Start Your Eviction Process?</div>
@@ -519,7 +556,7 @@
 
             <div class="mt-4">
                 <a href="tel:0333 050 5381" class="cta-button-white me-3"><i class=" bi bi-telephone me-2"></i> Call 0333 050 5381</a>
-                <a href="#" class="cta-button-white"> Start Your Process Today →</a>
+                <a href="contact.html" class="cta-button-white"> Start Your Process Today →</a>
             </div>
         </section>
         <section class="area-coverage-section py-5 border-bottom">
@@ -581,7 +618,7 @@
         </div>
         
         <!-- Right Side: Links Section -->
-        <div class="col-md-6 text-center text-md-start mt-md-5 pt-md-3">
+         <div class="col-md-6 text-center text-md-start ">
                     <div class="text-center mb-4">
           <div class="top-rated-badge">
             <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">
