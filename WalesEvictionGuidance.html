@@ -2,30 +2,113 @@
 <html lang="en">
 
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P4XVH898LC"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-P4XVH898LC');
-    </script>
-    <title>Eviction in England | Section 8 & Section 21 Guide for Landlords
-    </title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wales Eviction Guide | Section 173 & Section 182 for Landlords</title>
     <meta name="description"
-        content="Landlord eviction guide for England: step-by-step process for Section 8 and Section 21, contested vs uncontested claims, court hearings, defences and legal compliance." />
-    <link rel="alternate" hreflang="en-gb" href="https://eviction-lawyers.co.uk/" />
-    <link rel="canonical" href="https://eviction-lawyers.co.uk" />
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="./Css/CommonStyles.css" />
-    <link rel="stylesheet" href="./Css/CommonServiceStyle.css" />
+        content="Complete landlord eviction guide for Wales: Section 173 & 182 notices, court proceedings, defences and enforcement under the Renting Homes (Wales) Act 2016.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="Css/CommonStyles.css">
+    <link rel="stylesheet" href="Css/CommonServiceStyle.css">
     <style>
- .step-card {
+        :root {
+            --primary-orange: #cc6918;
+            --secondary-orange: #e67e22;
+            --light-orange: #fef3e2;
+            --dark-orange: #a85414;
+            --text-orange: black;
+            --text-secondary: #6b7280;
+            --border-light: #e5e7eb;
+            --bg-light: #f8fafc;
+            --success-green: #059669;
+            --warning-amber: #d97706;
+            --danger-red: #dc2626;
+            --wales-red: #d32f2f;
+            --wales-green: #388e3c;
+        }
+
+        .wales-badge {
+            background: linear-gradient(45deg, var(--wales-red), var(--wales-green));
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+
+        /* Notice Types */
+        .notice-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        @media (max-width: 992px) {
+            .notice-comparison {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .notice-card {
+            background: white;
+            border-radius: 12px;
+              padding: 2rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border-top: 4px solid var(--secondary-orange);
+             transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .notice-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(204, 105, 24, 0.15);
+            border-color: var(--secondary-orange);
+        }
+
+        .notice-header {
+            background: var(--primary-orange);
+            color: white;
+            padding: 1.5rem;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-align: center;
+        }
+
+        .notice-header.section-173 {
+            background: var(--secondary-orange);
+        }
+
+        .notice-header.section-182 {
+            background: var(--secondary-orange);
+        }
+
+        .notice-content {
+            padding: 1.5rem;
+        }
+
+        .notice-feature {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background: var(--bg-light);
+            border-radius: 6px;
+        }
+
+        .notice-feature i {
+            color: var(--primary-orange);
+            margin-right: 0.75rem;
+            width: 1.25rem;
+        }
+        /* Step Cards */
+         .step-card {
             background: white;
             border: 1px solid var(--border-light);
             border-radius: 12px;
@@ -43,8 +126,8 @@
         .step-number {
             background: var(--secondary-orange);
             color: white;
-            width: 2.5rem;
-            height: 2.5rem;
+            width: 3rem;
+            height: 3rem;
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -53,27 +136,7 @@
             font-size: 1.2rem;
             margin-bottom: 1rem;
         }
-        .subsection-title {
-            color: var(--primary-orange);
-            font-weight: 600;
-            font-size: 1.5rem;
-            margin: 2rem 0 3rem 0;
-        }
-        /* accordian css */
-         .accordion-button:not(.collapsed) {
-      background-color: #cc6918;
-      color: white;
-    }
-
-    .accordion-button.collapsed {
-      background-color: #fff0e5;
-      color: #cc6918;
-    }
-
-    .accordion-body {
-      background-color: #fff8f2;
-    }
-    /* Summary Table */
+            /* Summary Table */
         .summary-table {
             background: white;
             border-radius: 12px;
@@ -95,7 +158,7 @@
             border-color: var(--border-light);
 
         }
-        /* Feature Card */
+                /* Feature Card */
 .feature-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   border-radius: 10px;
@@ -110,7 +173,6 @@
    background: var(--bg-light);
   color:var(--primary-orange)
 }
-
     </style>
 </head>
 
@@ -164,14 +226,18 @@
             </a>
         </div>
     </div>
+
     <!-- Hero Section -->
     <section class="hero-section py-5">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-10">
-                    <h1 class="hero-title display-3 fw-bold mb-4">Landlord's Guide to Eviction in England</h1>
+                    <div class="wales-badge"><img src="./assets/wales.png" width="20px" height="20px" /> Wales Specific
+                        Guide</div>
+                    <h1 class="hero-title display-3 fw-bold mb-4">Landlord's Eviction Guide in Wales</h1>
                     <p class="hero-subtitle fs-5 text-muted mb-4 lh-lg">
-                        Expert guidance through every stage of the possession process — from serving notices to
+                        Expert guidance through every stage of the possession process — from Section 173 & 182 Notices
+                        to
                         navigating court proceedings, tenant defences, and common legal pitfalls.
                     </p>
                     <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
@@ -186,316 +252,346 @@
             </div>
         </div>
     </section>
+
     <!-- Main Content -->
     <main class="container my-5">
+        <!-- Legal Framework -->
         <section class="content-section py-5 border-bottom">
-            <h2 class="section-title display-5 fw-bold mb-3">Legal Framework & Notice Overview</h2>
-            <p class="answer-detailed">
-                The eviction process in England is primarily regulated by the <strong>Housing Act 1988</strong> and the
-                Civil Procedure Rules <strong>(Part 55)</strong>, which outline the legal pathway landlords must follow
-                to regain possession of a residential property.
-            </p>
-            <div class="alert-custom">
-                <div class="alert-title">⚖️ Legal Compliance Required</div>
-                <p class="mb-0">Strict adherence to Housing Act 1988 and Civil Procedure Rules (Part 55) is essential
-                    for successful evictions.</p>
+            <h2 class="section-title display-5 fw-bold mb-3">Legal Framework in Wales</h2>
+            <p class="text-muted mb-4">
+                In Wales, the eviction process is governed by the <strong>Renting Homes (Wales) Act 2016</strong>, which
+                introduces specific requirements for landlords to follow when seeking possession of a property.</p>
+            <div class=" alert-custom">
+                <div class="alert-title"><i class="fa-solid fa-scale-balanced me-2"></i>Renting Homes (Wales) Act 2016</div>
+                <p class="mb-0">Effective from 1 December 2022, this Act replaced Section 8 and Section 21 with new
+                    procedures specific to Wales.</p>
+                    <div class="mt-3 alert-title"><i class="fa-regular fa-clock me-2"></i>Legacy tenancies:</div>
+                    <p class="mb-0">Tenancies started before December 2022 may still require Section 8/21 rules until converted to occupation contracts.</p>
             </div>
-            <div class="key-points">
-                <p>Landlords typically pursue possession using one of two legal routes:</p>
-                <ul>
-                    <li class="answer-detailed"><strong>Section 21 Notice (No-Fault Eviction)-</strong>Enables landlords
-                        to reclaim their
-                        property without needing to provide a reason, provided they give the tenant <strong>at least two
-                            months’ notice</strong> and meet all compliance requirements.</li>
-                    <li class="answer-detailed"><strong>Section 8 Notice (Fault-Based Eviction)-</strong>Used when
-                        tenants have breached the
-                        tenancy agreement. Landlords must specify <strong>one or more of the 17 statutory
-                            grounds</strong> for eviction, such as rent arrears, antisocial behaviour, or property
-                        damage.</li>
-                </ul>
-            </div>
-            <div class="answer-detailed">
-                Under <strong>Part 55 of the Civil Procedure Rules (CPR),</strong> all possession proceedings must
-                follow a<strong> structured
-                    legal process:</strong></br>
-                serve the appropriate notice → wait for the notice period → apply to the court for a possession
-                order.</br>
+            <div class="notice-comparison">
+                <!-- Section 173 -->
+                <div class="notice-card">
+                    <div class="notice-header section-173">
+                        <i class="fas fa-file-alt me-2"></i>
+                        Section 173 Notice
+                        <div style="font-size: 0.9rem; font-weight: 400; margin-top: 0.5rem;">No-Fault Eviction</div>
+                    </div>
+                    <div class="notice-content">
+                        <div class="notice-feature">
+                            <i class="fas fa-clock"></i>
+                            <span><strong>6 months minimum notice</strong> period required</span>
+                        </div>
+                        <div class="notice-feature">
+                            <i class="fas fa-calendar-times"></i>
+                            <span>Cannot serve within <strong>first 6 months</strong> of tenancy</span>
+                        </div>
+                        <div class="notice-feature">
+                            <i class="fas fa-balance-scale"></i>
+                            <span>No fault or reason needed from landlord</span>
+                        </div>
+                        <div class="notice-feature">
+                            <i class="fas fa-home"></i>
+                            <span>Ends periodic occupation contracts only</span>
+                        </div>
+                    </div>
+                </div>
 
-                Following this legal sequence correctly is essential to avoid delays, dismissed claims, or financial
-                losses.
+                <!-- Section 182 -->
+                <div class="notice-card">
+                    <div class="notice-header section-182">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        Section 182 Notice
+                        <div style="font-size: 0.9rem; font-weight: 400; margin-top: 0.5rem;">Breach-Based Eviction
+                        </div>
+                    </div>
+                    <div class="notice-content">
+                        <div class="notice-feature">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span><strong>14 days</strong> for serious rent arrears</span>
+                        </div>
+                        <div class="notice-feature">
+                            <i class="fas fa-exclamation"></i>
+                            <span><strong>Immediate notice</strong> for antisocial behaviour</span>
+                        </div>
+                        <div class="notice-feature">
+                            <i class="fas fa-calendar"></i>
+                            <span><strong>30 days</strong> for other contract breaches</span>
+                        </div>
+                        <div class="notice-feature">
+                            <i class="fas fa-file-signature"></i>
+                            <span>Requires written explanation of breach</span>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </section>
-
-        <section class="content-section py-5 border-bottom">
-            <h2 class="section-title display-5 fw-bold mb-3">Step-by-Step Eviction Process</h2>
-            <!-- step 1 -->
-             <div class="step-card">
-                <div class="d-flex align-items-center gap-3 "><div class="step-number">1</div>
-                <h3 class="subsection-title">Serving the Correct Notice</h3></div>
-                
-                <div class="answer-brief">
-                    Use Section 21 for no-fault evictions; Section 8 when the tenant breaches the tenancy.
-                    </div>
-                   <div class="row">
-                    <div class="col-md-6">
-                        <h4 class="text-orange">Section 21 Checklist:</h4>
-                        <ul>
-                            <li>Tenant must have an AST</li>
-                            <li>No fault needed</li>
-                            <li>Must wait at least 4 months (fixed term or start date) before serving</li>
-                            <li>Provide gas safety certificate, EPC, How to Rent guide, and deposit protection documentation</li>
-                            <li>Use the correct Form 6A or equivalent notice</li>
-                        </ul>
-                    </div>
-                    <div class="col-md-6">
-                        <h4 class="text-orange">Section 8 Essentials:</h4>
-                        <ul>
-                            <li>Must cite one or more grounds from Schedule 2 (e.g. rent arrears Ground 8, antisocial behaviour Ground 14)</li>
-                            <li>Notice periods vary: from 2 weeks (Grounds 8/10/11 etc.) to 2 months (mandatory Grounds 1, 2, 5, 6, 7A, 7B)</li>
-                            <li>Combine discretionary with mandatory grounds to strengthen claims</li>
-                        </ul>
-                    </div>
-                </div>
-             </div>
-                         <!-- Step 2 -->
+        <!-- step-by-step guide -->
+         <section class="content-section py-5 border-bottom">
+            <h2 class="section-title display-5 fw-bold mb-3">Step-by-Step Wales Eviction Process</h2>
+               <!-- Step 1 -->
             <div class="step-card">
-                 <div class="d-flex align-items-center gap-3 "><div class="step-number">2</div>
-                <h3 class="subsection-title">Uncontested vs Contested Claims</h3>
+                 <div class="d-flex align-items-center gap-3 ">
+                <div class="step-number">1</div>
+                <h3 class="subsection-title">Issuing the Correct Notice</h3>
                 </div>
-                
                 <div class="answer-brief">
-                    Uncontested = no defence filed; contested = tenant registers a defence, court hearing required.
+                    Section 173 for no-fault evictions; Section 182 for tenant breaches.
                 </div>
 
-                <p>Section 21 supports accelerated possession: no hearing if unchallenged.</p>
-                <p>Section 8 automatically requires contested process and legal representation at court if a defence is submitted.</p>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="notice-card notice-173">
+                            <h4><i class="fas fa-file-alt me-2"></i> Section 173 (No-Fault):</h4>
+                            <ul>
+                                <li>Permitted only after 6 months from contract commencement</li>
+                                <li>Requires 6 months' written notice before proceeding</li>
+                                <li>Ideal for periodic occupation contracts where possession is needed without alleging tenant fault</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="notice-card notice-182">
+                            <h4><i class="fas fa-exclamation-triangle me-2"></i> Section 182 (Breach-Based):</h4>
+                            <p><strong>Used when the tenant has committed a breach, such as:</strong></p>
+                            <ul>
+                                <li>14 days of rent arrears</li>
+                                <li>Serious antisocial behaviour or criminal damage</li>
+                                <li>Nuisance or other contract breaches</li>
+                            </ul>
+                            <p><strong>Notice period varies:</strong></p>
+                            <ul>
+                                <li>14 days for serious arrears</li>
+                                <li>Immediate for antisocial acts</li>
+                                <li>30 days for other contract breaches</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert-custom">
+                    <div class="alert-title"><i class="fas fa-exclamation-triangle me-2"></i> Critical Compliance Requirements</div>
+                    <p class="mb-0">Ensure the contract, deposit protection, EPC, gas safety, and model written statement were provided within statutory timeframes. Even minor administrative failures can invalidate the notice.</p>
+                </div>
             </div>
 
-             <!-- Step 3 -->
+            <!-- Step 2 -->
             <div class="step-card">
-                 <div class="d-flex align-items-center gap-3 "><div class="step-number">3</div>
-                <h3 class="subsection-title">Filing Court Documents & Evidence</h3>
+                 <div class="d-flex align-items-center gap-3 ">
+                <div class="step-number">2</div>
+                <h3 class="subsection-title">Filing for Possession — Uncontested vs Contested</h3>
                 </div>
                 
                 <div class="answer-brief">
-                    You must file the correct forms along with evidence and proof of service.
+                    Uncontested when no defence is filed; contested when the tenant responds.
                 </div>
 
-                <h4 class="text-orange">Required items:</h4>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h4 class="text-success"><i class="fas fa-file-alt me-2"></i> Uncontested Process:</h4>
+                        <ul>
+                            <li>Section 173 cases typically proceed via administrative accelerated action if the tenant does not defend</li>
+                            <li>Section 182 cases with rent arrears may use Form RHW20 with no hearing unless the tenant challenges the claim</li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="text-danger"><i class="fa-solid fa-house me-2"></i> Contested Cases:</h4>
+                        <ul>
+                            <li>Tenant submits a defence or counterclaim</li>
+                            <li>Hearing is scheduled, landlord must present oral evidence, documents, and demonstrate notice compliance</li>
+                            <li>Judges may adjourn, dismiss, or require full trial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+                 <div class="d-flex align-items-center gap-3 ">
+                <div class="step-number">3</div>
+                <h3 class="subsection-title">Court Bundles & Documentation</h3>
+                </div>
+                
+                <div class="answer-brief">
+                    Notice, written contract, prescribed documents, and breach evidence must be properly bundled.
+                </div>
+
+                <h4 class="text-orange"><i class="fa-solid fa-folder me-2"></i> Compile:</h4>
                 <ul>
-                    <li>Section 8/21 notice served and proof via Form N215 or certificate of service</li>
-                    <li>Tenancy agreement and AST documentation</li>
-                    <li>Deposit protection certificate & prescribed information</li>
-                    <li>Safety documents (gas, EPC, electrical)</li>
-                    <li>Evidence: arrears ledger, photographic documentation, incident logs</li>
-                    <li>Forms: N5 (claim form), N119 (particulars of claim), N7A (advice to defendant), N11R (defence form)</li>
+                    <li>Copy of the served notice (Section 173 or 182)</li>
+                    <li>Signed standard occupation contract or written statement</li>
+                    <li>Proof of deposit protection & certificate issued</li>
+                    <li>EPC and gas safety documentation</li>
+                    <li>Rent arrears ledger, incident reports, invoices—whichever applies</li>
+                    <li>Correct forms: Part-procedure forms RHW16, RHW18, RHW20 (as applicable)</li>
                 </ul>
 
-                <p class="text-secondary">Court sets a hearing date 21–56 days from issue; claim form defendants must serve defences at least 21 days before hearing.</p>
+                <p class="text-secondary">Tenant receives court-issued defence and legal aid info—timeframes vary based on the notice served.</p>
             </div>
 
             <!-- Step 4 -->
             <div class="step-card">
-                 <div class="d-flex align-items-center gap-3 "><div class="step-number">4</div>
-                <h3 class="subsection-title">The Hearing & Judge's Decision</h3></div>
-                
+                 <div class="d-flex align-items-center gap-3 ">
+                <div class="step-number">4</div>
+                <h3 class="subsection-title">Court Hearing & Judicial Outcome</h3>
+                </div>
                 <div class="answer-brief">
-                    Judge reviews compliance, tenant defences, and evidence before ruling.
+                    Judge weighs notice validity, contract compliance, tenant defence and landlord evidence.
                 </div>
 
-                <h4 class="text-orange">At hearing:</h4>
+                <h4 class="text-orange"><i class="fa-solid fa-house me-2"></i> At hearings:</h4>
                 <ul>
-                    <li>Tenant may dispute notice validity or claim retaliatory eviction, missing deposit or safety documents</li>
-                    <li>Landlord must present evidence and witness statements</li>
-                    <li>Judge may grant outright, suspended, or conditional possession orders based on fairness and hardship considerations</li>
-                    <li>Protections under the Protection from Eviction Act 1977 still prevent forced eviction without court order</li>
+                    <li>Judges review legal sequence: contract, notice period, compliance documents</li>
+                    <li>Tenant may cite invalid notice due to incorrect form, missing statement, or property complaints</li>
+                    <li>Landlord presents documentary evidence and testimony</li>
+                </ul>
+
+                <h4 class="text-orange"><i class="fa-solid fa-scale-balanced me-2"></i> Possible outcomes:</h4>
+                <ul>
+                    <li>Unconditional possession order</li>
+                    <li>Conditional or suspended order based on hardship</li>
+                    <li>Adjournment to give tenant time to remedy arrears or breach</li>
+                    <li>Dismissal due to procedural or legal errors</li>
                 </ul>
             </div>
 
             <!-- Step 5 -->
             <div class="step-card">
-                <div class="d-flex align-items-center gap-3 "> <div class="step-number">5</div>
-                <h3 class="subsection-title">Enforcement & Bailiffs</h3></div>
+                 <div class="d-flex align-items-center gap-3 ">
+                <div class="step-number">5</div>
+                <h3 class="subsection-title">Enforcement & Bailiffs</h3>
+                </div>
                 
                 <div class="answer-brief">
-                    Landlords must apply for a warrant of possession and use court-appointed bailiffs to execute eviction.
+                    Landlords must obtain a warrant of possession and use court-appointed bailiffs to execute eviction.
                 </div>
 
-                <h4 class="text-orange">After an order:</h4>
+                <h4 class="text-orange"><i class="fa-solid fa-shield-halved me-2"></i> After order:</h4>
                 <ul>
-                    <li>Apply for warrant for possession</li>
-                    <li>Bailiffs serve eviction notice and enforce removal</li>
-                    <li>Illegal evictions without warrant expose landlords to prosecution under the Protection from Eviction Act 1977</li>
+                    <li>Apply for a warrant for possession</li>
+                    <li>Bailiffs execute the eviction in compliance with Welsh enforcement regulations</li>
+                    <li>Any attempt at eviction without warrant violates the Protection from Eviction Act 1977</li>
                 </ul>
             </div>
-        </section>
 
-          <!-- Common Defences & Pitfalls -->
+           </section>
+               <!-- Common Defences & Pitfalls -->
         <section class="content-section mb-5">
-            <h2 class="section-title">Common Tenant Defences & Pitfalls</h2>
+            <h2 class="section-title"><i class="fa-solid fa-circle-exclamation me-2"></i> Avoid Common Pitfalls & Tenant Defences</h2>
 
             <div class="row">
                 <div class="col-md-6">
                     <div class="step-card">
-                        <h3 class="subsection-title">What legal defences might tenants raise?</h3>
+                        <h3 class="subsection-title">What defences do tenants commonly use to delay eviction?</h3>
                         <div class="answer-brief">
-                            Common issues include defective notice, unprotected deposit, repair complaints, or hardship claims.
+                            Invalid notice, missing documentation, repair issues, hardship.
                         </div>
-                        <h4 class="text-orange">Typical defences:</h4>
+                        <h4 style="color:#388e3c;"><i class="fa-solid fa-shield-halved me-2"></i> Frequent defences:</h4>
                         <ul>
-                            <li>Notice incorrectly served or wrong form used</li>
-                            <li>Deposit not registered or prescribed information missing</li>
-                            <li>Complained repairs leading to retaliatory eviction claims</li>
-                            <li>Hardship or delay arguments to delay the hearing</li>
+                            <li>Incorrect notice (wrong duration or form)</li>
+                            <li>Missing contract/statements or late deposit info</li>
+                            <li>Retaliatory eviction claims due to disrepair complaints</li>
+                            <li>Tenant says they cannot find alternative accommodation</li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="step-card">
-                        <h3 class="subsection-title">What errors can make an eviction claim fail?</h3>
+                        <h3 class="subsection-title">What common mistakes can invalidate a claim?</h3>
                         <div class="answer-brief">
-                            Missing compliance documents, incorrect notice periods, and procedural mistakes under CPR Part 55.
+                            Early notice service, incomplete documentation, incorrect procedural steps under CPR Part 55 equivalent.
                         </div>
-                        <h4 class="text-orange">Common mistakes:</h4>
+                        <h4 style="color: #dc2626;"><i class="fa-solid fa-circle-xmark me-2"></i> Practice errors:</h4>
                         <ul>
-                            <li>Serving Section 21 too early (under 4 months) or without prescribed documents</li>
-                            <li>Incorrect grounds or notice length for Section 8</li>
-                            <li>Failure to file Particulars of Claim or serve bundle before hearing</li>
-                            <li>Violating court procedures or Part 6 & 55 service rules</li>
+                            <li>Serving Section 173 before six-month threshold</li>
+                            <li>Incorrect or missing written statement</li>
+                            <li>Failing to protect deposit or issue EPC within time</li>
+                            <li>Filing incomplete evidence bundles or skipping court forms</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
-
-              <!-- FAQ Section -->
-        <section class="py-5 border-bottom" id="faq">
-            <h2 class="text-center display-5 fw-bold mb-5">Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
-                           Can I recover possession without attending court?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Yes—if the tenant vacates following a valid notice before court action begins.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo">
-                            What if the tenant pays arrears before the hearing?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            Courts may delay proceedings if arrears are reduced under two months or cleared.
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree">
-                            Are Section 21 evictions being abolished?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                           The Renters' Rights Bill, expected in early 2026, proposes abolishing Section 21 and strengthening Section 8.
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="text-center mt-4">
-                <a href="index.html" class="cta-button">
-                    <i class="fas fa-question me-2"></i>More Questions? Read the Eviction FAQ
-                </a>
-            </div>
-        </section>
-
-              <!-- Summary Table -->
-        <section class="content-section mb-5">
-            <h2 class="section-title"> Summary: England Eviction Routes</h2>
+         <section class="content-section mb-5">
+            <h2 class="section-title"> Summary: Eviction Routes in Wales</h2>
             <div class="table-responsive">
                 <table class="table summary-table">
                     <thead>
                         <tr>
                             <th>Eviction Type</th>
-                            <th>Notice Type</th>
+                            <th>Notice</th>
                             <th>Notice Period</th>
-                            <th>Court Route</th>
-                            <th>Happens If Tenant Defends?</th>
+                            <th>Court Type</th>
+                            <th>Hearing Required</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><strong>No-Fault (End of Tenancy)</strong></td>
-                            <td>Section 21</td>
-                            <td>2 months</td>
-                            <td>Accelerated</td>
-                            <td>No</td>
+                            <td><strong>No-Fault</strong></td>
+                            <td>Section 173</td>
+                            <td>Serve after 6 months, then 6 months' notice</td>
+                            <td>Accelerated Admin</td>
+                            <td>Only if tenant defends</td>
                         </tr>
                         <tr>
-                            <td><strong>Fault-Based (Breach)</strong></td>
-                            <td>Section 8</td>
-                            <td>2–8 weeks</td>
-                            <td>Full court</td>
-                            <td>Yes</td>
+                            <td><strong>Breach-Based</strong></td>
+                            <td>Section 182</td>
+                            <td>14, 30 days or immediate depending on breach</td>
+                            <td>Standard Hearing</td>
+                            <td>Yes if defended</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </section>
- <!-- CTA Section -->
-         <section id="contact" class="cta-section">
-            <div class="cta-title"> Ready to Start Your Eviction Process?</div>
+         <!-- CTA Section -->
+        <section id="contact" class="cta-section">
+            <div class="cta-title"> Ready to Start Your Wales Eviction Process?</div>
             <div class="cta-subtitle">
-                Strict compliance with statutory documents and procedural rules is key to eviction success. 
-                At Housing Compensation & SLS Solicitors, we offer comprehensive legal support.
+                Strict adherence to statutory timelines and document requirements is essential for successful eviction proceedings in Wales. 
+                At Housing Compensation & SLS Solicitors, we offer comprehensive Welsh legal support.
             </div>
             
             <div class="row text-center mt-4">
-                <div class=" col-md-3 mb-3">
-                    <div class="feature-card">
+                <div class="col-md-3 mb-3">
+                     <div class="feature-card">
                     <div class="h5">Notice Drafting</div>
-                    <p class="small opacity-75">Professional notice preparation</p>
+                    <p class="small opacity-75">Section 173 & 182 notices</p>
                     </div>
                 </div>
-                <div class="col-md-3 mb-3 "><div class="feature-card">
-                    <div class="h5">Court Representation</div>
-                    <p class="small opacity-75">Expert legal advocacy</p>
-                    </div>  
+                <div class="col-md-3 mb-3">
+                     <div class="feature-card">
+                    <div class="h5">Court Filing & Representation</div>
+                    <p class="small opacity-75">Expert Welsh court advocacy</p>
+                    </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="feature-card">
-                    <div class="h5">Evidence Support</div>
-                    <p class="small opacity-75">Complete bundle preparation</p>
+                    <div class="h5">Evidence Bundle Compilation</div>
+                    <p class="small opacity-75">Complete documentation support</p>
                     </div>
                 </div>
                 <div class="col-md-3 mb-3">
                     <div class="feature-card">
                     <div class="h5">Bailiff Enforcement</div>
-                    <p class="small opacity-75">Full execution support</p>
+                    <p class="small opacity-75">Full enforcement support</p>
                     </div>
                 </div>
             </div>
 
             <div class="mt-4">
-                <a href="tel:0333 050 5381" class="cta-button-white me-3"><i class=" bi bi-telephone me-2"></i> Call 0333 050 5381</a>
-                <a href="#" class="cta-button-white"> Start Your Process Today →</a>
+                <p class="mb-3 opacity-90">Fixed-fee eviction packages and tailored support. All services by SRA-regulated solicitors.</p>
+                <a href="tel:03330505381" class="cta-button-white me-3"><i class=" bi bi-telephone me-2"></i> Call 0333 050 5381</a>
+                <a href="#" class="cta-button-white">📝 Begin Your Eviction Case →</a>
             </div>
         </section>
+             <!-- Coverage Section  -->
         <section class="area-coverage-section py-5 border-bottom">
             <h2 class="area-coverage-title">Where do we operate?</h2>
             <p class="area-coverage-description">We serve landlords across England and Wales</p>
             <div class="area-coverage-grid">
                 <div class="area-coverage-item">Birmingham</div>
+                <div class="area-coverage-item">Swanesa</div>
                 <div class="area-coverage-item">Manchester</div>
                 <div class="area-coverage-item">London</div>
                 <div class="area-coverage-item">Cardiff</div>
@@ -511,15 +607,23 @@
                 <div class="area-coverage-item">Brighton & Hove</div>
                 <div class="area-coverage-item">Southampton</div>
                 <div class="area-coverage-item">Derby</div>
+                <div class="area-coverage-item">Newport</div>
+                <div class="area-coverage-item">Aberystwyth</div>
+                <div class="area-coverage-item">Neath</div>
+                <div class="area-coverage-item">Llanelli</div>
+                <div class="area-coverage-item">Caerphilly</div>
+                <div class="area-coverage-item">Merthyr Tydfil</div>
+                <div class="area-coverage-item">Bridgend</div>
+                <div class="area-coverage-item">Wrexham</div>
             </div>
             <p class="mt-3 text-center">
                 <strong>We appear in courts across the UK, including Birmingham Civil Justice Centre, London Central
                     County Court, and Leeds Combined Court.</strong>
             </p>
         </section>
-
+        
     </main>
-    <!-- Footer -->
+ <!-- Footer -->
      <footer class="mt-5">
     <div class="container">
       <div class="row">
