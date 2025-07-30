@@ -42,6 +42,22 @@
     .navbar-brand {
       font-weight: bold;
     }
+
+              /* accordion */
+         .accordion-button:not(.collapsed) {
+      background-color: #cc6918;
+      color: white;
+    }
+
+    .accordion-button.collapsed {
+      background-color: #fff0e5;
+      color: #cc6918;
+    }
+
+    .accordion-body {
+      background-color: #fff8f2;
+    }
+
     footer {
       background-color: var(--primary-orange);
       color: white;
