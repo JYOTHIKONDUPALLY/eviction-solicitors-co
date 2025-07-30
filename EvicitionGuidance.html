@@ -110,7 +110,38 @@
    background: var(--bg-light);
   color:var(--primary-orange)
 }
+ /* Specialist Cards */
+        .specialist-card {
+            background: white;
+            border: 2px solid var(--border-light);
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 1rem 0;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
 
+        .specialist-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+        }
+
+        .specialist-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(204, 105, 24, 0.15);
+            border-color: var(--secondary-orange);
+        }
+
+        .specialist-card h4 {
+            color: var(--primary-orange);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -236,7 +267,7 @@
                 <div class="answer-brief">
                     Use Section 21 for no-fault evictions; Section 8 when the tenant breaches the tenancy.
                     </div>
-                   <div class="row">
+                   <div class="row ">
                     <div class="col-md-6">
                         <h4 class="text-orange">Section 21 Checklist:</h4>
                         <ul>
