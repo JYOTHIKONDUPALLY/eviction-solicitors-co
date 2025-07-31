@@ -9,12 +9,14 @@
       --bg-light: #fff8f2;
       --bg-section: #fffaf4;
       --bg-how-help: #f9fafb;
+      --text-primary: #333;
     }
 
     body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             line-height: 1.6;
             color: var(--text-primary);
+                 background-color: var(--bg-light);
         }
      nav .container {
       color: white;
@@ -57,6 +59,7 @@
     .accordion-body {
       background-color: #fff8f2;
     }
+
 
     footer {
       background-color: var(--primary-orange);

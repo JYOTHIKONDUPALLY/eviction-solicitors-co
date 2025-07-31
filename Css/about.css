@@ -1,0 +1,72 @@
+ .why-section {
+      padding: 80px 0;
+      background-color: var(--bg-section);
+    }
+
+    .why-section h2 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 30px;
+      color: var(--primary-orange);
+    }
+
+    .why-card {
+      border: none;
+      background: white;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+      padding: 30px;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .why-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .how-help-modern {
+      background-color: var(--bg-how-help);
+    }
+
+    .half-oval-wrapper {
+      width: 100%;
+      max-width: 420px;
+      height: 400px;
+      overflow: hidden;
+      border-top-left-radius: 200px;
+      border-bottom-left-radius: 200px;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .half-oval-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .stats-container {
+      background-color: var(--secondary-orange);
+      width: 80%;
+    }
+
+    .stat-icon,
+    .stat-text {
+      color: white;
+    }
+
+    /* On screens smaller than 576px: reverse colors */
+    @media (max-width: 575.98px) {
+      .stats-container {
+        background-color: var(--bg-light) !important;
+      }
+
+      .stat-icon {
+        color: var(--secondary-orange) !important;
+      }
+
+      .stat-text {
+        color: black !important;
+      }
+    }
