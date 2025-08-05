@@ -13,6 +13,8 @@
      --wales-red: #d32f2f;
     --wales-green: #388e3c;
     --wales-orange: #b08a00;
+     --text-dark: #1e293b;
+     --border-color: #e2e8f0;
 }
 
 /* Hero Section */
@@ -344,3 +346,59 @@
             margin: 0.5rem 0;
         }
       
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            border: 2px solid var(--secondary-orange);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 0.2rem rgba(204, 105, 24, 0.25);
+            outline: none;
+        }
+
+        .form-control.textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary-orange);
+            color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background: var(--dark-orange);
+            box-shadow: 0 4px 15px rgba(204, 105, 24, 0.3);
+        }

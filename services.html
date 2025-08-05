@@ -22,6 +22,7 @@
   </title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
   <style>
     :root {
       --primary-orange: #cc6918;
@@ -193,6 +194,58 @@
       }
     }
 
+
+    .government-link {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.75rem 1.25rem;
+      background: var(--bg-section);
+      border: 1px solid var(--secondary-orange);
+      border-radius: 0.75rem;
+      color: var(--primary-orange);
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      margin-bottom: 2rem;
+    }
+
+    .government-link:hover {
+      background: var(--primary-orange);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    .government-link i {
+      margin-right: 0.5rem;
+    }
+
+    .info-link {
+      display: flex;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      background: white;
+      border: 2px solid var(--secondary-orange);
+      border-radius: 10px;
+      text-decoration: none;
+      color: var(--primary-orange);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .info-link:hover {
+      background: var(--secondary-orange);
+      color: var(--text-light);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .info-link i {
+      margin-right: 0.75rem;
+      font-size: 1.1rem;
+    }
+
+
     footer {
       background-color: var(--primary-orange);
       color: white;
@@ -349,92 +402,119 @@
       <h2>Our Legal Services</h2>
 
       <!-- Service 1 -->
-      <div class="row align-items-center mb-5 p-4" id="eviction-notices" style="cursor: pointer;">
-        <div class="col-md-5 d-flex flex-column h-100">
-          <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+      <div class="container mb-5 p-4" id="eviction-notices" style="cursor: pointer;">
+
+        <!-- Row 1: Image and Text -->
+        <div class="row align-items-center mb-4">
+          <!-- Left: Image -->
+          <div class="col-md-6 mb-3 mb-md-0 text-center">
             <img src="assets/eviction notice.png" alt="Eviction Notices for Landlords" class="img-fluid rounded shadow"
-              style="width: 100%; height: 300px;" />
+              style="max-height: 300px; object-fit: cover;" />
           </div>
-        </div>
-        <div class="col-md-7 d-flex flex-column h-100 mt-3">
-          <div class="flex-grow-1">
+
+          <!-- Right: Text -->
+          <div class="col-md-6">
             <h4>Eviction Notice Service – Section 8 or Section 21 or Other Notice</h4>
             <p>
               We professionally draft and serve eviction notices including Section 8, Section 21, or any other legal
               notice as required. Get expert help with the tenant eviction process, including step-by-step guidance and
               landlord support. Visit the official UK eviction process page for more info.
             </p>
-            <p class="mt-2">
-              For official government guidance, visit the
-              <span class="px-4 py-2 mt-2 text-black">
-                UK eviction process page
-              </span>.
-            </p>
-            <div class="row mt-3 g-3">
-              <div class="col-lg-4 col-md-6 col-12">
-                <a class="btn btn-custom fw-semibold rounded-pill w-100" href="Section21Service.html">Section 21
-                  Info</a>
+            <a href="https://www.gov.uk/evicting-tenants" class="government-link d-inline-flex align-items-center">
+              <i class="fa-solid fa-arrow-up-right-from-square me-2"></i>
+              UK Government Eviction Guidelines
+            </a>
+          </div>
+        </div>
+
+        <!-- Row 2: Price Box and Info Buttons -->
+        <div class="row align-items-start">
+          <!-- Left: Price Box -->
+          <div class="col-md-6 mb-3 mb-md-0">
+            <div class="pricing-box p-3 rounded shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h5 class="text-dark fw-bold mb-0">£100 + VAT</h5>
+                <span class="badge bg-warning text-dark">
+                  <i class="fas fa-star me-1"></i>Best Value
+                </span>
               </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                <a class="btn btn-custom fw-semibold rounded-pill w-100" href="Section8Service.html">Section 8 Info</a>
-              </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                <a class="btn btn-custom fw-semibold rounded-pill w-100" href="WalesService.html">Eviction in wales</a>
-              </div>
+              <p class="small text-muted mb-2">
+                <i class="fas fa-check-circle text-success me-2"></i>
+                Expert advice and legally compliant eviction notice drafting.
+              </p>
+              <a class="btn btn-custom fw-semibold rounded-pill w-100" href="http://slssolicitors.co.uk/payment-page/">
+                Buy Now
+              </a>
             </div>
           </div>
-          <div class="pricing-box p-2 rounded shadow-sm">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="text-dark fw-bold mb-0">£100 + VAT</h5>
-              <span class="badge bg-warning text-dark">Best Value</span>
-            </div>
 
-            <p class="small mb-0 text-muted">Expert advice and legally compliant eviction notice drafting.</p>
-            <div class="row mt-3 g-3">
-              <div class="col-12">
-                <a class="btn btn-custom fw-semibold rounded-pill w-100"
-                  href="http://slssolicitors.co.uk/payment-page/">Buy Now</a>
+          <!-- Right: Info Buttons -->
+          <div class="col-md-6">
+            <h5>Learn More About:</h5>
+            <div class="row g-2">
+              <div class="col-12 col-md-6">
+                <a class="btn info-link fw-semibold w-100" href="Section21Service.html">Section 21 Notice Guide</a>
+              </div>
+              <div class="col-12 col-md-6">
+                <a class="btn info-link fw-semibold w-100" href="Section8Service.html">Section 8 Notice Guide</a>
+              </div>
+              <div class="col-12 col-md-6">
+                <a class="btn info-link fw-semibold w-100" href="WalesService.html">Wales Notice Guide</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
-
-
+      
       <!-- Service 2 -->
-      <div class="row align-items-center mb-5 p-4 flex-md-row-reverse" id="court-representation">
-        <div class="col-md-5 d-flex flex-column h-100">
-          <div class="flex-grow-1 d-flex align-items-center justify-content-center">
-            <img src="assets/legalAdvice.png" alt="Court representation for landlord eviction cases"
-              class="img-fluid rounded shadow" style="width: 100%; height: 300px;" />
-          </div>
-        </div>
-        <div class="col-md-7 d-flex flex-column h-100 mt-3">
-          <div class="flex-grow-1">
+      <div class="container mb-5 p-4" id="court-representation" style="cursor: pointer;">
+
+        <!-- Row 1: Text (left) and Image (right) -->
+        <div class="row align-items-center mb-4">
+          <!-- Left: Text -->
+          <div class="col-md-6">
             <h4>Guaranteed Eviction Package (Uncontested Cases)</h4>
             <p>
               Our expert eviction solicitors handle possession hearings across England and Wales. We draft the court
-              documents, represent you in court, and instruct bailiffs if and when needed.<br>This service covers full
-              legal representation but excludes any court fees and any replies to tenant defences.</br>Get trusted
-              support through the entire eviction court process to boost your chances of success.
+              documents, represent you in court, and instruct bailiffs if and when needed.
+              <br>This service covers full legal representation but excludes any court fees and any replies to tenant
+              defences.</br>
+              Get trusted support through the entire eviction court process to boost your chances of success.
             </p>
-            <div class="row mt-3 g-3">
-              <div class="col-lg-4 col-md-6 col-12">
-                <a class="btn btn-custom fw-semibold rounded-pill w-100" href="EvicitionGuidance.html"> Legal Eviction
-                  Info</a>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="col-md-6 text-center">
+            <img src="assets/legalAdvice.png" alt="Court representation for landlord eviction cases"
+             class="img-fluid rounded shadow"  style="max-height: 300px; object-fit: cover;" />
+          </div>
+        </div>
+
+        <!-- Row 2: Price Box (left) and Info Buttons (right) -->
+        <div class="row align-items-start">
+          <!-- Left:  Info Buttons -->
+                  <div class="col-md-6">
+            <h5>Learn More About:</h5>
+            <div class="row g-2">
+              <div class="col-12 col-md-6">
+                <a class="btn info-link fw-semibold w-100" href="EvicitionGuidance.html">Legal Eviction Info</a>
               </div>
-              <div class="col-lg-4 col-md-6 col-12">
-                <a class="btn btn-custom fw-semibold rounded-pill w-100" href="WalesEvictionGuidance.html">Legal
-                  Eviction In Wales</a>
+              <div class="col-12 col-md-6">
+                <a class="btn info-link fw-semibold w-100" href="WalesEvictionGuidance.html">Legal Eviction In Wales</a>
               </div>
             </div>
-            <div class="pricing-box p-3 rounded shadow-sm">
+          </div>
+
+          <!-- Right: Price Box  -->
+            <div class="col-md-6 mb-3 mb-md-0">
+            <div class="pricing-box p-3 rounded shadow-sm h-100">
               <div class="d-flex justify-content-between align-items-center mb-3">
                 <h5 class="text-dark fw-bold mb-0">£1500 + VAT</h5>
-                <span class="badge bg-warning text-dark"> Best Value</span>
+                <span class="badge bg-warning text-dark"> <i class="fas fa-star me-1"></i>Best Value</span>
               </div>
-              <p class="small mb-0 text-muted">Full court preparation & representation including bailiff attendance.</p>
+              <p class="small mb-0 text-muted">
+               <i class="fas fa-check-circle text-success me-2"></i> Full court preparation & representation including bailiff attendance.
+              </p>
               <a href="http://slssolicitors.co.uk/payment-page/"
                 class="btn btn-dark w-100 mt-3 fw-semibold rounded-pill">Buy Now</a>
             </div>
@@ -463,43 +543,62 @@
           <div class="pricing-box p-3 rounded shadow-sm">
             <div class="d-flex justify-content-between align-items-center mb-3">
               <h5 class="text-dark fw-bold mb-0"> £2500 + VAT</h5>
-              <span class="badge bg-warning text-dark">Best Value</span>
+              <span class="badge bg-warning text-dark"> <i class="fas fa-star me-1"></i>Best Value</span>
             </div>
-            <p class="small mb-0 text-muted">Guaranteed Eviction including full legal representation and responding to
+            <p class="small mb-0 text-muted"><i class="fas fa-check-circle text-success me-2"></i>Guaranteed Eviction including full legal representation and responding to
               any Defence</p>
             <a href="http://slssolicitors.co.uk/payment-page/"
               class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
           </div>
         </div>
       </div>
-
-
+      
       <!-- Service 4 -->
-      <div class="row align-items-center mt-5 mb-3 p-4 flex-md-row-reverse" id="section8">
-        <div class="col-md-5 d-flex flex-column h-100">
-          <div class="flex-grow-1 d-flex align-items-center justify-content-center">
+       <div class="container mb-5 p-4" id="court-representation" style="cursor: pointer;">
+        <!-- Row 1: Text (left) and Image (right) -->
+        <div class="row align-items-center mb-4">
+          <!-- Left: Text -->
+          <div class="col-md-6">
+            <h4>Guaranteed Eviction Package (Uncontested Cases)</h4>
+            <p>
+              Our expert eviction solicitors handle possession hearings across England and Wales. We draft the court
+              documents, represent you in court, and instruct bailiffs if and when needed.
+              <br>This service covers full legal representation but excludes any court fees and any replies to tenant
+              defences.</br>
+              Get trusted support through the entire eviction court process to boost your chances of success.
+            </p>
+          </div>
+
+          <!-- Right: Image -->
+          <div class="col-md-6 text-center">
             <img src="assets/section8.png" alt="Section 8 notice for tenant eviction with legal grounds"
-              class="img-fluid rounded shadow" style="width: 100%; height: 300px;" />
+              class="img-fluid rounded shadow" style="max-height: 300px; object-fit: cover;" />
           </div>
         </div>
-        <div class="col-md-7 d-flex flex-column h-100 mt-3">
-          <div class="flex-grow-1">
-            <h4>Complicated Eviction Cases – Expert Legal Support</h4>
-            <p>
-              We professionally draft and serve eviction notices including Section 8 or Section 21, or any other legal
-              notice on your instruction. If you require comprehensive advice please contact us today. For official
-              government guidance, visit the UK eviction process page on https://www.gov.uk/evicting-tenants
-            </p>
-            <a class="btn btn-custom fw-semibold rounded-pill w-100" href="ComplexEvictionService.html">Know More </a>
-          </div>
-          <div class="pricing-box p-3 rounded shadow-sm">
-            <div class="d-flex justify-content-between align-items-center mb-3">
-              <h5 class="text-dark fw-bold mb-0"> £350 + VAT</h5>
-              <span class="badge bg-warning text-dark">Best Value</span>
+        <!-- Row 2: Price Box (left) and Info Buttons (right) -->
+        <div class="row align-items-start">
+          <!-- Left: Info Buttons -->
+           <div class="col-md-6">
+            <h5>Learn More About:</h5>
+            <div class="row g-2">
+              <div class="col-12 ">
+                  <a class="btn info-link fw-semibold  w-100" href="ComplexEvictionService.html">Complex Case Guide </a>
+              </div>
             </div>
-            <p class="small mb-0 text-muted">Custom handling of complex cases with hourly billing.</p>
-            <a href="http://slssolicitors.co.uk/payment-page/"
-              class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
+          </div>
+          <!-- Right: Pricing Box -->
+          <div class="col-md-6 mb-3 mb-md-0">
+            <div class="pricing-box p-3 rounded shadow-sm h-100">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <h5 class="text-dark fw-bold mb-0">£350 + VAT</h5>
+                <span class="badge bg-warning text-dark"> <i class="fas fa-star me-1"></i>Best Value</span>
+              </div>
+              <p class="small mb-0 text-muted">
+                <i class="fas fa-check-circle text-success me-2"></i>Custom handling of complex cases with hourly billing.
+              </p>
+              <a href="http://slssolicitors.co.uk/payment-page/"
+                class="btn btn-dark w-100 mt-3 fw-semibold rounded-pill">Buy Now</a>
+            </div>
           </div>
         </div>
       </div>
@@ -520,16 +619,23 @@
               and enforcement action. Our team ensures proper documentation and
               representation to maximise recovery success.
             </p>
-            <a class="btn btn-custom fw-semibold rounded-pill w-100" href="RecoveryService.html">Know More </a>
           </div>
           <div class="pricing-box p-3 rounded shadow-sm">
             <div class="d-flex justify-content-between align-items-center mb-3">
               <h5 class="text-dark fw-bold mb-0"> £1300 + VAT + Disbursements</h5>
-              <span class="badge bg-warning text-dark"> Best Value</span>
+              <span class="badge bg-warning text-dark"> <i class="fas fa-star me-1"></i> Best Value</span>
             </div>
-            <p class="small mb-0 text-muted">Help recovering rent arrears. Additional disbursements may apply.</p>
+            <p class="small mb-0 text-muted"><i class="fas fa-check-circle text-success me-2"></i>Help recovering rent arrears. Additional disbursements may apply.</p>
             <a href="http://slssolicitors.co.uk/payment-page/"
               class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
+          </div>
+           <div class="col-md-6 mt-3">
+            <h5>Learn More About:</h5>
+            <div class="row g-2">
+              <div class="col-12 ">
+                  <a class="btn info-link fw-semibold  w-100" href="RecoveryService.html">Rent Arrears Guide</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -572,7 +678,7 @@
         </div>
 
         <!-- Right Side: Links Section -->
-         <div class="col-md-6 text-center text-md-start ">
+        <div class="col-md-6 text-center text-md-start ">
           <div class="text-center mb-4">
             <div class="top-rated-badge">
               <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">
