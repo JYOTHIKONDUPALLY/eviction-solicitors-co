@@ -47,7 +47,7 @@
               <a class="nav-link" href="index.html">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="about.html">About</a>
+              <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="services.html">Services</a>
@@ -205,24 +205,24 @@
           <div class="row text-center py-5 px-2 rounded stats-container">
             <div class="col-md-3 col-6 mb-4">
               <i class="fas fa-gavel fs-1 mb-2 stat-icon"></i>
-              <h3 class="fw-bold stat-text">100+</h3>
+              <h3 class="fw-bold stat-text">150+</h3>
               <p class="stat-text mb-0">
                 Successful eviction cases resolved nationwide
               </p>
             </div>
             <div class="col-md-3 col-6 mb-4">
               <i class="fas fa-hand-holding-usd fs-1 mb-2 stat-icon"></i>
-              <h3 class="fw-bold stat-text">£20k+</h3>
+              <h3 class="fw-bold stat-text">£113k+</h3>
               <p class="stat-text mb-0">In recovered unpaid rent for our clients</p>
             </div>
             <div class="col-md-3 col-6 mb-4">
-              <i class="fas fa-map-marked-alt fs-1 mb-2 stat-icon"></i>
-              <h3 class="fw-bold stat-text">7</h3>
-              <p class="stat-text mb-0">Office locations across England & Wales</p>
+             <i class="fa-solid fa-award fs-1 mb-2 stat-icon"></i>
+              <h3 class="fw-bold stat-text">20+</h3>
+              <p class="stat-text mb-0">Years of legal experience</p>
             </div>
             <div class="col-md-3 col-6 mb-4">
               <i class="fas fa-star fs-1 mb-2 stat-icon"></i>
-              <h3 class="fw-bold stat-text">4.3</h3>
+              <h3 class="fw-bold stat-text">4.8</h3>
               <p class="stat-text mb-0">Rated by hundreds of happy landlords</p>
             </div>
           </div>
@@ -230,25 +230,99 @@
       </div>
     </section>
 
-    <!-- Call to Action Section -->
-    <section class="py-5" style="background-color: #fffaf4;">
-      <div class="container text-center">
-        <p class="lead mb-4">
-          We provide expert legal support tailored to your needs. Discover more
-          about our journey and team.
+   <!-- Call to Action Section -->
+<section class="py-5" style="background-color: #fffaf4;">
+  <div class="container text-center">
+    <p class="lead mb-4">
+      We provide expert legal support tailored to your needs. Discover more
+      about our journey and team.
+    </p>
+    
+    <!-- Action Buttons -->
+    <div class="mb-4">
+      <a href="services.html" class="btn px-4 py-2 mb-2"
+         style="background-color: #cc6918; color: white;">
+        <i class="fas fa-briefcase me-2"></i>Our Services
+      </a>
+    </div>
+
+     <!-- Contact Form Section Below Testimonial -->
+  <section class="container formSection my-5">
+    <h2 class="text-center mb-4">Get In Touch With Us</h2>
+    <div class="row justify-content-center">
+      <div class="col-lg-6">
+        <div class="card shadow p-4">
+          <form id="contactFormBelow" method="POST">
+            <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
+            <input type="hidden" name="from_name" value="Eviction Lawyers Website">
+            <input type="hidden" name="subject" value="New Contact Form Submission">
+            <input type="checkbox" name="botcheck" style="display: none;">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name" required name="name" />
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Email Address" required name="email" />
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Phone Number" required name="phone" />
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Reason for eviction" required
+                name="reason"></textarea>
+            </div>
+            <button type="submit" class="btn  w-100">Submit</button>
+          </form>
+          <div class="form-success mt-3" id="formSuccessBelow" style="display: none;">
+            <strong>Success!</strong> Your message has been sent successfully.
+          </div>
+          <div class="form-error mt-3" id="formErrorBelow" style="display: none;">
+            <strong>Error!</strong> There was a problem sending your message. Please try again.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Legal Compliance Information -->
+    <p class="mb-3">
+      <i class="fas fa-shield-alt text-success me-2"></i>
+      Our qualified legal professionals guarantee full compliance with current UK housing legislation and regulatory requirements.
+    </p>
+
+    <!-- External Resources -->
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <p class="mb-2">
+          <i class="fas fa-external-link-alt me-1" style="color: #cc6918;"></i>
+          <strong>Official Resources:</strong>
         </p>
-        <a href="contact.html" class="btn px-4 py-2 mb-4 text-white" 
-           style="background-color: #e08a35;">Contact Us</a>
-        <p class="mb-0">
-          Our legal team ensures all procedures align with official UK laws. For
-          more details, check the
-          <a href="https://www.gov.uk/evicting-tenants" target="_blank" rel="noopener noreferrer"
-             class="text-decoration-none text-black">
-            official government eviction guidelines
-          </a>.
+        
+        <div class="d-flex flex-wrap justify-content-center gap-3 mb-3">
+          <a href="https://www.gov.uk/evicting-tenants"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="text-decoration-none fw-semibold border-bottom border-2"
+             style="color: #cc6918;">
+            <i class="fas fa-landmark me-1" style="color: #cc6918;"></i>
+            UK Government Eviction Guidelines
+          </a>
+             |
+              <p class="mb-0">
+                <i class="fas fa-balance-scale me-1" style="color: #cc6918;"></i>
+          <a href="https://www.legislation.gov.uk/ukpga/1988/50/contents"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="text-decoration-none fw-semibold"
+             style="color: #cc6918;">
+            Housing Act 1988
+          </a>
+          </p>
+        </div>
         </p>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
   </main>
 
   <!-- Fixed Call Button -->
@@ -444,5 +518,37 @@
     hamburgerIcon.classList.remove('d-none');
     closeIcon.classList.add('d-none');
   });
+    document.addEventListener('DOMContentLoaded', function () {
+    const formBelow = document.getElementById('contactFormBelow');
+    const successMessageBelow = document.getElementById('formSuccessBelow');
+    const errorMessageBelow = document.getElementById('formErrorBelow');
+
+    formBelow.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const formData = new FormData(formBelow);
+
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      })
+        .then(response => {
+          if (response.ok) {
+            formBelow.reset();
+            successMessageBelow.style.display = 'block';
+            errorMessageBelow.style.display = 'none';
+            setTimeout(() => successMessageBelow.style.display = 'none', 5000);
+          } else {
+            errorMessageBelow.style.display = 'block';
+            successMessageBelow.style.display = 'none';
+          }
+        })
+        .catch(() => {
+          errorMessageBelow.style.display = 'block';
+          successMessageBelow.style.display = 'none';
+          setTimeout(() => errorMessageBelow.style.display = 'none', 5000);
+        });
+    });
+  });
+
 </script>
   </html>

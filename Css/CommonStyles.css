@@ -217,3 +217,30 @@
 
     }
 
+    .form-success {
+      display: none;
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .form-error {
+      display: none;
+      background-color: #f8d7da;
+      color: #721c24;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+    }
+
+    .formSection h2 {
+      color: #a85613;
+    }
+
+    .formSection .btn {
+      background-color: #cc6918;
+      color: white;
+    }
+
