@@ -1,56 +1,312 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complicated Eviction & Rent Arrears Recovery Services - England & Wales</title>
-    <meta name="description"
-        content="Complete landlord eviction guide for Wales: Section 173 & 182 notices, court proceedings, defences and enforcement under the Renting Homes (Wales) Act 2016.">
+    <title>Eviction & Housing Law Insights 2025 | Expert Legal Blog</title>
+    <meta name="description" content="Expert eviction law blog covering Section 8, Section 21, rent arrears, tenant rights, and court procedures. Get the latest 2025 updates and legal insights.">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="Css/CommonStyles.css">
-    <link rel="stylesheet" href="Css/CommonServiceStyle.css">
+        <link rel="stylesheet" href="./Css/CommonStyles.css">
+    <link rel="stylesheet" href="./Css/CommonServiceStyle.css">
     <style>
-        /* Cards */
-        .service-card {
+        /* Section Styling */
+
+        /* .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 80px;
+            height: 4px;
+            background: var(--primary-orange);
+            border-radius: 2px;
+        } */
+
+
+        /* Why Follow Section */
+        .why-follow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+  .pricing-badge {
+            background: var(--bg-light);
+            color: var(--text-dark);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .feature-card {
             background: white;
-            border-radius: 8px;
             padding: 2rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            border: 2px solid var(--secondary-orange);
             transition: all 0.3s ease;
-            border-top: 3px solid var(--secondary-orange);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        .service-card:hover {
+        .feature-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 8px 25px rgba(204, 105, 24, 0.15);
+            border-color: var(--primary-orange);
         }
 
-        .service-card h4 {
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-icon i {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .feature-description {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        /* Blog Categories */
+        .categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .category-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .category-card:hover {
+            border-color: var(--primary-orange);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(204, 105, 24, 0.1);
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 700;
             color: var(--primary-orange);
             margin-bottom: 1rem;
         }
 
-        .service-card i {
-            color: var(--secondary-orange);
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
+        .category-description {
+            color: #6b7280;
+            line-height: 1.6;
         }
 
-        .accordion-button:not(.collapsed) {
-            background-color: #cc6918;
+
+        /* Contact Form */
+        .contact-form {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            border: 2px solid var(--secondary-orange);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .form-control {
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            padding: 1rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-orange);
+            box-shadow: 0 0 0 0.2rem rgba(204, 105, 24, 0.25);
+            outline: none;
+        }
+
+        .form-control.textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: var(--primary-orange);
             color: white;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            cursor: pointer;
         }
 
-        .accordion-button.collapsed {
-            background-color: #fff0e5;
-            color: #cc6918;
+        .submit-btn:hover {
+            background: var(--dark-orange);
+            transform: translateY(-2px);
         }
 
-        .accordion-body {
-            background-color: #fff8f2;
+        /* FAQ Section */
+        .faq-item {
+            background: white;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            border: 2px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--secondary-orange);
+        }
+
+        .faq-question {
+            padding: 1.5rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0;
+        }
+
+        .faq-question:hover {
+            color: var(--primary-orange);
+        }
+
+        .faq-answer {
+            padding: 0 1.5rem 1.5rem;
+            color: #6b7280;
+            line-height: 1.7;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-icon {
+            color: var(--primary-orange);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            background: var(--primary-orange);
+            color: white;
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            margin: 4rem 0;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 2rem auto 0;
+        }
+
+        .newsletter-input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .newsletter-btn {
+            background: white;
+            color: var(--primary-orange);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-btn:hover {
+            background: var(--bg-light);
+            transform: translateY(-2px);
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .categories-grid,
+            .why-follow-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .pricing-amount {
+                font-size: 3rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+            }
+            
+            .contact-form,
+            .pricing-section {
+                padding: 2rem;
+            }
         }
         .contact-form::before {
             content: '';
@@ -262,9 +518,7 @@
         }
     </style>
 </head>
-
 <body>
-    <!-- Sticky Navigation -->
     <div class="sticky-top">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
@@ -315,16 +569,18 @@
         </div>
     </div>
     <!-- Hero Section -->
-    <section class="hero-section py-5">
+    <section class="hero-section mb-3 py-4">
         <div class="container">
             <div class="row justify-content-center text-center">
-                <div class="col-lg-10">
-                    <h1 class="hero-title display-3 fw-bold mb-4"> Rent Arrears Recovery Services
-                    </h1>
-                    <p class="hero-subtitle fs-5 text-muted mb-4 lh-lg">
-                        Expert Legal Support Beyond Section 21 & Section 8 for England & Wales
-                    </p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+                 <div class="col-lg-10">
+                     <h3 class="hero-title display-3 fw-bold mb-4">Eviction & Housing Law Insights 2025</h1>
+                      <p class="hero-subtitle fade-in">Welcome to Our Eviction Law Blog</p>
+                       <!-- <p class="hero-subtitle fs-5 text-muted mb-4 lh-lg">
+                    Navigating eviction law can be complex and stressful. Whether you're a landlord, tenant, or legal professional, 
+                    staying informed about the latest legal updates, best practices, and eviction strategies is essential. Our blog is 
+                    your go-to resource for clear, practical, and up-to-date information on all aspects of eviction law in England and Wales.
+                </p> -->
+                <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
                         <a href="services.html" class="btn btn-primary-custom btn-lg px-4">
                             <i class="fas fa-arrow-right me-2"></i>Our Services
                         </a>
@@ -332,238 +588,161 @@
                             <i class="fas fa-phone me-2"></i>Get Consultation
                         </a>
                     </div>
-                </div>
+                 </div>
+               
+               
+               
             </div>
         </div>
     </section>
-    <!-- Main section -->
-    <main class="container my-5">
-        <section class="content-section py-5 border-bottom">
-            <h2 class="section-title">What is Rent Arrears Recovery?</h2>
-            <p class="lead">Recovering possession and unpaid rent often starts with standard notices, but many landlords
-                face complex cases involving informal agreements, lodgers, squatters, HMOs, and disputed arrears.</p>
-        </section>
-        <section class="content-section py-5 border-bottom">
-            <h2 class="section-title display-5 fw-bold mb-3">Why Some Cases Fall Outside Standard Eviction Processes
-            </h2>
-            <p>We provide a full range of services for complicated eviction cases, including:</p>
-            <div class="row">
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-file-contract"></i>
-                        <h4>Informal Agreements</h4>
-                        <p>No formal contracts or tenancy documentation requiring bespoke legal strategies.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-users"></i>
-                        <h4>Complex Occupations</h4>
-                        <p>Lodgers, licence holders, or implied tenants with varied legal statuses.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-home"></i>
-                        <h4>HMO Situations</h4>
-                        <p>Houses in Multiple Occupation with various licence or tenancy arrangements.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-user-slash"></i>
-                        <h4>Squatters & Trespassers</h4>
-                        <p>Unauthorized occupants with no legal tenancy requiring specialized removal procedures.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-pound-sign"></i>
-                        <h4>Disputed Arrears</h4>
-                        <p>Multi-party liability scenarios and missing tenant complications.</p>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="service-card">
-                        <i class="fas fa-search"></i>
-                        <h4>Tenant Tracing</h4>
-                        <p>Locating absconded tenants and pursuing enforcement across jurisdictions.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- Process Timeline -->
-        <section id="process" class="content-section py-5 border-bottom">
-            <div class="container">
-                <h2 class="section-title display-5 fw-bold mb-3">Our 4-Stage Enforcement Process</h2>
-                <div class="row">
-                    <div class="col-12">
-                        <div class="d-flex flex-column  gap-4">
-                            <div class="d-flex align-items-start">
-                                <div
-                                    class="timeline-number d-flex align-items-center justify-content-center me-4 flex-shrink-0">
-                                    1</div>
-                                <div class="timeline-content">
-                                    <h6>Arrears Assessment</h6>
-                                    <p>Review court orders, tenant profiles, and income/employment data to determine the
-                                        best recovery strategy.</p>
-                                </div>
-                            </div>
-
-                            <div class="d-flex align-items-start">
-                                <div
-                                    class="timeline-number d-flex align-items-center justify-content-center me-4 flex-shrink-0">
-                                    2</div>
-                                <div class="timeline-content">
-                                    <h6>Tracing & Locate</h6>
-                                    <p>Using investigator networks to locate debtor and assets for effective enforcement
-                                        action.</p>
-                                </div>
-                            </div>
-                            <div class="d-flex align-items-start">
-                                <div
-                                    class="timeline-number d-flex align-items-center justify-content-center me-4 flex-shrink-0">
-                                    3</div>
-                                <div class="timeline-content">
-                                    <h6>Enforce Judgments</h6>
-                                    <p>Apply for CCJ, Attachment of Earnings, Debt Orders, or administer bailiff
-                                        enforcement.</p>
-                                </div>
-                            </div>
-
-
-                            <div class="d-flex align-items-start">
-                                <div
-                                    class="timeline-number d-flex align-items-center justify-content-center me-4 flex-shrink-0">
-                                    4</div>
-                                <div class="timeline-content">
-                                    <h6>Ongoing Recovery</h6>
-                                    <p>Continue recovery efforts or advise on bankruptcy/write-off if no recoverable
-                                        assets exist.</p>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-
-        </section>
-        <!-- Enforcement Options -->
-        <section id="enforcement" class="content-section py-5 border-bottom">
-            <div class="container">
-                <h2 class="section-title display-5 fw-bold mb-3">Enforcement Options After Possession Order</h2>
-                <div class="row">
-                    <div class="col-lg-6 content-section">
-                        <h4 class="text-primary-orange mb-3"><i class="fas fa-hammer me-2"></i>Possession Enforcement
-                        </h4>
-                        <ul>
-                            <li><strong>County Court Bailiffs:</strong> Standard enforcement with 4-12 weeks wait time
-                            </li>
-                            <li><strong>High Court Enforcement Officers:</strong> Faster execution within 7 days
-                                (requires Form N293A transfer)</li>
-                            <li><strong>Urgent Cases:</strong> Ideal for high-value arrears requiring immediate action
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-6 content-section">
-                        <h4 class="text-primary-orange mb-3"><i class="fas fa-coins me-2"></i>Money Judgment Enforcement
-                        </h4>
-                        <ul>
-                            <li><strong>County Court Judgment (CCJ):</strong> Affects credit score for 6 years,
-                                motivates payment</li>
-                            <li><strong>Writ/Warrant of Control:</strong> Seize goods or arrange controlled goods
-                                agreements</li>
-                            <li><strong>Attachment of Earnings:</strong> Direct deductions from debtor's wages</li>
-                            <li><strong>Third-Party Debt Order:</strong> Freeze funds in debtor's bank accounts</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="alert-custom mt-4">
-                    <div class="alert-title"><i class="fas fa-exclamation-triangle me-2"></i>Common Pitfalls to Avoid
-                    </div>
-                    <p class="mb-0">Failing to promptly register CCJ, using wrong enforcement route, attempting
-                        collection from unsupported legal obligations, not using tracing services when tenant absconds,
-                        or ignoring HMO licensing requirements.</p>
-                </div>
-            </div>
-        </section>
-
-          <!-- rent recovery pricing section -->         
-<section class="pricing-box" id="pricing">             
-    <h2 class="pricing-title">Rent Recovery Legal Support – Expert Services for Unpaid Rent & Complex Cases</h2>             
-    <p>Struggling to recover unpaid rent from tenants? Our specialist solicitors provide comprehensive legal support for rent recovery, possession proceedings, and complex landlord situations involving informal agreements, lodgers, squatters, and HMO disputes across England and Wales.</p>             
-    
-    <div class="pricing-amount text-center">£1300 </div>             
-    <div class="pricing-text text-center">+ VAT + Disbursements</div>     
-    <p> Additional disbursements may apply.</p>        
-    <hr style="border-color: rgba(255,255,255,0.3);">             
-    
-    <div class="pricing-features">                 
-        <div class="row">                     
-            <div class="col-md-3 col-6">                         
-                <div class="d-flex align-items-center justify-content-center mb-2">                             
-                    <i class="fas fa-pound-sign me-2"></i>                             
-                    <span>Debt recovery</span>                         
-                </div>                     
-            </div>                     
-            <div class="col-md-3 col-6">                         
-                <div class="d-flex align-items-center justify-content-center mb-2">                             
-                    <i class="fas fa-home me-2"></i>                             
-                    <span>Possession claims</span>                         
-                </div>                     
-            </div>                     
-            <div class="col-md-3 col-6">                         
-                <div class="d-flex align-items-center justify-content-center mb-2">                             
-                    <i class="fas fa-balance-scale me-2"></i>                             
-                    <span>Dispute resolution</span>                         
-                </div>                     
-            </div>                     
-            <div class="col-md-3 col-6">                         
-                <div class="d-flex align-items-center justify-content-center mb-2">                             
-                    <i class="fas fa-user-shield me-2"></i>                             
-                    <span>HMO specialists</span>                         
-                </div>                     
-            </div>                 
-        </div>             
-    </div>             
-
-    <div class="process-info" style="background: rgba(255,255,255,0.05); padding: 15px; border-radius: 8px; margin: 20px 0; border-left: 4px solid #fff;">
-        <p class="mb-0"><strong>Beyond Standard Notices:</strong> Recovering possession and unpaid rent often starts with standard notices, but many landlords face complex cases involving informal agreements, lodgers, squatters, HMOs, and disputed arrears. We professionally draft and serve all types of legal notices while providing comprehensive advice for challenging rent recovery situations that require specialist legal intervention.</p>
-    </div>
-
-   
-   <div class="mt-4">
-                <a href="http://slssolicitors.co.uk/payment-page/" class="cta-button-white w-100">Buy Now</a>
-            </div>           
-</section>
- <!-- Testimonial Carousel Section -->
-  <div class="mt-5 p-5">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-    <div class="elfsight-app-0c93b143-9f76-433b-9fe5-b4f9df625670" data-elfsight-app-lazy></div>
-  </div>
-                
-    <!-- CTA Section -->
-    <section class="cta-section">
+ <div class="container my-5">
+    <!-- Why Follow Our Blog Section -->
+    <section class="content-section py-5 border-bottom">
         <div class="container">
-            <h2 class="cta-title">Ready to Recover Your Arrears?</h2>
-            <p class="cta-subtitle">Our specialist team ensures lawful, efficient, and streamlined outcomes from start to final enforcement across England & Wales.</p>
-             <div class="d-flex flex-wrap justify-content-center gap-3">
-                <a href="tel:+44 0333 050 5381" class="cta-button-white">
-                    <i class="fas fa-phone me-2"></i>
-                    Call Eviction Lawyers Team
-                </a>
-                <a href="mailto:info@evictionlawyers.co.uk" class="cta-button-white">
-                    <i class="fas fa-envelope me-2"></i>
-                    Email Eviction Experts
-                </a>
-                <a href="#contact" class="cta-button-white">
-                    <i class="fa-solid fa-align-justify me-2"></i>
-                    Fill out Contact Form
-                </a>
+            <div class="text-center fade-in">
+                <h2 class="section-title display-5 fw-bold mb-3">Why Follow Our Blog?</h2>
+                <p class="section-subtitle">
+                    Get expert insights, stay updated with 2025 legislation changes, and access practical guidance from experienced solicitors.
+                </p>
+            </div>
+            
+            <div class="why-follow-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="feature-title">Expert Legal Insights</h3>
+                    <p class="feature-description">Written by experienced eviction solicitors and housing law experts with years of practical experience.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="feature-title">2025 Updates & Trends</h3>
+                    <p class="feature-description">Stay ahead with the latest changes in legislation, court rules, and emerging legal trends.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-list-ol"></i>
+                    </div>
+                    <h3 class="feature-title">Step-by-Step Guides</h3>
+                    <p class="feature-description">Easy-to-understand breakdowns of complex eviction processes and legal procedures.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="feature-title">Practical Tips</h3>
+                    <p class="feature-description">Avoid common pitfalls, protect your rights, and make informed decisions with expert advice.</p>
+                </div>
+                
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Real Case Studies</h3>
+                    <p class="feature-description">Learn from actual eviction scenarios, court outcomes, and real-world applications.</p>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Blog Categories Section -->
+    <section class="content-section py-5 border-bottom">
+        <div class="container">
+            <div class="text-center fade-in">
+                <h2 class="section-title display-5 fw-bold mb-3">Explore Our Popular Blog Categories</h2>
+                <p class="section-subtitle">
+                    Comprehensive coverage of all eviction law topics, from basic procedures to complex legal challenges.
+                </p>
+            </div>
+            
+            <div class="categories-grid">
+                <div class="category-card fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-exclamation-triangle" style="margin-right: 0.5rem;"></i>
+                        Section 8 Evictions
+                    </h3>
+                    <p class="category-description">
+                        Understand the grounds for fault-based evictions and how to prepare a successful claim with proper documentation and procedures.
+                    </p>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-file-contract" style="margin-right: 0.5rem;"></i>
+                        Section 21 No-Fault Evictions
+                    </h3>
+                    <p class="category-description">
+                        Learn the latest rules for serving a Section 21 notice, ensuring compliance, and navigating the no-fault eviction process.
+                    </p>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-pound-sign" style="margin-right: 0.5rem;"></i>
+                        Rent Arrears Recovery
+                    </h3>
+                    <p class="category-description">
+                        Get strategies for managing unpaid rent, pursuing legal recovery, and protecting your financial interests as a landlord.
+                    </p>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-shield-alt" style="margin-right: 0.5rem;"></i>
+                        Tenant Rights & Defences
+                    </h3>
+                    <p class="category-description">
+                        Know the protections tenants have during eviction proceedings and understand valid defences against eviction claims.
+                    </p>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-gavel" style="margin-right: 0.5rem;"></i>
+                        Court Procedures & Hearings
+                    </h3>
+                    <p class="category-description">
+                        Prepare for court hearings with expert advice, documentation tips, and guidance on court processes and expectations.
+                    </p>
+                </div>
+                
+                <div class="category-card fade-in">
+                    <h3 class="category-title">
+                        <i class="fas fa-home" style="margin-right: 0.5rem;"></i>
+                        Housing Disrepair & Eviction
+                    </h3>
+                    <p class="category-description">
+                        How disrepair claims can impact eviction cases, landlord responsibilities, and the intersection of housing conditions and evictions.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing-box">
+        <div class="container">
+            <div class="">
+                <div class="pricing-badge " style="color: black;">
+                    <i class="fas fa-star" style="margin-right: 0.5rem;"></i>
+                    Expert Legal Service
+                </div>
+                <div class="pricing-amount">£100 <span class="pricing-text">+ VAT</span>
+                <hr style="border-color: rgba(255,255,255,0.3);"></div>
+                <p class="">
+                    Professional eviction notice drafting and legal guidance<br>
+                    Section 8, Section 21, and all other eviction notices included
+                </p>
+                <a  href="http://slssolicitors.co.uk/payment-page/" class="cta-button-white w-100">Buy Now</a>
+            </div>
+        </div>
+    </section>
+
      <!-- contact form -->
         <section class="content-section py-5 bg-light border-bottom" id="contact">
             <div class="container">
@@ -718,86 +897,112 @@
                 </div>
             </div>
         </section>
-           <!-- faq section -->
-        <section class="container my-5">
-            <h2 class="text-center mb-4">Frequently Asked Questions</h2>
-            <div class="accordion" id="faqAccordion">
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingOne">
-                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faqCollapseOne">
-                            How do I enforce a rent arrears judgment after eviction?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            <div class="answer-brief">You can instruct bailiffs, High Court officers or apply for court
-                                enforcement like Attachment of Earnings.</div>
-                            <div class="faq-answer answer-detailed">Whether through bailiffs, HCEO or court orders, we
-                                assess your tenant's financial profile and advise the <strong>quickest and most
-                                    effective enforcement method</strong> based on their circumstances and your
-                                priorities.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingTwo">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faqCollapseTwo">
-                            Can I recover rent arrears from a tenant who left without paying?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            <div class="answer-brief">Yes — if you trace them and enforce the judgment using appropriate
-                                legal tools.</div>
-                            <div class="faq-answer answer-detailed">We partner with <strong>trace agents and enforcement
-                                    specialists</strong> to recover rents from absconded tenants or co-debtors, using
-                                advanced debtor location techniques and cross-jurisdictional enforcement.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingThree">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faqCollapseThree">
-                            Can I collect arrears from a lodger or informal occupant?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            <div class="answer-brief">Only if you have documentary evidence of liability or a legally
-                                valid agreement.</div>
-                            <div class="faq-answer answer-detailed">We assess your records to build a claim, advising on
-                                notices and possible court procedures for recovery. <strong>Documentary
-                                    evidence</strong> such as bank statements, texts, and shared bills are crucial for
-                                establishing liability.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item">
-                    <h2 class="accordion-header" id="faqHeadingFour">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#faqCollapseFour">
-                            What's more effective: County Court or High Court enforcement?
-                        </button>
-                    </h2>
-                    <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body">
-                            <div class="answer-brief">High Court enforcement is faster and more effective—but costs
-                                more.</div>
-                            <div class="faq-answer answer-detailed">We evaluate the <strong>cost-benefit for your
-                                    specific case</strong>, helping you choose the most efficient enforcement route.
-                                High Court officers typically execute within 7 days versus 4-12 weeks for County Court
-                                bailiffs.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- faq section -->
+  <section class="container my-5">
+    <h2 class="text-center mb-4">Frequently Asked Questions</h2>
+    <div class="accordion" id="faqAccordion">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingOne">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne">
+           What's the difference between Section 8 and Section 21 notices?
+          </button>
+        </h2>
+        <div id="faqCollapseOne" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            Section 8 notices are fault-based evictions used when tenants breach their tenancy terms (e.g., rent arrears, antisocial behavior). Section 21 notices are no-fault evictions that allow landlords to regain possession without proving tenant fault, but require strict compliance with procedural requirements.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseTwo">
+            How long does the eviction process typically take?
+          </button>
+        </h2>
+        <div id="faqCollapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+            The timeline varies significantly depending on the type of eviction, tenant response, and court schedules. Section 21 evictions typically take 4-6 months from notice to possession, while Section 8 cases can take 3-8 months depending on complexity and whether the case is defended.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingThree">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseThree">
+            What documents do I need for an eviction case?
+          </button>
+        </h2>
+        <div id="faqCollapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+          Essential documents include: tenancy agreement, rent payment records, served notices, deposit protection certificates, gas safety certificates, EPC certificates, and any relevant correspondence with the tenant. The specific requirements vary by eviction type.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingFour">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseFour">
+            Can tenants defend against eviction proceedings?
+          </button>
+        </h2>
+        <div id="faqCollapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+             Yes, tenants can defend eviction cases by challenging procedural errors, raising counterclaims (such as disrepair), questioning the validity of served notices, or demonstrating that mandatory grounds haven't been met. Valid defenses can significantly delay or prevent eviction.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingFive">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseFive">
+            What are the costs involved in eviction proceedings?
+          </button>
+        </h2>
+        <div id="faqCollapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+           Costs include court fees (£355 for possession claims), bailiff fees if enforcement is needed, legal fees, and potential costs if the case is defended. Our fixed-fee service starts at £100 + VAT for notice drafting, with transparent pricing for full representation.
+          </div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="faqHeadingSix">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#faqCollapseSix">
+           Do you offer fixed-fee services?
+          </button>
+        </h2>
+        <div id="faqCollapseSix" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+          <div class="accordion-body">
+             Yes, we provide transparent, fixed-fee pricing for most eviction services. Notice drafting starts at £100 + VAT, with fixed fees available for court representation and full eviction proceedings. We'll provide a clear quote before starting any work.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    </main>
-      <footer class="mt-5">
+    <!-- Newsletter Section -->
+    <section class="content-section">
+        <div class="container">
+            <div class="newsletter-section fade-in">
+                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem;">Stay Updated with Regular Posts</h2>
+                <p style="font-size: 1.2rem; opacity: 0.9; margin-bottom: 2rem;">
+                    Don't miss out on critical eviction law updates, new legislation, and expert tips. 
+                    Subscribe to our newsletter for direct updates delivered to your inbox.
+                </p>
+                <form class="newsletter-form">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email address" required>
+                    <button type="submit" class="newsletter-btn">
+                        <i class="fas fa-envelope" style="margin-right: 0.5rem;"></i>
+                        Subscribe Now
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    </div>
+     <!-- Footer -->
+    <footer class="mt-5">
         <div class="container">
             <div class="row">
                 <!-- Left Side: Company Info -->
@@ -830,7 +1035,7 @@
                 </div>
 
                 <!-- Right Side: Links Section -->
-                 <div class="col-md-6 text-center text-md-start ">
+                <div class="col-md-6 text-center text-md-start ">
                     <div class="text-center mb-4">
                         <div class="top-rated-badge">
                             <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">
@@ -997,8 +1202,10 @@
             </div>
         </div>
     </footer>
-    <!-- Navigation Toggle Script -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
+        //navbar toggler icon switch
         const toggler = document.querySelector('.navbar-toggler');
         const navbarCollapse = document.getElementById('navbarNav');
         const hamburgerIcon = toggler.querySelector('.navbar-toggler-icon');
@@ -1014,7 +1221,26 @@
             hamburgerIcon.classList.remove('d-none');
             closeIcon.classList.add('d-none');
         });
-     document.addEventListener('DOMContentLoaded', function () {
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+        
+// Contact Form Submission
+    document.addEventListener('DOMContentLoaded', function () {
             const form = document.getElementById('contactForm');
             const successMessage = document.getElementById('formSuccess');
             const errorMessage = document.getElementById('formError');
@@ -1049,9 +1275,37 @@
                     });
             });
         });
+        // Newsletter Form Submission
+        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input[type="email"]').value;
+            
+            if (email) {
+                // Show success message (in real implementation, this would submit to server)
+                alert('Thank you for subscribing! You will receive updates on eviction law and legal insights.');
+                this.reset();
+            }
+        });
+
+
+        // Category card hover effects
+        document.querySelectorAll('.category-card').forEach(card => {
+            card.addEventListener('click', function() {
+                // In a real implementation, this would navigate to the category page
+                console.log('Navigate to category:', this.querySelector('.category-title').textContent);
+            });
+        });
+
+        // Initialize animations on page load
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.querySelectorAll('.fade-in').forEach((el, index) => {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 100);
+                });
+            }, 100);
+        });
     </script>
-                
-
 </body>
-
 </html>
