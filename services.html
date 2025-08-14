@@ -348,6 +348,54 @@
         gap: 1rem;
       }
     }
+    .timeline-container {
+  position: relative;
+}
+
+.timeline-item {
+  display: flex;
+  align-items:start;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.timeline-item:not(:last-child):before {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 30px;
+  width: 2px;
+  height: 20px;
+  background-color: #dee2e6;
+}
+
+.timeline-icon {
+  background-color: #cc6918;
+  color: white;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.feature-highlight {
+  padding: 1rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.feature-highlight:hover {
+  transform: translateY(-2px);
+}
   </style>
 </head>
 
@@ -617,11 +665,19 @@
       </div>
 
       <!-- Service 5 -->
-      <div class="row align-items-center mt-5 p-4" id="rent-recovery">
+      <div class="row align-items-center mt-5 p-4 mb-5" id="rent-recovery">
         <div class="col-md-5 d-flex flex-column h-100">
           <div class="flex-grow-1 d-flex align-items-center justify-content-center">
             <img src="assets/Rent-recovery.png" alt="Bailiff enforcement for tenant eviction UK"
               class="img-fluid rounded shadow" style="width: 100%; height: 300px;" />
+          </div>
+                    <div class="col-md-6 mt-3">
+            <h5>Learn More About:</h5>
+            <div class="row g-2">
+              <div class="col-12 ">
+                <a class="btn info-link fw-semibold  w-100" href="RecoveryService.html">Rent Arrears Guide</a>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-md-7 d-flex flex-column h-100 mt-3">
@@ -643,16 +699,173 @@
             <a href="http://slssolicitors.co.uk/payment-page/"
               class="btn btn-dark w-100 fw-semibold rounded-pill mt-3">Buy Now</a>
           </div>
-          <div class="col-md-6 mt-3">
-            <h5>Learn More About:</h5>
-            <div class="row g-2">
-              <div class="col-12 ">
-                <a class="btn info-link fw-semibold  w-100" href="RecoveryService.html">Rent Arrears Guide</a>
+
+        </div>
+      </div>
+
+      <hr class="my-5" style="color: white;" />
+<!-- Priority Super Package Service Section -->
+<div class="container mt-5 mb-5 p-4" id="priority-super-package" style="cursor: pointer; background-color: white; border-radius: 16px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);">
+
+  <!-- Row 1: Image and Text -->
+  <div class="row align-items-center mb-4">
+    <!-- Left: Image -->
+    <div class="col-md-6 mb-3 mb-md-0 text-center">
+      <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Priority Super Package - Full Contested Case Coverage" 
+           class="img-fluid rounded shadow" style="max-height: 300px; object-fit: cover;" />
+    </div>
+
+    <!-- Right: Text -->
+    <div class="col-md-6">
+      <h4>Priority Super Package (Contested Case Coverage)</h4>
+      <p>
+        Our most comprehensive eviction service designed for contested cases where tenants defend the proceedings. 
+        We provide full solicitor-led support from start to finish, including drafting all court documents, 
+        responding to tenant defenses, expert court representation, and coordinating bailiff enforcement when required.
+      </p>
+      <div class="alert alert-info" role="alert">
+        <i class="fas fa-info-circle me-2"></i>
+        <strong>Perfect for:</strong> Cases where tenants are likely to contest, complex situations, 
+        or when you need guaranteed professional support throughout the entire process.
+      </div>
+    </div>
+  </div>
+
+  <!-- Row 2: Price Box and Features -->
+  <div class="row align-items-start">
+    <!-- Left: Price Box -->
+    <div class="col-md-6 mb-3 mb-md-0">
+      <div class="pricing-box p-3 rounded shadow-sm h-100">
+        <div class="d-flex justify-content-between align-items-center mb-2">
+          <h5 class="text-dark fw-bold mb-0">£2500 + VAT</h5>
+          <span class="badge bg-success text-white">
+            <i class="fas fa-shield-alt me-1"></i>Premium Service
+          </span>
+        </div>
+        <div class="mb-3">
+          <h6 class="text-primary mb-2">
+            <i class="fas fa-check-circle me-2"></i>What's Included:
+          </h6>
+          <ul class="list-unstyled small text-muted mb-0">
+            <li class="mb-1">
+              <i class="fas fa-check text-success me-2"></i>
+              Complete court document preparation
+            </li>
+            <li class="mb-1">
+              <i class="fas fa-check text-success me-2"></i>
+              Professional responses to all tenant defenses
+            </li>
+            <li class="mb-1">
+              <i class="fas fa-check text-success me-2"></i>
+              Expert solicitor court representation
+            </li>
+            <li class="mb-1">
+              <i class="fas fa-check text-success me-2"></i>
+              Bailiff instruction and coordination
+            </li>
+            <li class="mb-1">
+              <i class="fas fa-check text-success me-2"></i>
+              Ongoing case management support
+            </li>
+            <li class="mb-1">
+              <i class="fas fa-check text-success me-2"></i>
+              Success guarantee - we work until possession is achieved
+            </li>
+          </ul>
+        </div>
+        <a class="btn btn-custom fw-semibold rounded-pill w-100" href="http://slssolicitors.co.uk/payment-page/">
+          Get Priority Support Now
+        </a>
+      </div>
+    </div>
+
+    <!-- Right: Process Timeline and Info -->
+    <div class="col-md-6">
+      <h5>Complete Process Coverage:</h5>
+      
+      <!-- Process Timeline -->
+      <div class="timeline-container mb-4">
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="timeline-content">
+            <h6 class="mb-1">Initial Case Review</h6>
+            <small class="text-muted">Comprehensive assessment and document preparation</small>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-gavel"></i>
+          </div>
+          <div class="timeline-content">
+            <h6 class="mb-1">Court Proceedings</h6>
+            <small class="text-muted">Full representation and defense handling</small>
+          </div>
+        </div>
+        
+        <div class="timeline-item">
+          <div class="timeline-icon">
+            <i class="fas fa-user-shield"></i>
+          </div>
+          <div class="timeline-content">
+            <h6 class="mb-1">Enforcement</h6>
+            <small class="text-muted">Bailiff coordination and possession completion</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learn More Buttons -->
+      <div class="row g-2">
+        <div class="col-12 col-md-6">
+          <a class="btn info-link fw-semibold w-100" href="PrioritySuperPackage.html">
+            <i class="fas fa-info-circle me-2"></i>Complete Service Guide
+          </a>
+        </div>
+        <div class="col-12 col-md-6">
+          <a class="btn info-link fw-semibold w-100" href="EvicitionGuidance.html">
+            <i class="fas fa-balance-scale me-2"></i>Contested Cases Info
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional Info Row -->
+  <div class="row mt-4">
+    <div class="col-12">
+      <div class="card border-primary">
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+              <div class="feature-highlight">
+                <i class="fas fa-clock fa-2x text-primary mb-2"></i>
+                <h6 class="text-primary">Fast Response</h6>
+                <small class="text-muted">24-48 hour defense response guarantee</small>
+              </div>
+            </div>
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+              <div class="feature-highlight">
+                <i class="fas fa-users fa-2x text-success mb-2"></i>
+                <h6 class="text-success">Expert Team</h6>
+                <small class="text-muted">Dedicated solicitors with specialized experience</small>
+              </div>
+            </div>
+            <div class="col-md-4 text-center">
+              <div class="feature-highlight">
+                <i class="fas fa-certificate fa-2x text-warning mb-2"></i>
+                <h6 class="text-warning">Success Rate</h6>
+                <small class="text-muted">98% success rate in contested eviction cases</small>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+
+</div>
     </div>
   </section>
 
