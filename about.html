@@ -251,41 +251,159 @@
     </div>
 
      <!-- Contact Form Section Below Testimonial -->
-  <section class="container formSection my-5">
-    <h2 class="text-center mb-4">Get In Touch With Us</h2>
-    <div class="row justify-content-center">
-      <div class="col-lg-6">
-        <div class="card shadow p-4">
-          <form id="contactFormBelow" method="POST">
-            <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683">
-            <input type="hidden" name="from_name" value="Eviction Lawyers Website">
-            <input type="hidden" name="subject" value="New Contact Form Submission">
-            <input type="checkbox" name="botcheck" style="display: none;">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name" required name="name" />
+ <section class="content-section py-5 bg-light border-bottom" id="contact">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-10 col-lg-11">
+                        <div class="fade-in">
+                            <h2 class="section-title display-5 fw-bold mb-3">Have Questions or Need Legal Help?</h2>
+                            <p class="section-subtitle">
+                                If you need personalised advice or support with an eviction case, our specialist
+                                solicitors are here to help. Contact us for a free consultation and fixed-fee service
+                                options.
+                            </p>
+                        </div>
+
+                        <div class="contact-form fade-in">
+                            <form id="contactForm">
+                                <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683" />
+                                <input type="hidden" name="from_name" value="Eviction Lawyers Website" />
+                                <input type="hidden" name="subject" value="New Contact Form Submission" />
+                                <div class="form-section">
+                                    <h3 class="form-section-title">
+                                        <i class="fas fa-user"></i>
+                                        Personal Information
+                                    </h3>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Full Name <span
+                                                        class="required">*</span></label>
+                                                <input type="text" class="form-control"
+                                                    placeholder="Enter your full name" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Email Address <span
+                                                        class="required">*</span></label>
+                                                <input type="email" class="form-control"
+                                                    placeholder="your.email@example.com" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label class="form-label">Phone Number</label>
+                                                <input type="tel" class="form-control" placeholder="+44 7XXX XXX XXX">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Case Details Section -->
+                                <div class="form-section">
+                                    <h3 class="form-section-title">
+                                        <i class="fas fa-home"></i>
+                                        Case Details - Select all that apply
+                                    </h3>
+                                    <div class="checkbox-grid">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Tenancy agreement in place" id="check1">
+                                            <label class="form-check-label" for="check1">Tenancy agreement in
+                                                place</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Section 8 fault eviction" id="check2">
+                                            <label class="form-check-label" for="check2">Section 8 fault
+                                                eviction</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Section 21 non-fault eviction" id="check3">
+                                            <label class="form-check-label" for="check3">Section 21 no fault
+                                                eviction</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="No tenancy provided" id="check4">
+                                            <label class="form-check-label" for="check4">No tenancy provided</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="HMO property" id="check5">
+                                            <label class="form-check-label" for="check5">HMO property</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Trespassers or squatters" id="check6">
+                                            <label class="form-check-label" for="check6">Trespassers or
+                                                squatters</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Rent arrears" id="check7">
+                                            <label class="form-check-label" for="check7">Rent arrears</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Notice already served" id="check8">
+                                            <label class="form-check-label" for="check8">Notice already served</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Deposit protected if taken" id="check9">
+                                            <label class="form-check-label" for="check9">Deposit protected if
+                                                taken</label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" name="checklist[]"
+                                                value="Bought property with tenant in situ" id="check10">
+                                            <label class="form-check-label" for="check10">Bought property with tenant in
+                                                situ</label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Message Section -->
+                                <div class="form-section">
+                                    <h3 class="form-section-title">
+                                        <i class="fas fa-comment-alt"></i>
+                                        Your Message
+                                    </h3>
+                                    <div class="form-group">
+                                        <label class="form-label">Describe Your Situation <span
+                                                class="required">*</span></label>
+                                        <textarea class="form-control textarea"
+                                            placeholder="Please provide details about your situation, timeline, and how we can help you..."
+                                            required></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="submit-section">
+                                    <button type="submit" class="submit-btn">
+                                        <i class="fas fa-paper-plane"></i>
+                                        Send Message
+                                    </button>
+                                    <div class="form-success" id="formSuccess">
+                                        <strong>Success!</strong> Your message has been sent successfully.
+                                    </div>
+                                    <div class="form-error" id="formError">
+                                        <strong>Error!</strong> There was a problem sending your message. Please try
+                                        again.
+                                    </div>
+                                    <div class="mt-3 text-muted" style="font-size: 0.9rem;">
+                                        <i class="fas fa-shield-alt"></i>
+                                        Your information is secure and confidential
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Email Address" required name="email" />
-            </div>
-            <div class="mb-3">
-              <input type="tel" class="form-control" placeholder="Phone Number" required name="phone" />
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Reason for eviction" required
-                name="reason"></textarea>
-            </div>
-            <button type="submit" class="btn  w-100">Submit</button>
-          </form>
-          <div class="form-success mt-3" id="formSuccessBelow" style="display: none;">
-            <strong>Success!</strong> Your message has been sent successfully.
-          </div>
-          <div class="form-error mt-3" id="formErrorBelow" style="display: none;">
-            <strong>Error!</strong> There was a problem sending your message. Please try again.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
     <!-- Legal Compliance Information -->
     <p class="mb-3">
@@ -523,36 +641,39 @@
     closeIcon.classList.add('d-none');
   });
     document.addEventListener('DOMContentLoaded', function () {
-    const formBelow = document.getElementById('contactFormBelow');
-    const successMessageBelow = document.getElementById('formSuccessBelow');
-    const errorMessageBelow = document.getElementById('formErrorBelow');
+            const form = document.getElementById('contactForm');
+            const successMessage = document.getElementById('formSuccess');
+            const errorMessage = document.getElementById('formError');
 
-    formBelow.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const formData = new FormData(formBelow);
+            form.addEventListener('submit', function (e) {
+                e.preventDefault();
+                successMessage.style.display = 'none';
+                errorMessage.style.display = 'none';
 
-      fetch('https://api.web3forms.com/submit', {
-        method: 'POST',
-        body: formData,
-      })
-        .then(response => {
-          if (response.ok) {
-            formBelow.reset();
-            successMessageBelow.style.display = 'block';
-            errorMessageBelow.style.display = 'none';
-            setTimeout(() => successMessageBelow.style.display = 'none', 5000);
-          } else {
-            errorMessageBelow.style.display = 'block';
-            successMessageBelow.style.display = 'none';
-          }
-        })
-        .catch(() => {
-          errorMessageBelow.style.display = 'block';
-          successMessageBelow.style.display = 'none';
-          setTimeout(() => errorMessageBelow.style.display = 'none', 5000);
+                const formData = new FormData(form);
+                const checklistItems = form.querySelectorAll('input[name="checklist[]"]:checked');
+                const selectedOptions = Array.from(checklistItems).map(cb => cb.value);
+                formData.append('Checklist Answers', selectedOptions.join(', '));
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: formData,
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            form.reset();
+                            successMessage.style.display = 'block';
+                            setTimeout(() => successMessage.style.display = 'none', 5000);
+                        } else {
+                            errorMessage.style.display = 'block';
+                            setTimeout(() => errorMessage.style.display = 'none', 5000);
+                            throw new Error('Submission failed');
+                        }
+                    })
+                    .catch(() => {
+                        errorMessage.style.display = 'block';
+                        setTimeout(() => errorMessage.style.display = 'none', 5000);
+                    });
+            });
         });
-    });
-  });
-
 </script>
   </html>

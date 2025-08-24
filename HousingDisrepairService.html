@@ -1,0 +1,1025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Housing Disrepair Counterclaims in Eviction Proceedings (England & Wales – 2025 Guide)</title>
+    <meta name="description" content="Understand how tenants can raise housing disrepair counterclaims in eviction cases. A 2025 guide for landlords and tenants in England & Wales covering rights, obligations, defences, and court procedure.">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Css/CommonStyles.css" />
+    
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can tenants raise disrepair as a defence to eviction?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Tenants may bring a counterclaim, and the court can reduce arrears or adjourn the case until disrepair is resolved."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of disrepair qualify for a counterclaim?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Serious defects such as damp, mould, leaks, defective heating, or unsafe electrics may justify damages and reduce arrears."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will a disrepair counterclaim stop eviction entirely?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Not always. The court balances landlord and tenant rights. A strong disrepair claim may delay proceedings or offset arrears but does not automatically prevent possession."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What evidence should tenants provide?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Tenants should keep repair logs, photographs, medical records, and request expert surveys to strengthen their defence."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-orange: #cc6918;
+            --secondary-orange: #e67e22;
+            --light-orange: #fef3e2;
+            --dark-orange: #a85414;
+            --text-primary: black;
+            --text-secondary: #6b7280;
+            --border-light: #e5e7eb;
+            --bg-light: #f8fafc;
+            --success-green: #059669;
+            --warning-amber: #d97706;
+            --danger-red: #dc2626;
+            --wales-red: #d32f2f;
+            --wales-green: #388e3c;
+            --wales-orange: #b08a00;
+            --text-dark: #1e293b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--light-orange) 0%, #ffffff 100%);
+            padding: 4rem 0;
+            margin-bottom: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23cc6918" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23cc6918" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="%23cc6918" opacity="0.1"/><circle cx="10" cy="90" r="1" fill="%23cc6918" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            color: var(--primary-orange);
+            font-weight: 700;
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-weight: 500;
+        }
+
+        .hero-icon {
+            font-size: 4rem;
+            color: var(--secondary-orange);
+            margin-bottom: 2rem;
+            opacity: 0.8;
+        }
+
+        /* Button Styles */
+        .btn-primary-custom {
+            background-color: var(--secondary-orange);
+            border-color: var(--secondary-orange);
+            color: white;
+            font-weight: 600;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            padding: 1rem 2.5rem;
+            box-shadow: 0 4px 15px rgba(204, 105, 24, 0.3);
+        }
+
+        .btn-primary-custom:hover {
+            background-color: var(--primary-orange);
+            border-color: var(--primary-orange);
+            color: white;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(204, 105, 24, 0.4);
+        }
+
+        /* Section Titles */
+        .section-title {
+            color: var(--primary-orange);
+            position: relative;
+            padding-bottom: 0.75rem;
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 4rem;
+            height: 3px;
+            background-color: var(--secondary-orange);
+            border-radius: 2px;
+        }
+
+        /* Content Cards */
+        .content-card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border: 1px solid var(--border-light);
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+
+        .content-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+        }
+
+        .content-card .card-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-orange);
+            margin-bottom: 1.5rem;
+        }
+
+        .content-card h3 {
+            color: var(--primary-orange);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        /* List Styling */
+        .content-list {
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .content-list li {
+            position: relative;
+            padding: 1rem 0 1rem 3rem;
+            margin-bottom: 0.8rem;
+            background: var(--bg-light);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .content-list li:hover {
+            background: #e8f4fd;
+            border-left-color: var(--primary-orange);
+            transform: translateX(8px);
+        }
+
+        .content-list li::before {
+            content: '▶';
+            position: absolute;
+            left: 1.2rem;
+            top: 1rem;
+            color: var(--primary-orange);
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        /* Risk indicators */
+        .risk-indicator {
+            background: linear-gradient(135deg, #fee2e2, #fecaca);
+            border-left: 4px solid var(--danger-red);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .risk-indicator h5 {
+            color: var(--danger-red);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Process Timeline */
+        .process-timeline {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-step {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .timeline-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 1.5rem;
+            top: 4rem;
+            bottom: -2rem;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--secondary-orange), var(--light-orange));
+        }
+
+        .step-number {
+            background: linear-gradient(135deg, var(--secondary-orange), var(--primary-orange));
+            color: white;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-right: 2rem;
+            box-shadow: 0 4px 15px rgba(204, 105, 24, 0.3);
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-content {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border-left: 3px solid var(--secondary-orange);
+        }
+
+        .step-content h5 {
+            color: var(--primary-orange);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        /* Outcome boxes */
+        .outcome-box {
+            background: white;
+            border: 2px solid var(--secondary-orange);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            position: relative;
+        }
+
+        .outcome-box::before {
+            content: '⚖️';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.5rem;
+        }
+
+        .outcome-box h6 {
+            color: var(--primary-orange);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Alert Boxes */
+        .alert-custom {
+            border-left: 4px solid var(--warning-amber);
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            color: #92400e;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .alert-custom .alert-title {
+            font-weight: 700;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+        }
+
+        .faq-item {
+            background: white;
+            border: 1px solid var(--border-light);
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 4px 15px rgba(204, 105, 24, 0.1);
+        }
+
+        .faq-question {
+            background: linear-gradient(135deg, var(--light-orange), rgba(254, 243, 226, 0.8));
+            padding: 1.5rem;
+            font-weight: 600;
+            color: var(--primary-orange);
+            cursor: pointer;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: linear-gradient(135deg, var(--secondary-orange), var(--primary-orange));
+            color: white;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            background: #fafafa;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+            color: white;
+            padding: 4rem 2rem;
+            border-radius: 15px;
+            text-align: center;
+            margin: 4rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23dots)"/></svg>');
+            animation: float 20s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        } */
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .cta-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+        }
+
+        .cta-button-white {
+            background: white;
+            color: var(--primary-orange);
+            padding: 1.2rem 2.5rem;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+            color: var(--primary-orange);
+            text-decoration: none;
+        }
+
+        /* Highlight Statistics */
+        .stat-box {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, var(--light-orange), white);
+            border-radius: 12px;
+            margin: 1rem 0;
+            border: 2px solid var(--secondary-orange);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-orange);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.6rem;
+            }
+            
+            .timeline-step {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .step-number {
+                margin-right: 0;
+                margin-bottom: 1rem;
+            }
+
+            .timeline-step::after {
+                display: none;
+            }
+
+            .cta-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+      <div class="sticky-top">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <div class="d-flex align-items-center">
+          <img src="assets/Eviction_lawyers.png" alt="logo" width="50" height="50" class="me-2" />
+          <a class="navbar-brand mb-0" href="#">Eviction Lawyers</a>
+        </div>
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          <span class="close-icon d-none fs-3">&times;</span>
+        </button>
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+
+          </ul>
+        </div>
+        
+        <!-- Desktop Call Button -->
+        <a href="tel:+44 0333 050 5381" class="px-3 d-none d-lg-inline text-decoration-none text-white">
+          Call Us: 0333 050 5381
+        </a>
+      </div>
+    </nav>
+
+    <!-- Mobile Call Button -->
+    <div class="d-lg-none bg-white py-2 mobile-call-bar d-flex justify-content-around align-items-center">
+      <a href="tel:+44 0333 050 5381" class="fw-semibold text-decoration-none border-bottom border-2"
+         style="color: #cc6918; border-color: #cc6918 !important;">
+        Call Us: 0333 050 5381
+      </a>
+      <a href="contact.html" class="btn btn-sm text-white px-3 py-2 rounded"
+         style="background-color: #cc6918;">
+        EVICT NOW
+      </a>
+    </div>
+  </div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 text-center hero-content">
+                    <div class="hero-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h1 class="hero-title">Housing Disrepair Counterclaims in Eviction Proceedings</h1>
+                    <p class="hero-subtitle">England & Wales – 2025 Guide</p>
+                    <p class="lead mb-4">When landlords begin possession proceedings, tenants often raise a counterclaim for housing disrepair. This legal defence can significantly affect the outcome of the case, sometimes reducing rent arrears, delaying eviction, or even dismissing proceedings entirely.</p>
+                    <a href="#contact" class="btn btn-primary-custom btn-lg">
+                        <i class="fas fa-gavel me-2"></i>Get Expert Legal Advice
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Introduction -->
+        <section class="mb-5">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <p class="lead text-center">Both landlords and tenants must understand the interplay between eviction claims and disrepair counterclaims. The court will assess compliance with repair obligations, landlord duties, and tenant rights under the Housing Act 1988, the Landlord and Tenant Act 1985, and subsequent case law.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Landlord Duties and Risks -->
+        <section class="mb-5">
+            <div class="content-card">
+                <div class="text-center">
+                    <i class="fas fa-exclamation-triangle card-icon"></i>
+                </div>
+                <h3 class="text-center">Landlord Duties and Risks in Disrepair Counterclaims</h3>
+                <p class="text-center mb-4">Landlords have statutory and contractual obligations to keep rental properties in good repair. In eviction proceedings, failure to meet these duties can expose landlords to:</p>
+                
+                <ul class="content-list">
+                    <li><strong>Set-off claims</strong> – where rent arrears are reduced by compensation for disrepair.</li>
+                    <li><strong>Damages awards</strong> – for inconvenience, health impacts, or loss of amenity.</li>
+                    <li><strong>Adjournment or dismissal of possession proceedings</strong> – where disrepair is serious and unresolved.</li>
+                    <li><strong>Additional costs</strong> – including expert surveyor fees and legal expenses.</li>
+                </ul>
+
+                <div class="risk-indicator mt-4">
+                    <h5><i class="fas fa-warning me-2"></i>High Risk Warning</h5>
+                    <p class="mb-0">Landlords who ignore repair obligations may face significant financial penalties and legal consequences in eviction proceedings.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tenant Rights -->
+        <section class="mb-5">
+            <div class="content-card">
+                <div class="text-center">
+                    <i class="fas fa-shield-alt card-icon"></i>
+                </div>
+                <h3 class="text-center">Tenant Rights in Raising a Counterclaim</h3>
+                <p class="text-center mb-4">Tenants facing eviction may:</p>
+                
+                <ul class="content-list">
+                    <li><strong>Allege disrepair as a defence</strong> to rent arrears, arguing that the landlord breached repair obligations.</li>
+                    <li><strong>Request inspection and expert evidence</strong> to support their case.</li>
+                    <li><strong>Seek compensation</strong> for damp, mould, leaks, structural defects, or health issues caused by poor housing conditions.</li>
+                    <li><strong>Delay possession proceedings</strong> until the disrepair claim is heard and determined.</li>
+                    <li><strong>Apply to set off damages</strong> against arrears, reducing the landlord's entitlement.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Tenant Obligations -->
+        <section class="mb-5">
+            <div class="content-card">
+                <div class="text-center">
+                    <i class="fas fa-balance-scale card-icon"></i>
+                </div>
+                <h3 class="text-center">Tenant Obligations in Disrepair Cases</h3>
+                <p class="text-center mb-4">Although tenants may raise disrepair counterclaims, they also carry responsibilities:</p>
+                
+                <ul class="content-list">
+                    <li><strong>Reporting defects promptly</strong> to the landlord or agent.</li>
+                    <li><strong>Allowing reasonable access</strong> for repairs to be carried out.</li>
+                    <li><strong>Maintaining the property</strong> in a tenant-like manner.</li>
+                    <li><strong>Providing evidence</strong> (e.g. photographs, medical records, expert reports) when asserting a counterclaim.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Court Process -->
+        <section class="mb-5">
+            <h2 class="section-title">
+                <i class="fas fa-courthouse me-2"></i>How the Court Handles Disrepair Counterclaims in 2025
+            </h2>
+            <p class="mb-4">The modern eviction process often intersects with disrepair claims as follows:</p>
+            
+            <div class="process-timeline">
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h5>Possession Claim Issued</h5>
+                        <p>Usually under Section 8, Ground 8 (rent arrears), initiating formal eviction proceedings.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h5>Tenant Files Defence and Counterclaim</h5>
+                        <p>Alleging disrepair and requesting damages to offset against rent arrears.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h5>Court Directions</h5>
+                        <p>The judge may order disclosure of repair records, expert reports, or property inspections.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h5>Hearing of Both Claims Together</h5>
+                        <p>Possession and disrepair are often dealt with in the same proceedings for efficiency.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h5>Court Outcome</h5>
+                        <p>Court may reach various decisions:</p>
+                        <div class="row mt-3">
+                            <div class="col-md-4">
+                    <div class="stat-box">
+                        <div class="stat-number">30%</div>
+                        <div class="stat-label">of eviction cases are dismissed due to serious disrepair</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-5">
+            <div class="content-card">
+                <div class="text-center">
+                    <i class="fas fa-check-circle card-icon"></i>
+                </div>
+                <h3 class="text-center">Conclusion</h3>
+                <p class="text-center">In eviction proceedings, housing disrepair counterclaims can drastically change outcomes. Landlords risk delays, cost awards, and reduced arrears if repair duties have not been met, while tenants may gain compensation or extended time in the property.</p>
+                <p class="text-center mb-0"><strong>Both parties should seek early legal advice, supported by expert surveyors and solicitors, to protect their position.</strong></p>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 cta-content">
+                    <h2 class="cta-title">Are you a landlord or tenant involved in eviction and disrepair proceedings?</h2>
+                    <p class="cta-subtitle">Our specialist solicitors handle complex eviction cases with counterclaims, ensuring compliance with housing law and court procedure across England and Wales.</p>
+                    <a href="#contact" class="cta-button-white">
+                        <i class="fas fa-phone me-2"></i>Contact Us Today for Tailored Legal Advice
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Resources -->
+    <div class="container">
+        <section class="mb-5">
+            <h2 class="section-title text-center">Related Legal Areas</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="content-card text-center">
+                        <i class="fas fa-home card-icon"></i>
+                        <h5>Section 21 & Section 8 Evictions</h5>
+                        <p>Understand the different types of eviction notices and procedures.</p>
+                        <a href="#" class="btn btn-outline-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="content-card text-center">
+                        <i class="fas fa-tools card-icon"></i>
+                        <h5>Landlord Repair Obligations</h5>
+                        <p>Comprehensive guide to statutory repair duties and compliance.</p>
+                        <a href="#" class="btn btn-outline-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="content-card text-center">
+                        <i class="fas fa-balance-scale card-icon"></i>
+                        <h5>Tenant Rights & Defences</h5>
+                        <p>Know your rights and available defences in eviction proceedings.</p>
+                        <a href="#" class="btn btn-outline-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+ <footer class="mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- Left Side: Company Info -->
+        <div class="col-md-6 text-center text-md-start">
+          <div class="mb-3">
+            <img src="assets/Eviction_lawyers.png" alt="logo" width="100" height="80" class="me-2" />
+            <span class="fw-bold text-white fs-4">Eviction Lawyers</span>
+          </div>
+          
+          <p class="small mb-3">
+            Eviction Lawyers is a trading name of LLB Legal Marketing Limited, a company registered in
+            England and Wales (Company No. 13772872). We are registered with the Information Commissioner's Office (ICO) for
+            data protection purposes (Registration No. 00012507817). We are a lead generation business for law
+            firms and do not provide legal advice or claims management services. All legal work is carried out by our
+            panel solicitors, who are authorised and regulated by the Solicitors Regulation Authority (SRA).
+          </p>
+          
+          <div class="d-block d-md-flex align-items-center justify-content-center justify-content-md-start gap-2 mb-3">
+            <!-- Start of SRA Digital Badge code -->
+            <div class="yoshkidiv">
+              <img alt="Verify SRA Membership" width="200" height="100"
+                   src="./assets/SRA logo.png" />
+            </div>
+            <!-- End of SRA Digital Badge code -->
+            <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
+          </div>
+        </div>
+        
+        <!-- Right Side: Links Section -->
+         <div class="col-md-6 text-center text-md-start ">
+                  <div class="text-center mb-4">
+          <div class="top-rated-badge">
+            <img src="assets/top_service.png" alt="Top Rated" width="24" height="24">
+            <span>Top-Rated Legal Services</span>
+          </div>
+        </div>
+          <div class="row text-center text-md-start g-4">
+            <!-- Services -->
+            <div class="col-md-4 mb-2">
+              <h6 class="fw-bold text-white mb-3 border-bottom border-white pb-2">Services</h6>
+              <ul class="list-unstyled small">
+                <li class="mb-2"><a href="services.html#eviction-notices" class="text-white footer-link">Eviction Notice Service</a></li>
+                <li class="mb-2"><a href="services.html#court-representation" class="text-white footer-link">Eviction Court Representation</a></li>
+                <li class="mb-2"><a href="services.html#bailiff-enforcement" class="text-white footer-link">Guaranteed Eviction Service</a></li>
+                <li class="mb-2"><a href="services.html#rent-recovery" class="text-white footer-link">Rent Arrears Recovery</a></li>
+                <li class="mb-2"><a href="services.html#section8" class="text-white footer-link">Complicated Eviction Cases</a></li>
+              </ul>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-md-3 mb-2">
+              <h6 class="fw-bold text-white mb-3 border-bottom border-white pb-2">Quick Links</h6>
+              <ul class="list-unstyled small">
+                <li class="mb-2"><a href="index.html" class="text-white footer-link">Home</a></li>
+                <li class="mb-2"><a href="about.html" class="text-white footer-link">About Us</a></li>
+                <li class="mb-2"><a href="services.html" class="text-white footer-link">Services</a></li>
+                <li class="mb-2"><a href="contact.html" class="text-white footer-link">Contact</a></li>
+              </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-4">
+              <h6 class="fw-bold text-white mb-3 border-bottom border-white pb-2">Contact</h6>
+              
+              <div class="d-flex align-items-start mb-3">
+                <i class="fas fa-map-marker-alt text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <div>
+                    <i class="fas fa-map-marker-alt text-white me-2 mt-1 d-inline-block d-md-none"></i>
+                    85 Great Portland Street,<br>
+                    First Floor, London, W1W 7LT<br>
+                    12 Chapel Street, Cheshire SK14 1LF
+                  </div>
+                </div>
+              </div>
+              
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-envelope text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <i class="fas fa-envelope text-white d-inline-block d-md-none me-2"></i>
+                  <strong>Email:</strong>
+                  <a href="mailto:info@evictionlawyers.co.uk" class="text-white text-decoration-none">info@evictionlawyers.co.uk</a>
+                </div>
+              </div>
+              
+              <div class="d-flex align-items-center mb-2">
+                <i class="fas fa-phone text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <i class="fas fa-phone text-white me-2 mt-1 d-inline-block d-md-none"></i>
+                  <strong>Phone:</strong>
+                  <a href="tel:03333050381" class="text-white text-decoration-none">0333 050 5381</a>
+                </div>
+              </div>
+              
+              <div class="d-flex align-items-center">
+                <i class="fas fa-clock text-white me-2 mt-1 d-none d-md-block"></i>
+                <div class="text-white small">
+                  <i class="fas fa-clock text-white me-2 mt-1 d-inline-block d-md-none"></i>
+                  <strong>Hours:</strong> Mon–Fri, 9am–6pm
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coverage Section -->
+      <div class="coverage-section">
+        <div class="text-center mb-4">
+          <h3 class="coverage-title">Some Areas We Cover</h3>
+          <p class="coverage-description">
+            We provide assistance across England and Wales. Click your city below to find eviction lawyers near you:
+          </p>
+        </div>
+
+
+        <div class="coverage-grid">
+          <div class="coverage-column">
+            <ul class="list-unstyled">
+              <li><a href="/eviction-lawyers/london" class="coverage-link">Eviction Lawyers in London</a></li>
+              <li><a href="Birmingham.html" class="coverage-link">Eviction Lawyers in Birmingham</a></li>
+              <li><a href="/eviction-lawyers/leeds" class="coverage-link">Eviction Lawyers in Leeds</a></li>
+              <li><a href="/eviction-lawyers/liverpool" class="coverage-link">Eviction Lawyers in Liverpool</a></li>
+              <li><a href="/eviction-lawyers/manchester" class="coverage-link">Eviction Lawyers in Manchester</a></li>
+              <li><a href="/eviction-lawyers/bristol" class="coverage-link">Eviction Lawyers in Bristol</a></li>
+            </ul>
+          </div>
+          <div class="coverage-column">
+            <ul class="list-unstyled">
+              <li><a href="/eviction-lawyers/sheffield" class="coverage-link">Eviction Lawyers in Sheffield</a></li>
+              <li><a href="/eviction-lawyers/nottingham" class="coverage-link">Eviction Lawyers in Nottingham</a></li>
+              <li><a href="/eviction-lawyers/coventry" class="coverage-link">Eviction Lawyers in Coventry</a></li>
+              <li><a href="/eviction-lawyers/brighton" class="coverage-link">Eviction Lawyers in Brighton & Hove</a></li>
+              <li><a href="/eviction-lawyers/derby" class="coverage-link">Eviction Lawyers in Derby</a></li>
+              <li><a href="/eviction-lawyers/newcastle" class="coverage-link">Eviction Lawyers in Newcastle upon Tyne</a></li>
+            </ul>
+          </div>
+          <div class="coverage-column">
+            <ul class="list-unstyled">
+              <li><a href="/eviction-lawyers/southampton" class="coverage-link">Eviction Lawyers in Southampton</a></li>
+              <li><a href="/eviction-lawyers/norwich" class="coverage-link">Eviction Lawyers in Norwich</a></li>
+              <li><a href="/eviction-lawyers/reading" class="coverage-link">Eviction Lawyers in Reading</a></li>
+              <li><a href="/eviction-lawyers/cardiff" class="coverage-link">Eviction Lawyers in Cardiff</a></li>
+              <li><a href="/eviction-lawyers/swansea" class="coverage-link">Eviction Lawyers in Swansea</a></li>
+              <li><a href="/eviction-lawyers/wrexham" class="coverage-link">Eviction Lawyers in Wrexham</a></li>
+              <li><a href="/eviction-lawyers/newport" class="coverage-link">Eviction Lawyers in Newport</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="d-block d-md-flex justify-content-around align-items-center mt-3">
+        <div class="text-center px-3">
+          <small>&copy; 2025 Eviction Solicitors. All rights reserved.</small>
+        </div>
+        <div class="d-block d-md-flex justify-content-center gap-2 text-center">
+          <p class="mb-1 mb-md-0"><a href="TermsAndConditions.html" class="text-white">Terms and Conditions</a></p>
+          <p class="d-none d-md-block mb-0">|</p>
+          <p class="mb-1 mb-md-0"><a href="PrivacyPolicy.html" class="text-white">Privacy Policy</a></p>
+          <p class="d-none d-md-block mb-0">|</p>
+          <p class="mb-1 mb-md-0"><a href="CookiePolicy.html" class="text-white">Cookie Policy</a></p>
+          <p class="d-none d-md-block mb-0">|</p>
+          <p class="mb-1 mb-md-0"><a href="Disclaimer.html" class="text-white">complaints</a></p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // FAQ toggle functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                const allAnswers = document.querySelectorAll('.faq-answer');
+                const allIcons = document.querySelectorAll('.faq-question i');
+                
+                // Close all other answers
+                allAnswers.forEach(a => {
+                    if (a !== answer) a.style.display = 'none';
+                });
+                allIcons.forEach(i => {
+                    if (i !== icon) {
+                        i.classList.remove('fa-chevron-up');
+                        i.classList.add('fa-chevron-down');
+                    }
+                });
+                
+                // Toggle current answer
+                if (answer.style.display === 'none' || !answer.style.display) {
+                    answer.style.display = 'block';
+                    icon.classList.remove('fa-chevron-down');
+                    icon.classList.add('fa-chevron-up');
+                } else {
+                    answer.style.display = 'none';
+                    icon.classList.remove('fa-chevron-up');
+                    icon.classList.add('fa-chevron-down');
+                }
+            });
+        });
+
+        // Initially hide all FAQ answers
+        document.querySelectorAll('.faq-answer').forEach(answer => {
+            answer.style.display = 'none';
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation to buttons
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                if (!this.getAttribute('href') || this.getAttribute('href').startsWith('#')) {
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Loading...';
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                    }, 2000);
+                }
+            });
+        });
+         //navbar toggler icon switch
+        const toggler = document.querySelector('.navbar-toggler');
+        const navbarCollapse = document.getElementById('navbarNav');
+        const hamburgerIcon = toggler.querySelector('.navbar-toggler-icon');
+        const closeIcon = toggler.querySelector('.close-icon');
+
+        // Listen for show/hide events
+        navbarCollapse.addEventListener('show.bs.collapse', () => {
+            hamburgerIcon.classList.add('d-none');
+            closeIcon.classList.remove('d-none');
+        });
+
+        navbarCollapse.addEventListener('hide.bs.collapse', () => {
+            hamburgerIcon.classList.remove('d-none');
+            closeIcon.classList.add('d-none');
+        });
+    </script>
+</body>
+</html>

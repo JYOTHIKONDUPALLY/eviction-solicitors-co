@@ -48,7 +48,7 @@
 
     .stats-container {
       background-color: var(--secondary-orange);
-      width: 80%;
+      width: 100%;
     }
 
     .stat-icon,
