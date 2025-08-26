@@ -514,6 +514,9 @@ footer a:hover {
     display: block;
     /* stack everything into one block */
   }
+  .icoLogo {
+    margin-top: 20px;
+  }
 
   .coverage-column {
     margin: 0;
