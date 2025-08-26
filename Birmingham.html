@@ -43,7 +43,55 @@
   </style>
 </head>
 <body>
-  <div class="container-fluid p-0">
+
+  <!-- WRAPPER for navbar and mobile call link -->
+  <div class="sticky-wrapper">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg  sticky-top">
+      <div class="container">
+        <img src="assets/Eviction_lawyers.png" alt="logo" width="50px" height="50px" />
+        <a class="navbar-brand" href="#">Eviction Lawyers</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+          <span class="close-icon d-none fs-3">&times;</span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="services.html">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>            <li class="nav-item">
+              <a class="nav-link" href="blog.html">Blog</a>
+            </li>
+
+          </ul>
+        </div>
+        <!-- Desktop Call Button -->
+        <a href="tel:+44 0333 050 5381" class="px-3 d-none d-lg-inline text-decoration-none text-white">
+          Call Us: 0333 050 5381
+        </a>
+      </div>
+    </nav>
+    <!-- Mobile Call Button -->
+    <div class="d-lg-none bg-white py-2 mobile-call-bar d-flex justify-content-around align-items-center">
+      <a href="tel:+44 0333 050 5381" class="fw-semibold mobile-call text-decoration-none"
+        style="color: #cc6918; border-bottom: 2px solid #cc6918;">
+        Call Us: 0333 050 5381
+      </a>
+      <a href="contact.html" class="btn btn-sm"
+        style="background-color: #cc6918; color: white; padding: 6px 12px; border-radius: 4px;">
+        Contact form
+      </a>
+    </div>
+      <div class="container-fluid p-0">
         <!-- Desktop Version (unchanged) -->
         <div class="benefit-banner d-none d-md-block" role="region" aria-label="Key benefits">
             <div class="container">
@@ -127,53 +175,6 @@
                 </div>
             </div>
         </div>
-    </div>
-  <!-- WRAPPER for navbar and mobile call link -->
-  <div class="sticky-wrapper">
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg  sticky-top">
-      <div class="container">
-        <img src="assets/Eviction_lawyers.png" alt="logo" width="50px" height="50px" />
-        <a class="navbar-brand" href="#">Eviction Lawyers</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-          <span class="navbar-toggler-icon"></span>
-          <span class="close-icon d-none fs-3">&times;</span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="services.html">Services</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>            <li class="nav-item">
-              <a class="nav-link" href="blog.html">Blog</a>
-            </li>
-
-          </ul>
-        </div>
-        <!-- Desktop Call Button -->
-        <a href="tel:+44 0333 050 5381" class="px-3 d-none d-lg-inline text-decoration-none text-white">
-          Call Us: 0333 050 5381
-        </a>
-      </div>
-    </nav>
-    <!-- Mobile Call Button -->
-    <div class="d-lg-none bg-white py-2 mobile-call-bar d-flex justify-content-around align-items-center">
-      <a href="tel:+44 0333 050 5381" class="fw-semibold mobile-call text-decoration-none"
-        style="color: #cc6918; border-bottom: 2px solid #cc6918;">
-        Call Us: 0333 050 5381
-      </a>
-      <a href="contact.html" class="btn btn-sm"
-        style="background-color: #cc6918; color: white; padding: 6px 12px; border-radius: 4px;">
-        Contact form
-      </a>
     </div>
   </div>
  <section class="hero text-center">
