@@ -376,7 +376,7 @@
         </section>
 
         <!-- Main Contact Section -->
-         <section class="py-5 bg-light">
+     <section class="py-5 bg-light">
         <div class="container">
             <div class="row g-5">
                 <!-- Contact Form -->
@@ -634,7 +634,7 @@
                             </div>
                             <!-- End of SRA Digital Badge code -->
                             <div class="icoLogo">
-                                <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
+                                <img src="assets/icoLogo.png" alt="ICO Logo" width="150" height="100">
                             </div>
                         </div>
                     </div>
@@ -716,7 +716,7 @@
                                     </div>
                                 </div>
 
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center mb-4">
                                     <i class="fas fa-clock text-white me-2 mt-1 d-none d-md-block"></i>
                                     <div class="text-white small">
                                         <i class="fas fa-clock text-white me-2 mt-1 d-inline-block d-md-none"></i>
@@ -820,107 +820,107 @@
         <!-- JavaScript -->
         <script>
             document.addEventListener('DOMContentLoaded', function () {
-                const form = document.getElementById('contactForm');
-                const successMessage = document.getElementById('formSuccess');
-                const errorMessage = document.getElementById('formError');
-                const submitBtn = document.getElementById('submitBtn');
-                const dropdownButton = document.getElementById('dropdownAssistance');
-                const dropdownText = document.getElementById('dropdownText');
-                const checklistInputs = document.querySelectorAll('input[name="checklist[]"]');
+    const form = document.getElementById('contactForm');
+    const successMessage = document.getElementById('formSuccess');
+    const errorMessage = document.getElementById('formError');
+    const submitBtn = document.getElementById('submitBtn');
+    const dropdownButton = document.getElementById('dropdownAssistance');
+    const dropdownText = document.getElementById('dropdownText');
+    const checklistInputs = document.querySelectorAll('input[name="checklist[]"]');
 
-                // Function to update dropdown display text
-                function updateDropdownText() {
-                    const selectedCheckboxes = Array.from(checklistInputs).filter(cb => cb.checked);
-                    const selectedLabels = selectedCheckboxes.map(cb => {
-                        // Get the label text (remove extra whitespace)
-                        return cb.parentElement.textContent.trim();
-                    });
+    // Function to update dropdown display text
+    function updateDropdownText() {
+        const selectedCheckboxes = Array.from(checklistInputs).filter(cb => cb.checked);
+        const selectedLabels = selectedCheckboxes.map(cb => {
+            // Get the label text (remove extra whitespace)
+            return cb.parentElement.textContent.trim();
+        });
+        console.log(selectedLabels);
 
-                    if (selectedLabels.length === 0) {
-                        dropdownText.textContent = 'Select Assistance Types';
-                        dropdownButton.classList.remove('text-start');
-                    } else if (selectedLabels.length === 1) {
-                        dropdownText.textContent = selectedLabels[0];
-                        dropdownButton.classList.add('text-start');
-                    } else if (selectedLabels.length <= 2) {
-                        dropdownText.textContent = selectedLabels.join(', ');
-                        dropdownButton.classList.add('text-start');
-                    } else {
-                        dropdownText.textContent = `${selectedLabels.length} assistance types selected`;
-                        dropdownButton.classList.add('text-start');
-                    }
+        if (selectedLabels.length === 0) {
+            dropdownText.textContent = 'Select Assistance Types';
+            dropdownButton.classList.remove('text-start');
+        } else if (selectedLabels.length === 1) {
+            dropdownText.textContent = selectedLabels[0];
+            dropdownButton.classList.add('text-start');
+        } else if (selectedLabels.length <= 2) {
+            dropdownText.textContent = selectedLabels.join(', ');
+            dropdownButton.classList.add('text-start');
+        } else {
+            dropdownText.textContent = `${selectedLabels.length} assistance types selected`;
+            dropdownButton.classList.add('text-start');
+        }
+    }
+
+    // Add event listeners to all checkboxes
+    checklistInputs.forEach(checkbox => {
+        checkbox.addEventListener('change', updateDropdownText);
+    });
+
+    // Prevent dropdown from closing when clicking on checkboxes
+    document.querySelectorAll('.dropdown-menu label').forEach(label => {
+        label.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+
+    // Form submission logic
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        // Hide previous messages
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+
+        // Show loading state
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+        submitBtn.disabled = true;
+
+        const formData = new FormData(form);
+        const selectedCheckboxes = Array.from(document.querySelectorAll('input[name="checklist[]"]:checked'));
+        const selectedOptions = selectedCheckboxes.map(cb => cb.value);
+        
+        // Add selected options to form data
+        formData.append('Legal Assistance Types', selectedOptions.join(', '));
+
+        fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData,
+        })
+            .then(response => {
+                if (response.ok) {
+                    form.reset();
+                    updateDropdownText(); // Reset dropdown text after form reset
+                    successMessage.style.display = 'block';
+                    successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    setTimeout(() => successMessage.style.display = 'none', 8000);
+                } else {
+                    throw new Error('Submission failed');
                 }
-
-                // Add event listeners to all checkboxes
-                checklistInputs.forEach(checkbox => {
-                    checkbox.addEventListener('change', updateDropdownText);
-                });
-
-                // Prevent dropdown from closing when clicking on checkboxes
-                document.querySelectorAll('.dropdown-menu label').forEach(label => {
-                    label.addEventListener('click', function (e) {
-                        e.stopPropagation();
-                    });
-                });
-
-                // Form submission logic
-                form.addEventListener('submit', function (e) {
-                    e.preventDefault();
-
-                    // Hide previous messages
-                    successMessage.style.display = 'none';
-                    errorMessage.style.display = 'none';
-
-                    // Show loading state
-                    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
-                    submitBtn.disabled = true;
-
-                    const formData = new FormData(form);
-                    const selectedCheckboxes = Array.from(document.querySelectorAll('input[name="checklist[]"]:checked'));
-                    const selectedOptions = selectedCheckboxes.map(cb => cb.value);
-
-                    // Add selected options to form data
-                    formData.append('Legal Assistance Types', selectedOptions.join(', '));
-
-                    fetch('https://api.web3forms.com/submit', {
-                        method: 'POST',
-                        body: formData,
-                    })
-                        .then(response => {
-                            if (response.ok) {
-                                form.reset();
-                                updateDropdownText(); // Reset dropdown text after form reset
-                                successMessage.style.display = 'block';
-                                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                                setTimeout(() => successMessage.style.display = 'none', 8000);
-                            } else {
-                                throw new Error('Submission failed');
-                            }
-                        })
-                        .catch(() => {
-                            errorMessage.style.display = 'block';
-                            errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                            setTimeout(() => errorMessage.style.display = 'none', 8000);
-                        })
-                        .finally(() => {
-                            // Reset button state
-                            submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send My Request';
-                            submitBtn.disabled = false;
-                        });
-                });
-
-                // Smooth scroll for anchor links
-                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                    anchor.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        const target = document.querySelector(this.getAttribute('href'));
-                        if (target) {
-                            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        }
-                    });
-                });
+            })
+            .catch(() => {
+                errorMessage.style.display = 'block';
+                errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                setTimeout(() => errorMessage.style.display = 'none', 8000);
+            })
+            .finally(() => {
+                // Reset button state
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Send My Request';
+                submitBtn.disabled = false;
             });
+    });
 
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
+    });
+});
             // Smooth scroll for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
@@ -954,6 +954,5 @@
                     this.style.transform = 'translateY(0)';
                 });
             });
-        });
         </script>
     </body>
