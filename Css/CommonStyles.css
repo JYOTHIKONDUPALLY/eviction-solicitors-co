@@ -13,6 +13,9 @@
   --danger-red: #dc2626;
   --text-dark: #1e293b;
   --success-green: #059669;
+    --accent-gold: #ffd700;
+            --dark-bg: #1a1a1a;
+            --accent-gold: #ffd700;
 }
 
 body {
@@ -504,165 +507,6 @@ footer a:hover {
   height: 100px;
 }
 
-.benefit-banner {
-  background: #fff;
-  color: #000;
-  padding: 8px 15px;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.benefit-inner {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  /* allows wrapping on small screens */
-}
-
-.benefit-lead {
-  display: flex;
-  align-items: center;
-  font-weight: bold;
-  color: #fff;
-}
-
-.tick-box {
-  background: #28a745;
-  /* green */
-  color: #fff;
-  font-weight: bold;
-  padding: 2px 6px;
-  border-radius: 3px;
-  margin-right: 6px;
-}
-
-.lead-text {
-  color: #000;
-}
-
-.benefit-list {
-  display: flex;
-  gap: 15px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.benefit-list li {
-  position: relative;
-  padding: 0 12px;
-  white-space: nowrap;
-}
-
-.benefit-list li:not(:last-child)::after {
-  content: "|";
-  color: #cc6918;
-  /* orange divider */
-  position: absolute;
-  right: 0;
-}
-
-@media (max-width: 768px) {
-  .benefit-banner {
-    padding: 10px 15px;
-    font-size: 12px;
-    text-align: center;
-  }
-
-  .icoLogo {
-    margin-top: 20px;
-    height: 100px;
-  }
-
-  .benefit-inner {
-    flex-direction: column;
-    gap: 8px;
-  }
-
-  .benefit-list {
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .benefit-list li {
-    padding: 0 8px;
-    font-size: 11px;
-  }
-
-  .benefit-list li:not(:last-child)::after {
-    /* display: none;  */
-  }
-}
-
-/* Extra small screens */
-@media (max-width: 768px) {
-  .benefit-banner {
-    padding: 10px 15px;
-    font-size: 12px;
-    text-align: left;
-    /* keep it aligned */
-  }
-
-  .benefit-inner {
-    flex-wrap: wrap;
-    /* allow wrapping but keep row layout */
-    gap: 8px;
-    justify-content: flex-start;
-  }
-
-  .benefit-lead {
-    display: flex;
-    align-items: center;
-    margin-right: 8px;
-    color: #000;
-    /* black for mobile background */
-  }
-
-  .benefit-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .benefit-list li {
-    padding: 0 6px;
-    font-size: 11px;
-  }
-
-  .benefit-list li:not(:last-child)::after {
-    content: "|";
-    right: -4px;
-  }
-}
-
-@media (max-width: 480px) {
-  .benefit-banner {
-    padding: 8px 10px;
-  }
-
-  .benefit-inner {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .benefit-list {
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-
-  .benefit-lead {
-    margin-right: 6px;
-    /* tick stays on same row */
-  }
-}
-
-/* Desktop layout (3 columns side by side) */
-
 
 /* Mobile layout */
 @media (max-width: 768px) {
@@ -688,3 +532,278 @@ footer a:hover {
     /* consistent spacing between items */
   }
 }
+.benefit-banner {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2c2c2c 100%);
+            border-bottom: 3px solid var(--primary-orange);
+            padding: 12px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Mobile slider version */
+        .benefit-banner-mobile {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2c2c2c 100%);
+            border-bottom: 3px solid var(--primary-orange);
+            padding: 15px 0;
+            position: relative;
+            overflow: hidden;
+            height: 80px;
+        }
+
+        .mobile-slider-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .mobile-slides {
+            display: flex;
+            width: 400%; /* 4 slides */
+            height: 100%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .mobile-slide {
+            width: 25%; /* Each slide takes 1/4 of the container */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .benefit-banner::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shine 3s infinite;
+        }
+
+        @keyframes shine {
+            0% { left: -100%; }
+            50% { left: 100%; }
+            100% { left: 100%; }
+        }
+
+        .benefit-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 2;
+        }
+
+        .benefit-intro {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .benefit-star {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        .benefit-items {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 500;
+            padding: 0.25rem 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Mobile slide benefit item styling */
+        .mobile-slide .benefit-item {
+            font-size: 0.9rem;
+            font-weight: 600;
+            justify-content: center;
+        }
+
+        .benefit-item:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.2);
+        }
+
+        .benefit-check {
+            background: #22c55e;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5rem;
+            font-weight: bold;
+            box-shadow: 0 2px 8px rgba(34, 197, 94, 0.3);
+            animation: checkPop 0.5s ease-out;
+        }
+
+        /* Larger check for mobile slides */
+        .mobile-slide .benefit-check {
+            width: 24px;
+            height: 24px;
+            font-size: 0.7rem;
+        }
+
+        @keyframes checkPop {
+            0% { transform: scale(0.8); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .benefit-separator {
+            width: 2px;
+            height: 20px;
+            background: linear-gradient(to bottom, transparent, var(--primary-orange), transparent);
+            opacity: 0.7;
+        }
+
+        /* Slide indicators (invisible but functional) */
+        .slide-indicators {
+            position: absolute;
+            bottom: 5px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 3;
+            opacity: 0; /* Make invisible */
+            pointer-events: none; /* Disable interaction */
+        }
+
+        .indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transition: background 0.3s ease;
+        }
+
+        .indicator.active {
+            background: var(--primary-orange);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 992px) {
+            .benefit-banner {
+                padding: 10px 0;
+            }
+            
+            .benefit-container {
+                gap: 1rem;
+                flex-direction: column;
+            }
+            
+            .benefit-items {
+                gap: 1.5rem;
+                justify-content: center;
+            }
+            
+            .benefit-intro {
+                font-size: 1rem;
+            }
+            
+            .benefit-item {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .benefit-items {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+                text-align: center;
+            }
+            
+            .benefit-separator {
+                display: none;
+            }
+        }
+
+        /* Fade in animation for active slide */
+        .mobile-slide {
+            opacity: 0.7;
+            transition: opacity 0.5s ease;
+        }
+
+        .mobile-slide.active {
+            opacity: 1;
+        }
+
+        /* Alternative Design Option */
+        .benefit-banner-alt {
+            background: linear-gradient(90deg, 
+                var(--primary-orange) 0%, 
+                #ff8c42 25%, 
+                var(--primary-orange) 50%, 
+                #ff8c42 75%, 
+                var(--primary-orange) 100%);
+            background-size: 400% 100%;
+            animation: gradientSlide 8s ease-in-out infinite;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        @keyframes gradientSlide {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .alt-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .alt-badge {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .alt-badge:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .alt-icon {
+            font-size: 1rem;
+        }

@@ -405,20 +405,91 @@
 </head>
 
 <body>
-<div class="benefit-banner d-none d-md-block" role="region" aria-label="Key benefits">
-    <div class="benefit-inner">
-      <div class="benefit-lead">
-        <span class="tick-box" aria-hidden="true">✓</span>
-        <span class="lead-text">Our</span>
-      </div>
-      <ul class="benefit-list">
-        <li>SRA Regulated Solicitors</li>
-        <li>Fixed Fees</li>
-        <li>Guaranteed Eviction</li>
-        <li>20+ years of legal experience</li>
-      </ul>
+  <div class="container-fluid p-0">
+        <!-- Desktop Version (unchanged) -->
+        <div class="benefit-banner d-none d-md-block" role="region" aria-label="Key benefits">
+            <div class="container">
+                <div class="benefit-container">
+                    <div class="benefit-items">
+                        <div class="benefit-item">
+                            <div class="benefit-check">✓</div>
+                            <span>SRA Regulated Solicitors</span>
+                        </div>
+                        
+                        <div class="benefit-separator"></div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-check">✓</div>
+                            <span>Fixed Transparent Fees</span>
+                        </div>
+                        
+                        <div class="benefit-separator"></div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-check">✓</div>
+                            <span>Guaranteed Eviction Service</span>
+                        </div>
+                        
+                        <div class="benefit-separator"></div>
+                        
+                        <div class="benefit-item">
+                            <div class="benefit-check">✓</div>
+                            <span>20+ Years Legal Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Slider Version -->
+        <div class="benefit-banner-mobile d-block d-md-none" role="region" aria-label="Key benefits">
+            <div class="container">
+                <div class="mobile-slider-container">
+                    <div class="mobile-slides" id="mobileSlides">
+                        <!-- Slide 1 -->
+                        <div class="mobile-slide active">
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>SRA Regulated Solicitors</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 2 -->
+                        <div class="mobile-slide">
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>Fixed Transparent Fees</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 3 -->
+                        <div class="mobile-slide">
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>Guaranteed Eviction Service</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Slide 4 -->
+                        <div class="mobile-slide">
+                            <div class="benefit-item">
+                                <div class="benefit-check">✓</div>
+                                <span>20+ Years Legal Experience</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Invisible slide indicators -->
+                    <div class="slide-indicators">
+                        <div class="indicator active"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                        <div class="indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
     <!-- Sticky Navigation -->
     <div class="sticky-top">
         <nav class="navbar navbar-expand-lg">
@@ -1654,6 +1725,86 @@
             });
         });
     }
+        // Mobile slider functionality
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const slideInterval = 2000; // 2 seconds
+
+        function showSlide(index) {
+            const slides = document.getElementById('mobileSlides');
+            const indicators = document.querySelectorAll('.indicator');
+            const mobileSlides = document.querySelectorAll('.mobile-slide');
+            
+            // Update transform
+            slides.style.transform = `translateX(-${index * 25}%)`;
+            
+            // Update indicators
+            indicators.forEach((indicator, i) => {
+                indicator.classList.toggle('active', i === index);
+            });
+            
+            // Update slide opacity
+            mobileSlides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+            });
+            
+            currentSlide = index;
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            showSlide(currentSlide);
+        }
+
+        // Auto-slide functionality
+        function startAutoSlide() {
+            return setInterval(nextSlide, slideInterval);
+        }
+
+        // Initialize slider
+        let autoSlideInterval;
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Start auto-sliding
+            autoSlideInterval = startAutoSlide();
+            
+            // Pause on hover (optional)
+            const mobileSlider = document.querySelector('.benefit-banner-mobile');
+            if (mobileSlider) {
+                mobileSlider.addEventListener('mouseenter', () => {
+                    clearInterval(autoSlideInterval);
+                });
+                
+                mobileSlider.addEventListener('mouseleave', () => {
+                    autoSlideInterval = startAutoSlide();
+                });
+            }
+        });
+
+        // Original desktop animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const items = document.querySelectorAll('.benefit-banner .benefit-item');
+            items.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+                item.style.animation = 'slideInFromTop 0.6s ease-out forwards';
+            });
+        });
+
+        // Add CSS for slide in animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes slideInFromTop {
+                from {
+                    opacity: 0;
+                    transform: translateY(-20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        `;
+        document.head.appendChild(style);
       </script>
 </body>
 
