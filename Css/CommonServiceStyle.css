@@ -260,7 +260,7 @@
         }
             /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, #1e293b, #0f766e);
+            background: linear-gradient(135deg, var(--text-dark), #0f172a);
             color: white;
             padding: 3rem;
             border-radius: 12px;
