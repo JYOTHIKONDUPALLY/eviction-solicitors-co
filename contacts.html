@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact us for legal support in eviction, court processes, or property disputes. Fast response & expert guidance from our legal professionals." />
+  <title>Contact Us | Get in Touch with Our Legal Support Team</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-orange: #cc6918;
+      --dark-orange: #a85414;
+      --light-orange: #e67e22;
+      --secondary-orange: #e08a35;
+      --text-dark: #2c3e50;
+      --text-light: #6c757d;
+      --bg-light: #f8f9fa;
+      --bg-white: #ffffff;
+      --shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+      --shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      --border-radius: 0.5rem;
+      --border-radius-lg: 1rem;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+      background-color: var(--bg-light);
+    }
+
+    /* Header Styles */
+    .navbar {
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+      box-shadow: var(--shadow-md);
+      padding: 1rem 0;
+    }
+
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: white !important;
+    }
+
+    .navbar-nav .nav-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      padding: 0.75rem 1rem !important;
+      margin: 0 0.25rem;
+      border-radius: var(--border-radius);
+    }
+
+    .navbar-nav .nav-link:hover,
+    .navbar-nav .nav-link.active {
+      color: white !important;
+      background-color: rgba(255, 255, 255, 0.1);
+      transform: translateY(-2px);
+    }
+
+    .call-btn {
+      background-color: white;
+      color: var(--primary-orange);
+      border: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: var(--border-radius);
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .call-btn:hover {
+      background-color: var(--bg-light);
+      color: var(--dark-orange);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+      color: white;
+      padding: 4rem 0 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+      opacity: 0.1;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-title {
+      font-size: 3rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-subtitle {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    /* Contact Section */
+    .contact-section {
+      padding: 4rem 0;
+      margin-top: -2rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .contact-card {
+      background: var(--bg-white);
+      border-radius: var(--border-radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .form-control,
+    .form-select {
+      border: 2px solid #e9ecef;
+      border-radius: var(--border-radius);
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .form-control:focus,
+    .form-select:focus {
+      border-color: var(--primary-orange);
+      box-shadow: 0 0 0 0.25rem rgba(255, 107, 53, 0.15);
+    }
+
+    .form-label {
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+      border: none;
+      padding: 1rem 2rem;
+      font-weight: 600;
+      border-radius: var(--border-radius);
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--dark-orange) 0%, var(--primary-orange) 100%);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Checkbox Styling */
+    .form-check {
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+    }
+
+    .form-check-input {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-top: 0.125rem;
+      margin-left: -2rem;
+      border: 2px solid #dee2e6;
+    }
+
+    .form-check-input:checked {
+      background-color: var(--primary-orange);
+      border-color: var(--primary-orange);
+    }
+
+    .form-check-label {
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    /* Office Info Card */
+    .office-card {
+      background: var(--bg-white);
+      border-radius: var(--border-radius-lg);
+      padding: 2.5rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      height: 100%;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+      background: var(--bg-light);
+      border-radius: var(--border-radius);
+      transition: all 0.3s ease;
+    }
+
+    .info-item:hover {
+      background-color: rgba(255, 107, 53, 0.05);
+      transform: translateY(-2px);
+    }
+
+    .info-icon {
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+      color: white;
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* Map Styling */
+    .map-container {
+      border-radius: var(--border-radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-top: 2rem;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+
+    /* Alert Styling */
+    .alert-success {
+      background: linear-gradient(135deg, #d1e7dd 0%, #a3d9a4 100%);
+      border: none;
+      border-radius: var(--border-radius);
+      color: #0f5132;
+    }
+
+    .alert-danger {
+      background: linear-gradient(135deg, #f8d7da 0%, #f5c6cb 100%);
+      border: none;
+      border-radius: var(--border-radius);
+      color: #721c24;
+    }
+
+    /* Floating Call Button */
+    .floating-call-btn {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: linear-gradient(135deg, var(--primary-orange) 0%, var(--dark-orange) 100%);
+      color: white;
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-lg);
+      z-index: 1000;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .floating-call-btn:hover {
+      color: white;
+      transform: scale(1.1);
+      box-shadow: 0 1rem 2rem rgba(255, 107, 53, 0.4);
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+
+      .hero-subtitle {
+        font-size: 1.1rem;
+      }
+
+      .contact-card,
+      .office-card {
+        padding: 1.5rem;
+      }
+
+      .floating-call-btn {
+        width: 3.5rem;
+        height: 3.5rem;
+      }
+
+      .info-item {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .info-icon {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+
+    /* Loading Animation */
+    .btn-loading {
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .btn-loading::after {
+      content: '';
+      width: 1rem;
+      height: 1rem;
+      margin-left: 0.5rem;
+      border: 2px solid transparent;
+      border-top: 2px solid white;
+      border-radius: 50%;
+      display: inline-block;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Custom Section Styling */
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.25rem;
+      color: var(--text-light);
+      margin-bottom: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+<div class="benefit-banner d-none d-md-block" role="region" aria-label="Key benefits">
+    <div class="benefit-inner">
+      <div class="benefit-lead">
+        <span class="tick-box" aria-hidden="true">✓</span>
+        <span class="lead-text">Our</span>
+      </div>
+      <ul class="benefit-list">
+        <li>SRA Regulated Solicitors</li>
+        <li>Fixed Fees</li>
+        <li>Guaranteed Eviction</li>
+        <li>20+ years of legal experience</li>
+      </ul>
+    </div>
+  </div>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <div class="d-flex align-items-center">
+        <img src="assets/Eviction_lawyers.png" alt="Eviction Lawyers Logo" width="45" height="45" class="me-3" />
+        <a class="navbar-brand" href="index.html">Eviction Lawyers</a>
+      </div>
+      
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="services.html">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="contact.html">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">Blog</a>
+          </li>
+        </ul>
+        
+        <a href="tel:+4403330505381" class="call-btn d-none d-lg-inline-flex">
+          <i class="fas fa-phone me-2"></i>
+          0333 050 5381
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <div class="hero-content">
+            <h1 class="hero-title">Get Expert Legal Help Today</h1>
+            <p class="hero-subtitle">
+              Our experienced eviction lawyers are ready to assist you with all your property legal needs. 
+              Get a free consultation and fast, professional service.
+            </p>
+            <div class="d-flex flex-column flex-md-row gap-3">
+              <a href="tel:+4403330505381" class="btn btn-light btn-lg">
+                <i class="fas fa-phone me-2"></i>
+                Call Now: 0333 050 5381
+              </a>
+              <a href="#contact-form" class="btn btn-outline-light btn-lg">
+                <i class="fas fa-envelope me-2"></i>
+                Request Callback
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 d-none d-lg-block">
+          <div class="text-center">
+            <i class="fas fa-balance-scale" style="font-size: 8rem; opacity: 0.3;"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-section" id="contact-form">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Contact Form -->
+        <div class="col-lg-8">
+          <div class="contact-card">
+            <div class="text-center mb-4">
+              <h2 class="section-title">Request a Free Consultation</h2>
+              <p class="section-subtitle">Fill out the form below and our legal experts will contact you within 24 hours</p>
+            </div>
+
+            <form id="contactForm" method="POST">
+              <input type="hidden" name="access_key" value="bffdd0be-0783-4051-8b4d-e1b5def20683" />
+              <input type="hidden" name="from_name" value="Eviction Lawyers Website" />
+              <input type="hidden" name="subject" value="New Contact Form Submission" />
+              <input type="checkbox" name="botcheck" style="display:none" />
+
+              <!-- Personal Information -->
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="name" class="form-label">
+                    <i class="fas fa-user me-2"></i>Full Name
+                  </label>
+                  <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="email" class="form-label">
+                    <i class="fas fa-envelope me-2"></i>Email Address
+                  </label>
+                  <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required />
+                </div>
+              </div>
+
+              <div class="row g-3 mb-4">
+                <div class="col-md-6">
+                  <label for="phone" class="form-label">
+                    <i class="fas fa-phone me-2"></i>Phone Number
+                  </label>
+                  <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter your phone number" required />
+                </div>
+                <div class="col-md-6">
+                  <label for="urgency" class="form-label">
+                    <i class="fas fa-clock me-2"></i>Urgency Level
+                  </label>
+                  <select class="form-select" id="urgency" name="urgency" required>
+                    <option value="">Select urgency level</option>
+                    <option value="immediate">Immediate (Within 24 hours)</option>
+                    <option value="urgent">Urgent (Within 1 week)</option>
+                    <option value="normal">Normal (Within 2 weeks)</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Eviction Type Checkboxes -->
+              <div class="mb-4">
+                <label class="form-label">
+                  <i class="fas fa-list-check me-2"></i>Type of Eviction (Select all that apply)
+                </label>
+                <div class="row g-2">
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Tenancy agreement in place" id="check1">
+                      <label class="form-check-label" for="check1">Tenancy agreement in place</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Section 8 fault eviction" id="check2">
+                      <label class="form-check-label" for="check2">Section 8 fault eviction</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Section 21 non-fault eviction" id="check3">
+                      <label class="form-check-label" for="check3">Section 21 no fault eviction</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="No tenancy provided" id="check4">
+                      <label class="form-check-label" for="check4">No tenancy provided</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="HMO property" id="check5">
+                      <label class="form-check-label" for="check5">HMO property</label>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Trespassers or squatters" id="check6">
+                      <label class="form-check-label" for="check6">Trespassers or squatters</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Rent arrears" id="check7">
+                      <label class="form-check-label" for="check7">Rent arrears</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Notice already served" id="check8">
+                      <label class="form-check-label" for="check8">Notice already served</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Deposit protected if taken" id="check9">
+                      <label class="form-check-label" for="check9">Deposit protected if taken</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="checklist[]" value="Bought property with tenant in situ" id="check10">
+                      <label class="form-check-label" for="check10">Bought property with tenant in situ</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="mb-4">
+                <label for="message" class="form-label">
+                  <i class="fas fa-comment me-2"></i>Tell us about your situation
+                </label>
+                <textarea class="form-control" id="message" name="message" rows="5" 
+                  placeholder="Please provide details about your eviction case, timeline, and any specific concerns..." required></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-lg" id="submitBtn">
+                  <i class="fas fa-paper-plane me-2"></i>
+                  Request Free Consultation
+                </button>
+              </div>
+
+              <!-- Alert Messages -->
+              <div class="alert alert-success mt-4" id="formSuccess" style="display: none;">
+                <i class="fas fa-check-circle me-2"></i>
+                <strong>Success!</strong> Your message has been sent successfully. We'll contact you within 24 hours.
+              </div>
+              <div class="alert alert-danger mt-4" id="formError" style="display: none;">
+                <i class="fas fa-exclamation-circle me-2"></i>
+                <strong>Error!</strong> There was a problem sending your message. Please try again or call us directly.
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Office Information -->
+        <div class="col-lg-4">
+          <div class="office-card">
+            <h3 class="mb-4">
+              <i class="fas fa-building me-2"></i>
+              Contact Information
+            </h3>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5>Our Offices</h5>
+                <p class="mb-1"><strong>London Office:</strong><br>
+                85 Great Portland Street,<br>
+                First Floor, London, W1W 7LT</p>
+                <p class="mb-0"><strong>Cheshire Office:</strong><br>
+                12 Chapel Street, Cheshire SK14 1LF</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div>
+                <h5>Phone</h5>
+                <p class="mb-0">
+                  <a href="tel:+4403330505381" class="text-decoration-none fw-bold">
+                    0333 050 5381
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5>Email</h5>
+                <p class="mb-0">
+                  <a href="mailto:info@evictionlawyers.co.uk" class="text-decoration-none">
+                    info@evictionlawyers.co.uk
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div>
+                <h5>Office Hours</h5>
+                <p class="mb-1"><strong>Monday - Friday:</strong> 9:00 AM - 6:00 PM</p>
+                <p class="mb-0"><strong>Emergency:</strong> 24/7 Support Available</p>
+              </div>
+            </div>
+
+            <div class="text-center mt-4">
+              <a href="tel:+4403330505381" class="btn btn-primary w-100">
+                <i class="fas fa-phone me-2"></i>
+                Call Now for Immediate Help
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Map -->
+      <div class="row mt-5">
+        <div class="col-12">
+          <h3 class="text-center mb-4">Find Us</h3>
+          <div class="map-container">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2482.6254536733336!2d-0.14552157472534988!3d51.52008715977811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48761ad5969a5555%3A0xdb69a017aa33b477!2sMy%20City%20Office!5e0!3m2!1sen!2sin!4v1744682019263!5m2!1sen!2sin"
+              loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Floating Call Button -->
+  <a href="tel:+4403330505381" class="floating-call-btn" title="Call Us Now">
+    <i class="fas fa-phone"></i>
+  </a>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.getElementById('contactForm');
+      const successMessage = document.getElementById('formSuccess');
+      const errorMessage = document.getElementById('formError');
+      const submitBtn = document.getElementById('submitBtn');
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        
+        // Hide previous messages
+        successMessage.style.display = 'none';
+        errorMessage.style.display = 'none';
+        
+        // Add loading state
+        submitBtn.classList.add('btn-loading');
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending Message...';
+
+        const formData = new FormData(form);
+        
+        // Handle checklist
+        const checklistItems = form.querySelectorAll('input[name="checklist[]"]:checked');
+        const selectedOptions = Array.from(checklistItems).map(cb => cb.value);
+        formData.append('Checklist Answers', selectedOptions.join(', '));
+
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData,
+        })
+          .then(response => {
+            if (response.ok) {
+              form.reset();
+              successMessage.style.display = 'block';
+              successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+              setTimeout(() => successMessage.style.display = 'none', 8000);
+            } else {
+              throw new Error('Submission failed');
+            }
+          })
+          .catch(() => {
+            errorMessage.style.display = 'block';
+            errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            setTimeout(() => errorMessage.style.display = 'none', 8000);
+          })
+          .finally(() => {
+            // Remove loading state
+            submitBtn.classList.remove('btn-loading');
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane me-2"></i>Request Free Consultation';
+          });
+      });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>

@@ -260,7 +260,7 @@
         }
             /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, var(--primary-orange), var(--secondary-orange));
+            background: linear-gradient(135deg, #1e293b, #0f766e);
             color: white;
             padding: 3rem;
             border-radius: 12px;
@@ -301,7 +301,7 @@
 
         .cta-button-white {
             background: white;
-            color: var(--primary-orange);
+            color: var(--text-dark);
             padding: 1rem 2rem;
             border-radius: 8px;
             font-weight: 700;

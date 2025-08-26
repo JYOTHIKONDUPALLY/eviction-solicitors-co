@@ -279,6 +279,20 @@
 </head>
 
 <body>
+<div class="benefit-banner d-none d-md-block" role="region" aria-label="Key benefits">
+    <div class="benefit-inner">
+      <div class="benefit-lead">
+        <span class="tick-box" aria-hidden="true">✓</span>
+        <span class="lead-text">Our</span>
+      </div>
+      <ul class="benefit-list">
+        <li>SRA Regulated Solicitors</li>
+        <li>Fixed Fees</li>
+        <li>Guaranteed Eviction</li>
+        <li>20+ years of legal experience</li>
+      </ul>
+    </div>
+  </div>
     <!-- Sticky Navigation -->
     <div class="sticky-top">
         <nav class="navbar navbar-expand-lg">
@@ -819,70 +833,84 @@
                                 </div>
 
                                 <!-- Case Details Section -->
-                                <div class="form-section">
-                                    <h3 class="form-section-title">
-                                        <i class="fas fa-home"></i>
-                                        Case Details - Select all that apply
-                                    </h3>
-                                    <div class="checkbox-grid">
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Tenancy agreement in place" id="check1">
-                                            <label class="form-check-label" for="check1">Tenancy agreement in
-                                                place</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Section 8 fault eviction" id="check2">
-                                            <label class="form-check-label" for="check2">Section 8 fault
-                                                eviction</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Section 21 non-fault eviction" id="check3">
-                                            <label class="form-check-label" for="check3">Section 21 no fault
-                                                eviction</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="No tenancy provided" id="check4">
-                                            <label class="form-check-label" for="check4">No tenancy provided</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="HMO property" id="check5">
-                                            <label class="form-check-label" for="check5">HMO property</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Trespassers or squatters" id="check6">
-                                            <label class="form-check-label" for="check6">Trespassers or
-                                                squatters</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Rent arrears" id="check7">
-                                            <label class="form-check-label" for="check7">Rent arrears</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Notice already served" id="check8">
-                                            <label class="form-check-label" for="check8">Notice already served</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Deposit protected if taken" id="check9">
-                                            <label class="form-check-label" for="check9">Deposit protected if
-                                                taken</label>
-                                        </div>
-                                        <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" name="checklist[]"
-                                                value="Bought property with tenant in situ" id="check10">
-                                            <label class="form-check-label" for="check10">Bought property with tenant in
-                                                situ</label>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="mb-4">
+  <label class="form-label fw-semibold">Type of Legal Assistance Needed</label>
+
+  <div class="dropdown w-100">
+    <button class="btn btn-light border w-100 text-start d-flex justify-content-between align-items-center"
+            type="button"
+            id="dropdownAssistance"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+      Select Assistance Types
+      <i class="fas fa-chevron-down"></i>
+    </button>
+
+    <ul class="dropdown-menu w-100 p-2" aria-labelledby="dropdownAssistance" style="max-height: 250px; overflow-y: auto;">
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Tenancy agreement in place">
+          Tenancy Agreement Review
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Section 8 fault eviction">
+          Section 8 Fault Eviction
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Section 21 non-fault eviction">
+          Section 21 No-Fault Eviction
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="No tenancy provided">
+          No Tenancy Agreement
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="HMO property">
+          HMO Property Issues
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Trespassers or squatters">
+          Trespassers / Squatters
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Rent arrears">
+          Rent Arrears Recovery
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Notice already served">
+          Notice Already Served
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Deposit protected if taken">
+          Deposit Protection Issues
+        </label>
+      </li>
+      <li>
+        <label class="dropdown-item d-flex align-items-center">
+          <input type="checkbox" class="form-check-input me-2" name="checklist[]" value="Bought property with tenant in situ">
+          Inherited Tenant Situation
+        </label>
+      </li>
+    </ul>
+  </div>
+</div>
+
 
                                 <!-- Message Section -->
                                 <div class="form-section">
@@ -987,7 +1015,7 @@
                 <!-- Left Side: Company Info -->
                 <div class="col-md-6 text-center text-md-start ">
                     <div class="mb-3">
-                        <img src="assets/Eviction_lawyers.png" alt="logo" width="100" height="80" class="me-2" />
+                        <img src="assets/Eviction_lawyers_logo.png" alt="logo" width="100" height="80" class="me-2" />
                         <span class="fw-bold text-white fs-4">Eviction Lawyers</span>
                     </div>
 
@@ -1009,7 +1037,9 @@
                             <img alt="Verify SRA Membership" width="200" height="100" src="./assets/SRA logo.png" />
                         </div>
                         <!-- End of SRA Digital Badge code -->
+                        <div class="icoLogo">
                         <img src="assets/icoLogo.png" alt="ICO Logo" width="100" height="100">
+                        </div>
                     </div>
                 </div>
 
@@ -1168,7 +1198,7 @@
             <!-- Footer Bottom -->
             <div class="d-block d-md-flex justify-content-around align-items-center mt-3">
                 <div class="text-center px-3">
-                    <small>&copy; 2025 Eviction Solicitors. All rights reserved.</small>
+                     <small>&copy; 2025 Eviction Lawyers. All rights reserved.</small>
                 </div>
                 <div class="d-block d-md-flex justify-content-center gap-2 text-center">
                     <p class="mb-1 mb-md-0"><a href="TermsAndConditions.html" class="text-white">Terms and

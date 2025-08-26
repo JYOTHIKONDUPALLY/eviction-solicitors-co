@@ -11,6 +11,7 @@
       --bg-how-help: #f9fafb;
       --text-primary: #333;
        --danger-red: #dc2626;
+       --text-dark:#1e293b;
     }
 
     body {
@@ -62,8 +63,8 @@
     }
 
 
-    footer {
-      background-color: var(--primary-orange);
+    footer {           
+      background: linear-gradient(135deg, var(--text-dark), #0f172a);
       color: white;
       padding: 40px 0;
     }
@@ -80,7 +81,7 @@
 
     .coverage-section {
       background: rgba(255, 255, 255, 0.95);
-      color: var(--primary-orange);
+      color: var(--text-primary);
       margin: 0 -15px;
       padding: 3rem 2rem;
       border-top: 3px solid rgba(255, 255, 255, 0.3);
@@ -90,7 +91,7 @@
       font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: 1rem;
-      color: var(--primary-orange);
+      color: var(--text-primary);
     }
 
     .coverage-description {
@@ -128,7 +129,7 @@
     }
 
     .coverage-link {
-      color: var(--primary-orange);
+      color: var(--text-primary);
       text-decoration: none;
       padding: 0.75rem 0;
       border-bottom: 1px solid rgba(204, 105, 24, 0.1);
@@ -138,10 +139,10 @@
     }
 
     .coverage-link:hover {
-      color: var(--dark-orange);
+      color: var(--primary-orange);
       padding-left: 0.75rem;
-      border-bottom-color: var(--primary-orange);
-      background: rgba(204, 105, 24, 0.05);
+      border-bottom-color: var(--text-primary);
+      background: rgba(195, 191, 188, 0.05);
     }
 
     .coverage-grid {
@@ -300,8 +301,9 @@
         }
 
         .textarea {
-            min-height: 120px;
+            /* min-height: 120px; */
             resize: vertical;
+            height: 150px;
         }
 
         .checkbox-grid {
@@ -470,3 +472,162 @@
             height: 3px;
             background-color: var(--secondary-orange);
         }
+
+        .icoLogo {
+  display: inline-flex;        /* keeps box tight around logo */
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;         /* white background */
+  border-radius: 12px;         /* rounded corners */
+  padding: 5px;               /* space inside the box */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15); /* soft shadow */
+}
+
+.icoLogo img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.benefit-banner {
+  background: #fff;
+  color: #000;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.benefit-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap; /* allows wrapping on small screens */
+}
+
+.benefit-lead {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tick-box {
+  background: #28a745; /* green */
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 3px;
+  margin-right: 6px;
+}
+.lead-text{
+  color:#000;
+}
+
+.benefit-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.benefit-list li {
+  position: relative;
+  padding: 0 12px;
+  white-space: nowrap;
+}
+
+.benefit-list li:not(:last-child)::after {
+  content: "|";
+  color: #cc6918; /* orange divider */
+  position: absolute;
+  right: 0;
+}
+@media (max-width: 768px) {
+  .benefit-banner {
+    padding: 10px 15px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .benefit-inner {
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .benefit-list {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .benefit-list li {
+    padding: 0 8px;
+    font-size: 11px;
+  }
+  
+  .benefit-list li:not(:last-child)::after {
+    /* display: none;  */
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 768px) {
+  .benefit-banner {
+    padding: 10px 15px;
+    font-size: 12px;
+    text-align: left; /* keep it aligned */
+  }
+
+  .benefit-inner {
+    flex-wrap: wrap;   /* allow wrapping but keep row layout */
+    gap: 8px;
+    justify-content: flex-start;
+  }
+
+  .benefit-lead {
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+    color: #000; /* black for mobile background */
+  }
+
+  .benefit-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .benefit-list li {
+    padding: 0 6px;
+    font-size: 11px;
+  }
+
+  .benefit-list li:not(:last-child)::after {
+    content: "|";
+    right: -4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .benefit-banner {
+    padding: 8px 10px;
+  }
+
+  .benefit-inner {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .benefit-list {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .benefit-lead {
+    margin-right: 6px; /* tick stays on same row */
+  }
+}
