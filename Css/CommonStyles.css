@@ -542,7 +542,7 @@ footer a:hover {
 
         /* Mobile slider version */
         .benefit-banner-mobile {
-            background: linear-gradient(135deg, var(--dark-bg) 0%, #2c2c2c 100%);
+            background: black;
             padding: 15px 0;
             position: relative;
             overflow: hidden;
